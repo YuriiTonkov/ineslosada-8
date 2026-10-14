@@ -1,6 +1,6 @@
 # Inés Losada · #8
 
-Fan zone de **Inés Losada**, colocadora española de los **Colorado Buffaloes** (NCAA Div. I,
+Fan zone de **Inés Losada**, punta española de los **Colorado Buffaloes** (NCAA Div. I,
 Big 12). Una sola página, bilingüe español / inglés, con sus números de la temporada, sus
 mejores partidos en vídeo, galería, trayectoria y el enlace a su camiseta oficial.
 
