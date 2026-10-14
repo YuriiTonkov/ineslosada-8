@@ -187,9 +187,14 @@ main,.rail,footer{position:relative;z-index:2}
 .hero .col{min-width:0}
 .hero .title{
   font-family:var(--font-display);font-weight:400;text-transform:uppercase;
-  font-size:var(--fs-name);line-height:.86;letter-spacing:0;margin:.18em 0 0;
+  font-size:var(--fs-name);line-height:.86;letter-spacing:0;margin:.43em 0 0;
   color:var(--paper);
 }
+/* El margen de arriba no es un capricho. Con line-height .86 la caja de linea es mas
+   baja que la propia letra, y la tilde de la E de "Ines" asoma 0,247em por encima de
+   ella: con .18em se metia en la linea de arriba. Se le suma ese cuarto de em para
+   devolverle al nombre el mismo aire que tendria sin acento (y escala con el tipo,
+   porque el margen va en em). */
 .hero .title span{display:block}
 @supports ((-webkit-background-clip:text) or (background-clip:text)){
   .hero .title .foil{
