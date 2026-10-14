@@ -1,0 +1,1403 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Fan zone de Inés Losada, la colocadora española (#8) de los Colorado Buffaloes: sus números, sus mejores partidos y su camiseta oficial.">
+<meta name="theme-color" content="#070709">
+<meta property="og:url" content="https://yuriitonkov.github.io/ineslosada-8/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Inés Losada #8">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Inés Losada · #8 Colorado Buffaloes">
+<meta property="og:description" content="Fan zone de Inés Losada, la colocadora española (#8) de los Colorado Buffaloes: sus números, sus mejores partidos y su camiseta oficial.">
+<meta property="og:image" content="https://yuriitonkov.github.io/ineslosada-8/img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Inés Losada · #8 Colorado Buffaloes">
+<meta name="twitter:description" content="Fan zone de Inés Losada, la colocadora española (#8) de los Colorado Buffaloes: sus números, sus mejores partidos y su camiseta oficial.">
+<meta name="twitter:image" content="https://yuriitonkov.github.io/ineslosada-8/img/hero.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23070709'%3E%3C/rect%3E%3Ctext x='16' y='24' font-family='Arial Black,Arial,sans-serif' font-size='22' font-weight='900' text-anchor='middle' fill='%23CFB87C'%3E8%3C/text%3E%3C/svg%3E">
+<title>Inés Losada · #8 Colorado Buffaloes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+/* =========================================================================
+   FAN ZONE · INÉS LOSADA · #8
+   Mundo visual único (deliberado): negro de pista + oro de los Buffaloes.
+   Paleta, tipografía y retícula declaradas aquí y usadas en todo el resto.
+   ========================================================================= */
+:root{
+  color-scheme: dark;
+  /* color */
+  --ink:#070709;            /* fondo, negro de grada */
+  --ink-2:#0E0E12;          /* superficie de bloque */
+  --ink-3:#17171C;          /* superficie elevada */
+  --gold:#CFB87C;           /* oro CU */
+  --gold-hi:#F2E0AE;        /* champán para el foil */
+  --gold-deep:#9A8452;      /* oro apagado */
+  --paper:#F3F0E9;          /* texto principal */
+  --muted:#A7A395;          /* texto secundario */
+  --line:rgba(207,184,124,.26);
+  --line-soft:rgba(243,240,233,.10);
+  --scrim:rgba(7,7,9,.78);  /* velo sobre las fotos de fondo */
+  /* type */
+  --font-display:'Anton','Haettenschweiler','Arial Narrow',sans-serif;
+  --font-body:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,'Cascadia Mono',Consolas,monospace;
+  --fs-name:clamp(3.2rem,12.5vw,8.6rem);
+  --fs-h2:clamp(1.8rem,4.4vw,3rem);
+  --fs-h3:clamp(1.1rem,2.1vw,1.4rem);
+  --fs-lead:clamp(1rem,1.35vw,1.125rem);
+  --fs-body:1rem;
+  --fs-micro:.7rem;
+  /* layout */
+  --gutter:clamp(16px,4vw,40px);
+  --maxw:1180px;
+  --band:clamp(48px,7vw,104px);   /* aire vertical entre secciones */
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--paper);
+  font-family:var(--font-body);
+  font-size:var(--fs-body);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+/* height:auto es imprescindible: los atributos width/height del HTML actúan como
+   pista de presentación y, si el CSS solo fija el ancho, la altura del atributo
+   se queda puesta y la foto sale deformada. */
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{
+  font-family:var(--font-mono);font-size:var(--fs-micro);font-weight:500;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--gold);
+}
+.h2{
+  font-family:var(--font-display);font-size:var(--fs-h2);font-weight:400;
+  line-height:.98;letter-spacing:.005em;text-transform:uppercase;
+  text-wrap:balance;margin:0;
+}
+.lead{font-size:var(--fs-lead);color:var(--paper);max-width:62ch}
+.small{font-size:.86rem;color:var(--muted)}
+.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- capa de fondo: fotos en duotono, fundidas y cruzadas ---------- */
+.amb{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;background:var(--ink)}
+.amb img{
+  position:absolute;inset:-4% -4% -4% -4%;width:108%;height:108%;
+  object-fit:cover;object-position:50% 38%;
+  opacity:0;transition:opacity 1.4s ease;
+  filter:saturate(.9) brightness(.62);
+}
+.amb img.on{opacity:.52}
+.amb img[data-k="hero"]{object-position:50% 44%}
+.amb img[data-k="esp"]{object-position:50% 55%}
+.amb::after{ /* velo + viñeta para que el texto respire */
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(120% 80% at 50% 0%,rgba(7,7,9,.15) 0%,rgba(7,7,9,.86) 62%,var(--ink) 100%),
+    linear-gradient(180deg,rgba(7,7,9,.72) 0%,rgba(7,7,9,.42) 30%,rgba(7,7,9,.55) 100%);
+}
+.grain{
+  position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.055;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+  mix-blend-mode:screen;
+}
+main,.rail,footer{position:relative;z-index:2}
+
+/* ---------- barra superior ---------- */
+.rail{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:20;
+  display:flex;align-items:center;gap:18px;
+  padding:10px var(--gutter);
+  background:rgba(7,7,9,.82);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  border-bottom:1px solid transparent;
+  transform:translateY(-102%);transition:transform .35s ease,border-color .35s ease;
+}
+.rail.on{transform:none;border-bottom-color:var(--line)}
+.rail .who{font-family:var(--font-display);letter-spacing:.06em;font-size:.95rem;text-transform:uppercase;white-space:nowrap}
+.rail .who b{color:var(--gold);font-weight:400}
+.rail nav{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.rail nav::-webkit-scrollbar{display:none}
+.rail nav a{
+  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);padding:7px 9px;white-space:nowrap;border-radius:2px;
+}
+.rail nav a:hover{color:var(--gold-hi)}
+/* conmutador de idioma: siempre visible, también cuando la nav se oculta */
+.lang{display:flex;gap:2px;margin-left:10px;border:1px solid var(--line-soft);padding:2px;flex:none}
+.lang button{
+  font-family:var(--font-mono);font-size:.66rem;letter-spacing:.12em;
+  background:none;border:0;color:var(--muted);padding:5px 9px;cursor:pointer;
+  transition:color .2s ease,background .2s ease;
+}
+.lang button:hover{color:var(--gold-hi)}
+.lang button[aria-pressed="true"]{background:var(--gold);color:var(--ink);cursor:default}
+/* acceso a su tienda: el sitio con más valor comercial, siempre a la vista */
+.rail .buy{
+  margin-left:10px;flex:none;white-space:nowrap;
+  font-family:var(--font-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  background:var(--gold);color:var(--ink);padding:7px 11px;border-radius:2px;
+  transition:background .2s ease;
+}
+.rail .buy:hover{background:var(--gold-hi)}
+
+/* ---------- franja promocional de la tienda ---------- */
+.promo{
+  background:linear-gradient(92deg,var(--gold-deep) 0%,var(--gold) 28%,var(--gold-hi) 52%,var(--gold) 76%,var(--gold-deep) 100%);
+  color:#0B0B0D;
+}
+.promo .wrap{
+  display:flex;flex-wrap:wrap;gap:clamp(14px,2.4vw,34px);
+  align-items:center;justify-content:space-between;
+  padding-block:clamp(22px,3.2vw,34px);
+}
+.promo .t{min-width:0}
+.promo b{
+  display:block;font-family:var(--font-display);font-weight:400;text-transform:uppercase;
+  font-size:clamp(1.35rem,2.8vw,2rem);line-height:.98;letter-spacing:.005em;text-wrap:balance;
+}
+.promo p{margin:9px 0 0;font-size:.9rem;line-height:1.5;max-width:54ch;color:rgba(11,11,13,.8)}
+.promo .btn{background:#0B0B0D;border-color:#0B0B0D;color:var(--gold-hi);flex:none}
+.promo .btn:hover{background:#191920;border-color:#191920;color:var(--gold-hi)}
+
+/* línea de compra al final de una sección */
+.buyline{
+  margin:clamp(24px,3vw,34px) 0 0;padding-top:16px;border-top:1px solid var(--line-soft);
+  font-size:.9rem;color:var(--muted);max-width:66ch;
+}
+.buyline a{color:var(--gold-hi);border-bottom:1px solid var(--line)}
+.buyline a:hover{border-bottom-color:var(--gold)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding-block:clamp(28px,5vw,54px) clamp(34px,6vw,72px)}
+.hero .wrap{display:grid;gap:clamp(20px,3vw,36px);grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:end}
+.hero .col{min-width:0}
+.hero .title{
+  font-family:var(--font-display);font-weight:400;text-transform:uppercase;
+  font-size:var(--fs-name);line-height:.86;letter-spacing:0;margin:.18em 0 0;
+  color:var(--paper);
+}
+.hero .title span{display:block}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .hero .title .foil{
+    background:linear-gradient(96deg,var(--gold-deep) 0%,var(--gold) 22%,var(--gold-hi) 46%,var(--gold) 68%,var(--gold-deep) 100%);
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent;
+  }
+}
+.hero .meta{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
+.hero .meta .dot{width:4px;height:4px;background:var(--gold);border-radius:50%}
+.hero .lead{margin-top:18px}
+.hero .stats{
+  margin-top:clamp(22px,3vw,34px);display:grid;gap:0;
+  grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);
+}
+.hero .stats div{padding:14px 12px 0 0;border-right:1px solid var(--line-soft)}
+.hero .stats div:last-child{border-right:0}
+.hero .stats b{display:block;font-family:var(--font-display);font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:400;color:var(--gold-hi);line-height:1}
+.hero .stats small{display:block;margin-top:6px;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(22px,3vw,32px)}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  padding:13px 18px;border:1px solid var(--line);color:var(--gold-hi);border-radius:2px;
+  transition:background .25s ease,border-color .25s ease,color .25s ease;
+}
+.btn:hover{background:rgba(207,184,124,.12);border-color:var(--gold)}
+.btn.solid{background:var(--gold);border-color:var(--gold);color:#111}
+.btn.solid:hover{background:var(--gold-hi)}
+.hero .shot{position:relative;min-width:0}
+.hero .shot img{
+  width:100%;max-width:420px;margin-left:auto;border:1px solid var(--line);
+  filter:contrast(1.04) saturate(1.02);
+}
+.hero .shot figcaption{
+  max-width:420px;margin:10px 0 0 auto;font-family:var(--font-mono);
+  font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:right;
+}
+
+/* ---------- ficha ---------- */
+.ficha{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--scrim)}
+.ficha dl{
+  margin:0;display:grid;gap:0;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+}
+.ficha div{padding:18px 14px 18px 0;border-right:1px solid var(--line-soft);min-width:0}
+.ficha div:last-child{border-right:0}
+.ficha dt{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+.ficha dd{margin:0;font-size:.95rem;line-height:1.35}
+
+/* ---------- secciones ---------- */
+section{padding-block:var(--band)}
+.head{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:flex-end;justify-content:space-between;margin-bottom:clamp(24px,3.5vw,44px)}
+.head .h2{max-width:22ch}
+.head .small{max-width:44ch}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0%,rgba(207,184,124,.1) 60%,transparent 100%)}
+
+/* temporada */
+.season{background:linear-gradient(180deg,rgba(7,7,9,.9),rgba(7,7,9,.94));position:relative;overflow:hidden}
+.season .eight{
+  position:absolute;right:-2%;top:8%;font-family:var(--font-display);font-size:clamp(14rem,34vw,30rem);
+  line-height:.7;color:transparent;-webkit-text-stroke:1px rgba(207,184,124,.10);pointer-events:none;user-select:none;
+}
+.tiles{display:grid;gap:1px;background:var(--line-soft);grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid var(--line-soft)}
+.tile{background:rgba(14,14,18,.86);padding:clamp(16px,2.4vw,26px);min-width:0}
+.tile b{display:block;font-family:var(--font-display);font-weight:400;font-size:clamp(2rem,4.6vw,3.2rem);line-height:1;color:var(--gold-hi)}
+.tile small{display:block;margin-top:8px;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+
+.chart{margin-top:clamp(30px,4vw,54px)}
+.chart h3{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 4px}
+.chart .lg{font-size:.8rem;color:var(--muted);margin:0 0 20px;max-width:70ch}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-soft)}
+.rows li{
+  display:grid;gap:6px 16px;align-items:center;
+  grid-template-columns:74px minmax(0,1.25fr) minmax(0,2.1fr) 58px minmax(0,1fr);
+  padding:11px 0;border-bottom:1px solid var(--line-soft);
+}
+.rows .date{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);letter-spacing:.06em}
+.rows .opp{font-size:.92rem;min-width:0}
+.rows .opp em{font-style:normal;color:var(--muted)}
+.rows .track{position:relative;height:12px;background:rgba(243,240,233,.07);min-width:0}
+.rows .track i{
+  position:absolute;inset:0 auto 0 0;width:var(--w,0%);
+  background:linear-gradient(90deg,var(--gold-deep),var(--gold));
+}
+.rows li.top .track i{background:linear-gradient(90deg,var(--gold),var(--gold-hi))}
+.rows .pts{font-family:var(--font-display);font-size:1.15rem;color:var(--paper);text-align:right;font-variant-numeric:tabular-nums}
+.rows li.top .pts{color:var(--gold-hi)}
+.rows .k{font-family:var(--font-mono);font-size:.68rem;color:var(--muted);letter-spacing:.04em;min-width:0;text-align:right}
+.rows .k .v{color:var(--gold);border:1px solid var(--line);padding:1px 5px;margin-left:6px;white-space:nowrap}
+.rows .none{opacity:.55}
+
+/* vídeos */
+.vids .grid{display:grid;gap:clamp(18px,2.4vw,30px);grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{
+  display:flex;flex-direction:column;background:rgba(14,14,18,.82);
+  border:1px solid var(--line-soft);min-width:0;
+  transition:border-color .3s ease,transform .3s ease;
+}
+.card:hover{border-color:var(--line);transform:translateY(-3px)}
+.card .shot{position:relative;overflow:hidden;aspect-ratio:16/9;background:var(--ink-3)}
+.card .shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.card:hover .shot img{transform:scale(1.045)}
+.card .badge{
+  position:absolute;left:0;top:0;background:var(--gold);color:#111;
+  font-family:var(--font-display);font-size:1rem;letter-spacing:.02em;padding:6px 11px 5px;
+}
+.card .dur{
+  position:absolute;right:0;bottom:0;background:rgba(7,7,9,.82);color:var(--paper);
+  font-family:var(--font-mono);font-size:.66rem;letter-spacing:.1em;padding:5px 9px;
+}
+.card .body{padding:clamp(14px,2vw,22px);display:flex;flex-direction:column;gap:10px;flex:1}
+.card .body h3{font-family:var(--font-display);font-weight:400;font-size:var(--fs-h3);text-transform:uppercase;letter-spacing:.01em;margin:0}
+.card .body p{margin:0;font-size:.88rem;color:var(--muted)}
+.card .go{
+  margin-top:auto;display:inline-flex;align-items:center;gap:8px;padding-top:12px;
+  border-top:1px solid var(--line-soft);font-family:var(--font-mono);font-size:.68rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);
+}
+.card .go span{transition:transform .3s ease}
+.card:hover .go span{transform:translateX(5px)}
+.sub{margin:clamp(34px,5vw,60px) 0 16px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.compact{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-soft)}
+.compact li{border-bottom:1px solid var(--line-soft)}
+.compact a{display:grid;gap:8px 16px;align-items:center;grid-template-columns:96px minmax(0,1fr) auto;padding:13px 0;transition:background .25s ease}
+.compact a:hover{background:rgba(207,184,124,.06)}
+.compact .mini{width:96px;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line-soft)}
+.compact .t{min-width:0}
+.compact .t b{display:block;font-weight:600;font-size:.93rem}
+.compact .t small{display:block;color:var(--muted);font-size:.8rem;margin-top:3px}
+.compact .pt{font-family:var(--font-display);font-size:1.1rem;color:var(--gold-hi);white-space:nowrap;text-align:right}
+.compact .pt small{display:block;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+
+.feature{
+  display:grid;gap:clamp(16px,2.2vw,28px);grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  align-items:center;border:1px solid var(--line-soft);background:rgba(14,14,18,.82);
+}
+.feature .shot{aspect-ratio:16/9;overflow:hidden}
+.feature .shot img{width:100%;height:100%;object-fit:cover}
+.feature .txt{padding:clamp(16px,2.4vw,30px);min-width:0}
+.feature .txt h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase;font-size:var(--fs-h3);margin:8px 0 10px}
+.feature .txt p{margin:0;font-size:.9rem;color:var(--muted);max-width:52ch}
+
+/* galería */
+.gal{background:var(--scrim)}
+.gal .grid{display:grid;gap:clamp(12px,1.6vw,20px);grid-template-columns:repeat(6,minmax(0,1fr));align-items:start}
+.gal figure{margin:0;min-width:0;position:relative;overflow:hidden}
+.gal figure img{width:100%;object-fit:cover;filter:contrast(1.03)}
+.gal figcaption{
+  font-family:var(--font-mono);font-size:.64rem;letter-spacing:.06em;line-height:1.5;
+  color:var(--muted);margin-top:8px;
+}
+.gal .w3{grid-column:span 3}
+.gal .w4{grid-column:span 4}
+.gal .w2{grid-column:span 2}
+/* Las parejas de cada fila comparten altura: 2/3 junto a 4/3, y 1/1 junto a 2/1. */
+.gal .tall img{aspect-ratio:2/3}
+.gal .wide img{aspect-ratio:16/9}
+.gal .sq img{aspect-ratio:1/1}
+.gal .r43 img{aspect-ratio:4/3}
+.gal .r21 img{aspect-ratio:2/1}
+
+/* trayectoria */
+.two{display:grid;gap:clamp(28px,4vw,56px);grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{
+  position:relative;padding:0 0 26px 54px;border-left:1px solid var(--line);margin-left:9px;
+}
+.steps li:last-child{padding-bottom:0;border-left-color:transparent}
+.steps li::before{
+  counter-increment:s;content:counter(s,decimal-leading-zero);
+  position:absolute;left:-9px;top:-2px;width:34px;height:34px;
+  display:grid;place-items:center;background:var(--ink-3);border:1px solid var(--line);
+  font-family:var(--font-mono);font-size:.68rem;color:var(--gold);
+}
+.steps h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase;font-size:1.05rem;margin:0 0 6px}
+.steps p{margin:0;font-size:.88rem;color:var(--muted);max-width:44ch}
+.steps .yr{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.16em;color:var(--gold);display:block;margin-bottom:6px}
+.pal{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.pal li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:6px 16px;padding:14px 0;border-bottom:1px solid var(--line-soft)}
+.pal .y{font-family:var(--font-mono);font-size:.7rem;color:var(--gold);letter-spacing:.1em}
+.pal b{font-weight:600;font-size:.93rem}
+.pal small{display:block;color:var(--muted);font-size:.82rem;margin-top:2px}
+
+/* selección */
+.nat{background:linear-gradient(180deg,rgba(7,7,9,.82),rgba(7,7,9,.9))}
+.nat .box{display:grid;gap:clamp(20px,3vw,40px);grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center}
+.nat figure{margin:0;min-width:0}
+.nat img{border:1px solid var(--line)}
+.nat .kpis{display:grid;gap:18px;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:26px;border-top:1px solid var(--line);padding-top:22px}
+.nat .kpis b{display:block;font-family:var(--font-display);font-weight:400;font-size:clamp(1.7rem,3.4vw,2.5rem);color:var(--gold-hi);line-height:1}
+.nat .kpis small{display:block;margin-top:6px;font-family:var(--font-mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* tienda */
+.store{background:linear-gradient(180deg,rgba(7,7,9,.92),var(--ink))}
+.store .grid{display:grid;gap:clamp(16px,2.2vw,28px);grid-template-columns:repeat(3,minmax(0,1fr))}
+.shop{display:flex;flex-direction:column;gap:12px;padding:clamp(20px,2.6vw,32px);border:1px solid var(--line);background:rgba(23,23,28,.7);min-width:0}
+/* la suya manda: marco y fondo de oro, y el botón sólido */
+.shop.lead{border-color:var(--gold);background:rgba(207,184,124,.09)}
+.shop.lead .k{color:var(--gold-hi)}
+.shop .k{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.shop h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase;font-size:var(--fs-h3);margin:0}
+.shop p{margin:0;font-size:.88rem;color:var(--muted)}
+.shop .btn{margin-top:auto;align-self:flex-start}
+.store .note{margin-top:22px;font-size:.8rem;color:var(--muted);max-width:70ch}
+
+/* pie */
+footer{border-top:1px solid var(--line);padding-block:clamp(34px,5vw,64px);background:var(--ink)}
+footer .grid{display:grid;gap:clamp(24px,3vw,48px);grid-template-columns:repeat(3,minmax(0,1fr))}
+footer h4{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+footer a{font-size:.86rem;color:var(--muted);border-bottom:1px solid transparent}
+footer a:hover{color:var(--gold-hi);border-bottom-color:var(--line)}
+footer .legal{grid-column:1/-1;margin-top:14px;padding-top:20px;border-top:1px solid var(--line-soft);font-size:.78rem;color:var(--muted);max-width:80ch}
+
+/* ---------- móvil ---------- */
+/* la barra cede la navegación (redundante con el pie) antes que el acceso a su tienda */
+@media (max-width:960px){
+  .rail nav{display:none}
+  .lang{margin-left:auto}
+}
+@media (max-width:900px){
+  .hero .wrap,.nat .box,.two,.feature{grid-template-columns:minmax(0,1fr)}
+  .hero .shot img,.hero .shot figcaption{margin-left:0;max-width:100%}
+  .hero .shot figcaption{text-align:left}
+  .ficha dl{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ficha div{border-right:0;border-bottom:1px solid var(--line-soft)}
+  .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .vids .grid,.store .grid,footer .grid{grid-template-columns:minmax(0,1fr)}
+  .gal .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gal .w3,.gal .w4,.gal .w2{grid-column:span 1}
+  .gal .tall img{aspect-ratio:1/1}
+}
+@media (max-width:560px){
+  .eyebrow{letter-spacing:.13em}
+  .ficha dl{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero .stats div{border-right:0}
+  .rows li{grid-template-columns:minmax(0,1fr) 48px}
+  .rows .date{grid-column:1}
+  .rows .opp{grid-column:1}
+  .rows .track{grid-column:1/-1;order:5}
+  .rows .k{grid-column:1;text-align:left}
+  .rows .pts{grid-row:1;grid-column:2;text-align:right}
+  .compact a{grid-template-columns:80px minmax(0,1fr)}
+  .compact .mini{width:80px}
+  .compact .pt{grid-column:2;text-align:left}
+  .pal li{grid-template-columns:minmax(0,1fr)}
+  .nat .kpis{grid-template-columns:minmax(0,1fr)}
+  /* la galería pasa a una columna: a dos por fila las fotos quedan de sello */
+  .gal .grid{grid-template-columns:minmax(0,1fr)}
+  .gal .tall img{aspect-ratio:4/5}
+  .gal .sq img,.gal .r43 img{aspect-ratio:4/3}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .card:hover{transform:none}
+  .card:hover .shot img{transform:none}
+}
+/* entrada del hero: arranca en su estado final visible */
+@media (prefers-reduced-motion:no-preference){
+  .hero .col>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+  .hero .col>*:nth-child(2){animation-delay:.08s}
+  .hero .col>*:nth-child(3){animation-delay:.16s}
+  .hero .col>*:nth-child(4){animation-delay:.22s}
+  .hero .col>*:nth-child(5){animation-delay:.28s}
+  .hero .shot{animation:rise 1.1s .12s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+}
+</style><style>
+:root{padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}
+html{-webkit-text-size-adjust:100%%}
+[hidden]{display:none!important}
+
+/* Contador de visitas: cierra la pagina por debajo del pie, al mismo ancho. */
+.visits{border-top:1px solid var(--line-soft);background:var(--ink)}
+.visits .wrap{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;padding-block:14px}
+.visits .k{font-family:var(--font-mono);font-size:var(--fs-micro);letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted)}
+.visits b{font-family:var(--font-display);font-weight:400;font-size:1.2rem;line-height:1;
+  color:var(--gold);font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<div class="amb" aria-hidden="true">
+  <img data-k="hero" src="img/amb_hero.jpg" alt="">
+  <img data-k="spike" src="img/amb_spike.jpg" alt="">
+  <img data-k="team" src="img/amb_team.jpg" alt="">
+  <img data-k="csu" src="img/amb_csu.jpg" alt="">
+  <img data-k="esp" src="img/amb_esp.jpg" alt="">
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="rail" id="rail">
+  <span class="who">Inés Losada <b>· 8</b></span>
+  <nav aria-label="Secciones">
+    <a href="#temporada">Temporada</a>
+    <a href="#videos">Vídeos</a>
+    <a href="#galeria">Galería</a>
+    <a href="#trayectoria">Trayectoria</a>
+    <a href="#seleccion">Selección</a>
+    <a href="#tienda">Tienda</a>
+  </nav>
+  <div class="lang" role="group" aria-label="Idioma / Language">
+    <button type="button" data-set="es" aria-pressed="true">ES</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+  <a class="buy" href="https://nil.store/colorado/col-ines-losada-8" target="_blank" rel="noopener">Camiseta <span aria-hidden="true">↗</span></a>
+</header>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <div class="col">
+        <p class="eyebrow">Colorado Buffaloes · Voleibol · Big 12</p>
+        <h1 class="title"><span>Inés</span><span class="foil">Losada</span></h1>
+        <div class="meta mono small">
+          <span>Punta receptora</span><i class="dot"></i>
+          <span>Dorsal 8</span><i class="dot"></i>
+          <span>1,86 m</span><i class="dot"></i>
+          <span>A Coruña → Boulder</span>
+        </div>
+        <p class="lead">
+          De la Superliga 2 al Mundial Sub-19 con España y de ahí a Colorado. En su segunda
+          temporada con los Buffaloes es una de las puntas que sostienen el ataque del equipo
+          y una de las voces que la Universidad pone delante de la cámara.
+        </p>
+        <div class="stats">
+          <div><b>93,0</b><small>Puntos · 2026</small></div>
+          <div><b>130,5</b><small>Puntos · carrera NCAA</small></div>
+          <div><b>40,52%</b><small>Eficacia · Mundial S19</small></div>
+        </div>
+        <div class="cta">
+          <a class="btn" href="#videos">Sus mejores partidos <span aria-hidden="true">↓</span></a>
+          <a class="btn solid" href="https://nil.store/colorado/col-ines-losada-8" target="_blank" rel="noopener">Camiseta de Inés <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <figure class="shot">
+        <img src="img/hero.jpg" width="1040" height="1356"
+             alt="Inés Losada, con la camiseta blanca del 8 de Colorado, en pleno salto de remate en el CU Events Center">
+        <figcaption>Temporada 2026 · CU Events Center</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= FICHA ================= -->
+  <section class="ficha" aria-label="Ficha" style="padding-block:0">
+    <div class="wrap">
+      <dl>
+        <div><dt>Dorsal</dt><dd>8</dd></div>
+        <div><dt>Puesto</dt><dd>Punta receptora</dd></div>
+        <div><dt>Altura</dt><dd>1,86 m</dd></div>
+        <div><dt>Equipo</dt><dd>Colorado Buffaloes<br><span class="small">NCAA Div. I · Big 12</span></dd></div>
+        <div><dt>Origen</dt><dd>A Coruña, Galicia<br><span class="small">España</span></dd></div>
+        <div><dt>Temporada 2026</dt><dd>13 partidos<br><span class="small">38 sets hasta el 11 oct</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= TEMPORADA ================= -->
+  <section class="season" id="temporada" data-amb="spike">
+    <span class="eight" aria-hidden="true">8</span>
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow">Temporada 2026 · datos de las actas oficiales</p>
+          <h2 class="h2">Lo que firma cada noche</h2>
+        </div>
+        <p class="small">
+          13 de los 16 partidos del equipo hasta el 11 de octubre de 2026, cuando los Buffaloes
+          eran el número 23 del ranking nacional. Media de 2,4 puntos por set.
+        </p>
+      </div>
+
+      <div class="tiles">
+        <div class="tile"><b>93,0</b><small>Puntos</small></div>
+        <div class="tile"><b>62</b><small>Kills</small></div>
+        <div class="tile"><b>22</b><small>Aces</small></div>
+        <div class="tile"><b>25</b><small>Digs</small></div>
+        <div class="tile"><b>9,0</b><small>Bloqueos</small></div>
+      </div>
+
+      <div class="chart">
+        <h3>Puntos por partido</h3>
+        <p class="lg">
+          Puntos = kills + aces + bloqueos (0,5 por bloqueo asistido). Las cinco primeras líneas
+          son sus mejores partidos del curso; las que llevan la marca «vídeo» tienen reel publicado
+          en el canal de los Buffaloes.
+        </p>
+        <ul class="rows">
+          <li class="top"><span class="date">6 sep</span><span class="opp">Northern Colorado</span>
+            <span class="track"><i style="--w:100%"></i></span><span class="pts">19,0</span>
+            <span class="k">14 K + 5 aces <span class="v">vídeo</span></span></li>
+          <li class="top"><span class="date">4 oct</span><span class="opp"><em>#21</em> Baylor</span>
+            <span class="track"><i style="--w:87%"></i></span><span class="pts">16,5</span>
+            <span class="k">10 K + 5 aces <span class="v">vídeo</span></span></li>
+          <li class="top"><span class="date">11 oct</span><span class="opp">Kansas State</span>
+            <span class="track"><i style="--w:87%"></i></span><span class="pts">16,5</span>
+            <span class="k">11 K + 5 aces <span class="v">vídeo</span></span></li>
+          <li class="top"><span class="date">17 sep</span><span class="opp">Colorado State</span>
+            <span class="track"><i style="--w:68%"></i></span><span class="pts">13,0</span>
+            <span class="k">10 K + 1 ace <span class="v">vídeo</span></span></li>
+          <li class="top"><span class="date">2 oct</span><span class="opp">TCU</span>
+            <span class="track"><i style="--w:63%"></i></span><span class="pts">12,0</span>
+            <span class="k">9 K + 1 ace</span></li>
+          <li><span class="date">9 oct</span><span class="opp">Arizona State</span>
+            <span class="track"><i style="--w:32%"></i></span><span class="pts">6,0</span>
+            <span class="k">2 K + 3 aces</span></li>
+          <li><span class="date">11 sep</span><span class="opp">Oregon State</span>
+            <span class="track"><i style="--w:16%"></i></span><span class="pts">3,0</span>
+            <span class="k">1 K + 2 aces</span></li>
+          <li><span class="date">25 sep</span><span class="opp">Utah</span>
+            <span class="track"><i style="--w:13%"></i></span><span class="pts">2,5</span>
+            <span class="k">2 K</span></li>
+          <li><span class="date">28 ago</span><span class="opp">CSUN</span>
+            <span class="track"><i style="--w:11%"></i></span><span class="pts">2,0</span>
+            <span class="k">1 K <span class="v">vídeo</span></span></li>
+          <li><span class="date">4 sep</span><span class="opp">Wichita State</span>
+            <span class="track"><i style="--w:8%"></i></span><span class="pts">1,5</span>
+            <span class="k">1 K <span class="v">vídeo</span></span></li>
+          <li><span class="date">29 ago</span><span class="opp">Central Arkansas</span>
+            <span class="track"><i style="--w:5%"></i></span><span class="pts">1,0</span>
+            <span class="k">1 K <span class="v">vídeo</span></span></li>
+          <li class="none"><span class="date">12 sep</span><span class="opp"><em>#16</em> USC</span>
+            <span class="track"><i style="--w:0%"></i></span><span class="pts">0,0</span>
+            <span class="k">Sin puntos · <span class="v">vídeo</span></span></li>
+          <li class="none"><span class="date">18 sep</span><span class="opp">Colorado State</span>
+            <span class="track"><i style="--w:0%"></i></span><span class="pts">0,0</span>
+            <span class="k">Sin puntos</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FRANJA PROMOCIONAL ================= -->
+  <div class="promo">
+    <div class="wrap">
+      <div class="t">
+        <p class="eyebrow" style="color:rgba(11,11,13,.72)">Su locker room oficial · NIL Store</p>
+        <b>Lleva el 8</b>
+        <p>
+          La camiseta negra de Colorado con el apellido LOSADA y el dorsal 8, y el resto de su
+          línea, en su página de la NIL Store. Cada compra va directa a la jugadora.
+        </p>
+      </div>
+      <a class="btn" href="https://nil.store/colorado/col-ines-losada-8" target="_blank" rel="noopener">
+        Ver la camiseta <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ================= VÍDEOS ================= -->
+  <section class="vids" id="videos" data-amb="csu">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow">BuffsTV · canal oficial de Colorado Athletics</p>
+          <h2 class="h2">Momentazos</h2>
+        </div>
+        <p class="small">
+          Cuatro partidos en los que fue protagonista, ordenados por los puntos que firmó.
+          Cada tarjeta abre el vídeo completo en YouTube.
+        </p>
+      </div>
+
+      <div class="grid">
+        <a class="card" href="https://www.youtube.com/watch?v=MUh-lUOqrHg" target="_blank" rel="noopener">
+          <span class="shot">
+            <img src="img/p_h1_northern_colorado_0906.jpg" alt="Fotograma del reel: las Buffaloes celebrando en la pista" loading="lazy">
+            <span class="badge">19,0 pts</span><span class="dur">2:02</span>
+          </span>
+          <span class="body">
+            <h3>Northern Colorado</h3>
+            <p>6 de septiembre. Su mejor partido del curso: 14 kills y 5 aces en la remontada a cinco
+              sets (15-25, 25-20, 16-25, 25-9, 15-6). Habló después en la sala de prensa.</p>
+            <span class="go">Ver en YouTube <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+
+        <a class="card" href="https://www.youtube.com/watch?v=ZiHKrViAPkA" target="_blank" rel="noopener">
+          <span class="shot">
+            <img src="img/p_h2_baylor_1004.jpg" alt="Fotograma del reel: jugadoras de Colorado abrazadas tras el punto" loading="lazy">
+            <span class="badge">16,5 pts</span><span class="dur">2:56</span>
+          </span>
+          <span class="body">
+            <h3>#21 Baylor</h3>
+            <p>4 de octubre, en Waco. 10 kills y 5 aces para tumbar al número 21 del país fuera de casa
+              en el Ferrell Center.</p>
+            <span class="go">Ver en YouTube <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+
+        <a class="card" href="https://www.youtube.com/watch?v=RoghldES4FE" target="_blank" rel="noopener">
+          <span class="shot">
+            <img src="img/p_h3_kansas_state_1011.jpg" alt="Fotograma del reel: acción de red contra Kansas State" loading="lazy">
+            <span class="badge">16,5 pts</span><span class="dur">1:59</span>
+          </span>
+          <span class="body">
+            <h3>Kansas State</h3>
+            <p>11 de octubre. 11 kills, 21 ataques y .333 en la remontada 3-2 en el CU Events Center.
+              Volvió a la sala de prensa con el equipo.</p>
+            <span class="go">Ver en YouTube <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+
+        <a class="card" href="https://www.youtube.com/watch?v=tmY1--E9hYA" target="_blank" rel="noopener">
+          <span class="shot">
+            <img src="img/p_h4_colorado_state_0917.jpg" alt="Fotograma del reel: jugadoras de Colorado celebrando el punto" loading="lazy">
+            <span class="badge">13,0 pts</span><span class="dur">3:11</span>
+          </span>
+          <span class="body">
+            <h3>Colorado State</h3>
+            <p>17 de septiembre. 10 kills en el derbi del estado, la noche en que el 9-0 de las Buffs
+              igualó el mejor arranque de su historia.</p>
+            <span class="go">Ver en YouTube <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+      </div>
+
+      <h3 class="sub">El resto de la temporada</h3>
+      <ul class="compact">
+        <li><a href="https://www.youtube.com/watch?v=D-HS4sXwcRQ" target="_blank" rel="noopener">
+          <img class="mini" src="img/p_h8_usc_0912.jpg" alt="Fotograma del reel contra USC en el Galen Center" loading="lazy">
+          <span class="t"><b>#16 USC · 12 sep</b><small>Victoria en el Galen Center. Reel completo; su aparición es breve.</small></span>
+          <span class="pt">0,0<small>puntos · 2:16</small></span></a></li>
+        <li><a href="https://www.youtube.com/watch?v=MfRFQXA8WZw" target="_blank" rel="noopener">
+          <img class="mini" src="img/p_h5_csun_0828.jpg" alt="Fotograma del reel contra CSUN" loading="lazy">
+          <span class="t"><b>CSUN · 28 ago</b><small>Primer partido de la temporada, en casa. 1 kill.</small></span>
+          <span class="pt">2,0<small>puntos · 1:58</small></span></a></li>
+        <li><a href="https://www.youtube.com/watch?v=UCM2S69vaAc" target="_blank" rel="noopener">
+          <img class="mini" src="img/p_h7_wichita_state_0904.jpg" alt="Fotograma del reel contra Wichita State" loading="lazy">
+          <span class="t"><b>Wichita State · 4 sep</b><small>Barrida en tres sets del Buffs Invite.</small></span>
+          <span class="pt">1,5<small>puntos · 2:39</small></span></a></li>
+        <li><a href="https://www.youtube.com/watch?v=5x6RSsB1dEE" target="_blank" rel="noopener">
+          <img class="mini" src="img/p_h6_central_arkansas_0829.jpg" alt="Fotograma del reel contra Central Arkansas" loading="lazy">
+          <span class="t"><b>Central Arkansas · 29 ago</b><small>Segunda victoria del curso, también en tres sets.</small></span>
+          <span class="pt">1,0<small>puntos · 1:40</small></span></a></li>
+      </ul>
+
+      <h3 class="sub">El reportaje</h3>
+      <div class="feature">
+        <div class="shot">
+          <img src="img/p_pr1_reunion_ines_y_tinons_1006.jpg" alt="Inés Losada y Tinons Munar Galmes sentadas en el banquillo del CU Events Center" loading="lazy">
+        </div>
+        <div class="txt">
+          <span class="eyebrow">6 de octubre · 1:29</span>
+          <h3>«De vidas separadas a un reencuentro en las montañas»</h3>
+          <p>
+            Inés y Tinons Munar Galmes se conocen desde antes de vestir el «Colorado» en el pecho:
+            fueron compañeras en la selección española. El reportaje de CU cuenta cómo acabaron
+            juntas, a 8.000 kilómetros de casa, en la misma plantilla y en el mismo pueblo.
+          </p>
+          <p style="margin-top:16px">
+            <a class="btn" href="https://www.youtube.com/watch?v=f8qFyS6MnM0" target="_blank" rel="noopener">Ver el reportaje en YouTube <span aria-hidden="true">→</span></a>
+          </p>
+        </div>
+      </div>
+
+      <h3 class="sub">Salas de prensa</h3>
+      <ul class="compact">
+        <li><a href="https://www.youtube.com/watch?v=sT2RtbC1oBE" target="_blank" rel="noopener">
+          <img class="mini" src="img/p_r2_colorado_state_0917.jpg" alt="Sala de prensa del partido contra Colorado State" loading="lazy">
+          <span class="t"><b>Posterior a Colorado State · 17 sep</b><small>Inés en el panel, con la camiseta blanca del 8.</small></span>
+          <span class="pt">13,0<small>puntos · 10:25</small></span></a></li>
+        <li><a href="https://www.youtube.com/watch?v=rkO3mYflJM8" target="_blank" rel="noopener">
+          <img class="mini" src="img/p_r3_kansas_state_1011.jpg" alt="Sala de prensa del partido contra Kansas State" loading="lazy">
+          <span class="t"><b>Posterior a Kansas State · 11 oct</b><small>Rueda de prensa tras la remontada 3-2.</small></span>
+          <span class="pt">16,5<small>puntos · 8:00</small></span></a></li>
+        <li><a href="https://www.youtube.com/watch?v=R2tHpvUFPko" target="_blank" rel="noopener">
+          <img class="mini" src="img/p_r1_northern_colorado_0906.jpg" alt="Sala de prensa del partido contra Northern Colorado" loading="lazy">
+          <span class="t"><b>Posterior a Northern Colorado · 6 sep</b><small>La rueda de prensa de su mejor partido del curso.</small></span>
+          <span class="pt">19,0<small>puntos · 6:35</small></span></a></li>
+      </ul>
+
+      <p class="buyline">
+        Si te ha gustado lo que hace en la pista, la camiseta negra con su 8 está en
+        <a href="https://nil.store/colorado/col-ines-losada-8" target="_blank" rel="noopener">su locker room de la NIL Store →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= GALERÍA ================= -->
+  <section class="gal" id="galeria" data-amb="team">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow">Galería</p>
+          <h2 class="h2">El 8 en la pista</h2>
+        </div>
+        <p class="small">
+          Fotos de Colorado Athletics, más una de prensa gallega con la selección española.
+          Los créditos están al final de la página.
+        </p>
+      </div>
+
+      <div class="grid">
+        <figure class="w3 wide">
+          <img src="img/g_spike.jpg" alt="Inés Losada rematando con la camiseta negra del 8 de Colorado" loading="lazy">
+          <figcaption>Remate con la equipación negra. Foto: Colorado Athletics / cubuffs.com</figcaption>
+        </figure>
+        <figure class="w3 wide">
+          <img src="img/g_csu.jpg" alt="El equipo de Colorado celebrando en corro tras ganar a Colorado State" loading="lazy">
+          <figcaption>El corro tras ganar el derbi a Colorado State (17 sep), el 9-0 histórico.
+            Foto: Colorado Athletics / cubuffs.com</figcaption>
+        </figure>
+
+        <figure class="w2 tall">
+          <img src="img/portrait.jpg" alt="Ficha oficial de Inés Losada con la camiseta del número 8 de Colorado" loading="lazy">
+          <figcaption>Ficha oficial de la temporada 2026. Foto: Colorado Athletics / cubuffs.com</figcaption>
+        </figure>
+        <figure class="w4 r43">
+          <img src="img/g_team.jpg" alt="La plantilla de voleibol de Colorado celebrando en la pista" loading="lazy">
+          <figcaption>La plantilla en el CU Events Center. Foto: Colorado Athletics / cubuffs.com</figcaption>
+        </figure>
+
+        <figure class="w2 sq">
+          <img src="img/g_detail.jpg" alt="Detalle del dorsal y las mangas doradas de la camiseta negra de Colorado" loading="lazy">
+          <figcaption>Oro sobre negro. Foto: Colorado Athletics / cubuffs.com</figcaption>
+        </figure>
+        <figure class="w4 r21">
+          <img src="img/g_esp.jpg" alt="La selección española sub-19 en un partido del Mundial" loading="lazy">
+          <figcaption>Con España en el Mundial Sub-19 de 2025. Foto: La Opinión A Coruña / Prensa Ibérica</figcaption>
+        </figure>
+      </div>
+
+      <p class="buyline">
+        Ese dorsal se lleva:
+        <a href="https://nil.store/colorado/col-ines-losada-8" target="_blank" rel="noopener">camiseta Losada 8 en su locker room →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= TRAYECTORIA ================= -->
+  <section id="trayectoria" data-amb="team">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow">Trayectoria</p>
+          <h2 class="h2">De A Coruña a Boulder</h2>
+        </div>
+        <p class="small">
+          Cuatro etapas antes de cruzar el Atlántico, y un palmarés que empieza a los 14 años.
+        </p>
+      </div>
+
+      <div class="two">
+        <ol class="steps">
+          <li>
+            <span class="yr">Hasta los 14 · A Coruña</span>
+            <h3>Formación en Galicia</h3>
+            <p>Empieza en el voleibol gallego, donde llama la atención de los técnicos de la
+              federación española.</p>
+          </li>
+          <li>
+            <span class="yr">Con 14 años · Soria</span>
+            <h3>CAEP Soria</h3>
+            <p>Entra en la concentración permanente de Soria. En la Superliga 2 de 2023-24 acaba
+              como máxima anotadora: 431 puntos en 22 partidos.</p>
+          </li>
+          <li>
+            <span class="yr">2024-25 · A Coruña</span>
+            <h3>CV Zalaeta</h3>
+            <p>Vuelve a casa para jugar en la Superliga con el club de su ciudad, ya con la
+              selección española en el punto de mira.</p>
+          </li>
+          <li>
+            <span class="yr">2025 - hoy · Boulder, Colorado</span>
+            <h3>Colorado Buffaloes</h3>
+            <p>Beca en la División I de la NCAA, en la Big 12. «Freshman» en 2025 con 21 partidos y
+              65 sets; en 2026, una de las puntas de referencia del equipo.</p>
+          </li>
+        </ol>
+
+        <ul class="pal">
+          <li><span class="y">2022-23</span><span><b>Mejor receptora del WEVZA Sub-17</b>
+            <small>Y siete ideal del torneo de Grünheide (Alemania), enero de 2023.</small></span></li>
+          <li><span class="y">2023-24</span><span><b>Máxima anotadora de la Superliga 2</b>
+            <small>431 puntos en 22 partidos con el CAEP Soria, mejor registro de su grupo.</small></span></li>
+          <li><span class="y">2024</span><span><b>Campeona de España júnior</b>
+            <small>Con el Arenal Emevé, en la final disputada el 19 de mayo de 2024 en Las Palmas.</small></span></li>
+          <li><span class="y">2024</span><span><b>Subcampeona de España cadete</b>
+            <small>Con el JAV Olímpico.</small></span></li>
+          <li><span class="y">2025</span><span><b>Mundial Sub-19 de la FIVB con España</b>
+            <small>120 puntos y un 40,52% de eficacia en ataque.</small></span></li>
+          <li><span class="y">2025</span><span><b>Debut en la NCAA</b>
+            <small>37,5 puntos, 21 partidos, 65 sets y 20 aces en su primera temporada.</small></span></li>
+          <li><span class="y">2026</span><span><b>Récord personal con los Buffaloes</b>
+            <small>19,0 puntos ante Northern Colorado (6 sep): kills, aces y bloqueos.</small></span></li>
+        </ul>
+      </div>
+
+      <p class="small mono" style="margin-top:clamp(26px,3.5vw,44px)">
+        Carrera NCAA: 34 partidos · 103 sets · 130,5 puntos · 78 kills · 42 aces · 43 digs · 10,5 bloqueos.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= SELECCIÓN ================= -->
+  <section class="nat" id="seleccion" data-amb="esp">
+    <div class="wrap">
+      <div class="box">
+        <div>
+          <p class="eyebrow">Selección española</p>
+          <h2 class="h2">La camiseta roja</h2>
+          <p class="lead" style="margin-top:20px">
+            Antes de Boulder hubo España. Con la Sub-17 fue elegida mejor receptora del torneo WEVZA
+            de Grünheide y entró en el siete ideal. Con la Sub-19 jugó el Mundial de la FIVB de 2025,
+            donde terminó con 120 puntos y un 40,52% de eficacia en ataque.
+          </p>
+          <div class="kpis">
+            <div><b>120</b><small>Puntos en el Mundial Sub-19</small></div>
+            <div><b>40,52%</b><small>Eficacia en ataque</small></div>
+            <div><b>7 ideal</b><small>WEVZA Sub-17, 2023</small></div>
+            <div><b>2</b><small>Títulos de España de base</small></div>
+          </div>
+        </div>
+        <figure>
+          <img src="img/g_esp.jpg" alt="Inés Losada con la selección española sub-19 durante el Mundial de 2025" loading="lazy">
+          <figcaption class="small" style="margin-top:10px">
+            Foto: La Opinión A Coruña / Prensa Ibérica.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TIENDA ================= -->
+  <section class="store" id="tienda">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow">Tienda oficial de los Buffaloes</p>
+          <h2 class="h2">Vístete el 8</h2>
+        </div>
+        <p class="small">
+          La equipación y el merchandising salen de la tienda oficial de Colorado Athletics.
+          Los enlaces se abren en una pestaña nueva.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="shop lead">
+          <span class="k">NIL Store · su locker room</span>
+          <h3>La camiseta de Inés</h3>
+          <p>
+            Su página oficial en la NIL Store: la camiseta negra de Colorado con el apellido LOSADA
+            y el dorsal 8, más el resto de su línea de voleibol. Cada compra va a la jugadora.
+          </p>
+          <a class="btn solid" href="https://nil.store/colorado/col-ines-losada-8" target="_blank" rel="noopener">
+            Ir a su locker room <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="shop">
+          <span class="k">NIL Store · plantilla</span>
+          <h3>La tienda de las jugadoras</h3>
+          <p>
+            El NIL Store de Colorado reúne el merchandising firmado por las jugadoras: camisetas y
+            sudaderas con su nombre, y cada compra va a la deportista.
+          </p>
+          <a class="btn" href="https://nil.store/colorado/sports/womens-volleyball" target="_blank" rel="noopener">
+            Ver la colección <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="shop">
+          <span class="k">NIL · Pick-A-Player</span>
+          <h3>Camiseta de voleibol de Colorado</h3>
+          <p>
+            La camiseta NIL de voleibol femenino de los Buffaloes, en la que se elige jugadora en la
+            ficha del producto. Busca el dorsal 8: es el de Inés.
+          </p>
+          <a class="btn" href="https://shop.cubuffs.com/unisex-gameday-greats-black-colorado-buffaloes-nil-pick-a-player-collegiate-womens-volleyball-lightweight-fashion-jersey/p-358869504121592120+z-98-911091835" target="_blank" rel="noopener">
+            Ir a la tienda oficial <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <p class="note">
+        Enlaces comprobados el 14 de octubre de 2026. También hay camisetas de voleibol en la
+        <a href="https://shop.cubuffs.com/colorado-buffaloes/jerseys/t-12602597+d-86776790+z-995-3679135264" target="_blank" rel="noopener" style="color:var(--gold-hi);border-bottom:1px solid var(--line)">sección de equipaciones</a>
+        de la tienda oficial.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h4>Seguir al equipo</h4>
+        <ul>
+          <li><a href="https://cubuffs.com/sports/womens-volleyball" target="_blank" rel="noopener">Voleibol femenino · cubuffs.com</a></li>
+          <li><a href="https://cubuffs.com/sports/womens-volleyball/roster" target="_blank" rel="noopener">Plantilla 2026</a></li>
+          <li><a href="https://cubuffs.com/sports/womens-volleyball/stats" target="_blank" rel="noopener">Estadísticas de la temporada</a></li>
+          <li><a href="https://www.youtube.com/channel/UCeTemrMnh7mAtN99BD6jo4Q" target="_blank" rel="noopener">Canal BuffsTV en YouTube</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Crónicas de sus partidos</h4>
+        <ul>
+          <li><a href="https://cubuffs.com/news/2026/10/11/volleyball-no-23-colorado-reverse-sweeps-kansas-state" target="_blank" rel="noopener">Remontada 3-2 a Kansas State (11 oct)</a></li>
+          <li><a href="https://cubuffs.com/news/2026/10/4/volleyball-no-24-colorado-dominates-first-two-sets-to-upset-no-21-baylor" target="_blank" rel="noopener">Victoria ante el nº 21 Baylor (4 oct)</a></li>
+          <li><a href="https://cubuffs.com/news/2026/10/6/volleyball-from-miles-apart-to-amountain-town-reunion" target="_blank" rel="noopener">El reencuentro con Tinons (6 oct)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Tienda</h4>
+        <ul>
+          <li><a href="https://nil.store/colorado/col-ines-losada-8" target="_blank" rel="noopener">Locker room de Inés Losada · NIL Store</a></li>
+          <li><a href="https://shop.cubuffs.com/" target="_blank" rel="noopener">Tienda oficial de los Buffaloes</a></li>
+          <li><a href="https://nil.store/colorado/sports/womens-volleyball" target="_blank" rel="noopener">NIL Store · voleibol femenino</a></li>
+          <li><a href="https://shop.cubuffs.com/colorado-buffaloes/jerseys/t-12602597+d-86776790+z-995-3679135264" target="_blank" rel="noopener">Equipaciones de Colorado</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="legal">
+      <strong style="color:var(--paper);font-weight:600">Créditos.</strong>
+      Vídeos: canal oficial <em>BuffsTV</em> de Colorado Athletics en YouTube; aquí solo se enlazan.
+      Fotos: Colorado Athletics / cubuffs.com, salvo la imagen de la selección española, de
+      La Opinión A Coruña / Prensa Ibérica, incluida como cobertura periodística del Mundial Sub-19 de 2025.
+      Estadísticas: actas y páginas oficiales de cubuffs.com, consultadas el 14 de octubre de 2026.
+      <br><br>
+      Página no oficial, hecha como homenaje para Inés Losada. No está vinculada a la Universidad de
+      Colorado, a CU Athletics ni a ninguna de las marcas citadas. En las ruedas de prensa, la
+      identificación de Inés se hizo por el dorsal de la camiseta y el cotejo con su ficha oficial:
+      la certeza es alta en la de Colorado State y media en las de Northern Colorado y Kansas State.
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* =======================================================================
+     IDIOMA · ES por defecto, EN a un clic, y el idioma del navegador manda
+     la primera vez. Todo el texto vive en el HTML en español y de ahí se
+     indexa: cada nodo guarda su original y el diccionario solo traduce al
+     inglés, así que volver al español es restaurar, no adivinar.
+     ======================================================================= */
+  var EN = {
+    /* barra */
+    "Temporada":"Season","Vídeos":"Videos","Galería":"Gallery","Trayectoria":"Career",
+    "Selección":"Spain","Tienda":"Store",
+    /* hero */
+    "Colorado Buffaloes · Voleibol · Big 12":"Colorado Buffaloes · Volleyball · Big 12",
+    "Punta receptora":"Outside hitter","Dorsal 8":"Jersey 8","1,86 m":"6'1\"",
+    "De la Superliga 2 al Mundial Sub-19 con España y de ahí a Colorado. En su segunda temporada con los Buffaloes es una de las puntas que sostienen el ataque del equipo y una de las voces que la Universidad pone delante de la cámara.":
+      "From Superliga 2 to the U19 World Championship with Spain and on to Colorado. In her second season with the Buffaloes she is one of the outside hitters carrying the team's attack, and one of the voices the University puts in front of the camera.",
+    "Puntos · 2026":"Points · 2026","Puntos · carrera NCAA":"Points · NCAA career",
+    "Eficacia · Mundial S19":"Efficiency · U19 World Ch.",
+    "Sus mejores partidos":"Her best matches","Tienda oficial":"Official store",
+    "Camiseta":"Jersey","Camiseta de Inés":"Inés's jersey",
+    /* franja promocional */
+    "Su locker room oficial · NIL Store":"Her official locker room · NIL Store",
+    "Lleva el 8":"Wear the 8",
+    "La camiseta negra de Colorado con el apellido LOSADA y el dorsal 8, y el resto de su línea, en su página de la NIL Store. Cada compra va directa a la jugadora.":
+      "The black Colorado jersey with LOSADA and the No. 8 on the back, and the rest of her line, on her NIL Store page. Every purchase goes straight to the player.",
+    "Ver la camiseta":"See the jersey",
+    /* líneas de compra */
+    "Si te ha gustado lo que hace en la pista, la camiseta negra con su 8 está en":"If you liked what she does on the court, the black jersey with her 8 is in",
+    "su locker room de la NIL Store →":"her NIL Store locker room →",
+    "Ese dorsal se lleva:":"That number is wearable:",
+    "camiseta Losada 8 en su locker room →":"Losada 8 jersey in her locker room →",
+    "Temporada 2026 · CU Events Center":"2026 season · CU Events Center",
+    /* ficha */
+    "Dorsal":"Jersey","Puesto":"Position","Altura":"Height","Equipo":"Team","Origen":"Hometown",
+    "España":"Spain","Temporada 2026":"2026 season","13 partidos":"13 matches",
+    "38 sets hasta el 11 oct":"38 sets through Oct 11",
+    /* temporada */
+    "Temporada 2026 · datos de las actas oficiales":"2026 season · official box scores",
+    "Lo que firma cada noche":"What she signs every night",
+    "13 de los 16 partidos del equipo hasta el 11 de octubre de 2026, cuando los Buffaloes eran el número 23 del ranking nacional. Media de 2,4 puntos por set.":
+      "13 of the team's 16 matches through 11 October 2026, when the Buffaloes were ranked No. 23 in the nation. An average of 2.4 points per set.",
+    "Puntos":"Points","Bloqueos":"Blocks","Puntos por partido":"Points per match",
+    "Puntos = kills + aces + bloqueos (0,5 por bloqueo asistido). Las cinco primeras líneas son sus mejores partidos del curso; las que llevan la marca «vídeo» tienen reel publicado en el canal de los Buffaloes.":
+      "Points = kills + aces + blocks (0.5 per assisted block). The first five rows are her best matches of the season; the ones marked “video” have a highlight reel on the Buffaloes' channel.",
+    "6 sep":"Sep 6","4 oct":"Oct 4","11 oct":"Oct 11","17 sep":"Sep 17","2 oct":"Oct 2",
+    "9 oct":"Oct 9","11 sep":"Sep 11","25 sep":"Sep 25","28 ago":"Aug 28","4 sep":"Sep 4",
+    "29 ago":"Aug 29","12 sep":"Sep 12","18 sep":"Sep 18",
+    "vídeo":"video","Sin puntos ·":"No points ·","Sin puntos":"No points",
+    "93,0":"93.0","130,5":"130.5","40,52%":"40.52%","9,0":"9.0","19,0":"19.0","16,5":"16.5",
+    "13,0":"13.0","12,0":"12.0","6,0":"6.0","3,0":"3.0","2,5":"2.5","2,0":"2.0","1,5":"1.5",
+    "1,0":"1.0","0,0":"0.0",
+    /* vídeos */
+    "BuffsTV · canal oficial de Colorado Athletics":"BuffsTV · Colorado Athletics' official channel",
+    "Momentazos":"Big nights",
+    "Cuatro partidos en los que fue protagonista, ordenados por los puntos que firmó. Cada tarjeta abre el vídeo completo en YouTube.":
+      "Four matches in which she was the story, ordered by the points she scored. Each card opens the full video on YouTube.",
+    "19,0 pts":"19.0 pts","16,5 pts":"16.5 pts","13,0 pts":"13.0 pts",
+    "6 de septiembre. Su mejor partido del curso: 14 kills y 5 aces en la remontada a cinco sets (15-25, 25-20, 16-25, 25-9, 15-6). Habló después en la sala de prensa.":
+      "6 September. Her best match of the season: 14 kills and 5 aces in the five-set comeback (15-25, 25-20, 16-25, 25-9, 15-6). She spoke afterwards in the press room.",
+    "4 de octubre, en Waco. 10 kills y 5 aces para tumbar al número 21 del país fuera de casa en el Ferrell Center.":
+      "4 October, in Waco. 10 kills and 5 aces to take down the No. 21 team in the country on the road at the Ferrell Center.",
+    "11 de octubre. 11 kills, 21 ataques y .333 en la remontada 3-2 en el CU Events Center. Volvió a la sala de prensa con el equipo.":
+      "11 October. 11 kills on 21 swings at .333 in the 3-2 comeback at the CU Events Center. She went back to the press room with the team.",
+    "17 de septiembre. 10 kills en el derbi del estado, la noche en que el 9-0 de las Buffs igualó el mejor arranque de su historia.":
+      "17 September. 10 kills in the in-state derby, the night the Buffs' 9-0 start matched the best in program history.",
+    "Ver en YouTube":"Watch on YouTube",
+    "El resto de la temporada":"The rest of the season",
+    "#16 USC · 12 sep":"#16 USC · Sep 12",
+    "Victoria en el Galen Center. Reel completo; su aparición es breve.":"A win at the Galen Center. Full match reel; her appearance is brief.",
+    "CSUN · 28 ago":"CSUN · Aug 28",
+    "Primer partido de la temporada, en casa. 1 kill.":"First match of the season, at home. 1 kill.",
+    "Wichita State · 4 sep":"Wichita State · Sep 4",
+    "Barrida en tres sets del Buffs Invite.":"A three-set sweep at the Buffs Invite.",
+    "Central Arkansas · 29 ago":"Central Arkansas · Aug 29",
+    "Segunda victoria del curso, también en tres sets.":"Second win of the season, also in three sets.",
+    "puntos · 2:16":"pts · 2:16","puntos · 1:58":"pts · 1:58","puntos · 2:39":"pts · 2:39",
+    "puntos · 1:40":"pts · 1:40","puntos · 10:25":"pts · 10:25","puntos · 8:00":"pts · 8:00",
+    "puntos · 6:35":"pts · 6:35",
+    "El reportaje":"The feature","6 de octubre · 1:29":"October 6 · 1:29",
+    "«De vidas separadas a un reencuentro en las montañas»":"“From separate lives to a reunion in the mountains”",
+    "Inés y Tinons Munar Galmes se conocen desde antes de vestir el «Colorado» en el pecho: fueron compañeras en la selección española. El reportaje de CU cuenta cómo acabaron juntas, a 8.000 kilómetros de casa, en la misma plantilla y en el mismo pueblo.":
+      "Inés and Tinons Munar Galmes knew each other before they ever wore “Colorado” across their chests: they were team-mates on the Spain national team. CU's feature tells how they ended up together, 8,000 kilometres from home, on the same roster and in the same town.",
+    "Ver el reportaje en YouTube":"Watch the feature on YouTube",
+    "Salas de prensa":"Press conferences",
+    "Posterior a Colorado State · 17 sep":"Post-Colorado State · Sep 17",
+    "Inés en el panel, con la camiseta blanca del 8.":"Inés on the panel, in the white No. 8 jersey.",
+    "Posterior a Kansas State · 11 oct":"Post-Kansas State · Oct 11",
+    "Rueda de prensa tras la remontada 3-2.":"Press conference after the 3-2 comeback.",
+    "Posterior a Northern Colorado · 6 sep":"Post-Northern Colorado · Sep 6",
+    "La rueda de prensa de su mejor partido del curso.":"The press conference from her best match of the season.",
+    /* galería */
+    "El 8 en la pista":"The 8 on the court",
+    "Fotos de Colorado Athletics, más una de prensa gallega con la selección española. Los créditos están al final de la página.":
+      "Photos from Colorado Athletics, plus one from the Galician press with the Spain national team. Credits are at the foot of the page.",
+    "Remate con la equipación negra. Foto: Colorado Athletics / cubuffs.com":"Attacking in the black kit. Photo: Colorado Athletics / cubuffs.com",
+    "El corro tras ganar el derbi a Colorado State (17 sep), el 9-0 histórico. Foto: Colorado Athletics / cubuffs.com":
+      "The huddle after beating Colorado State in the derby (Sep 17), the historic 9-0 start. Photo: Colorado Athletics / cubuffs.com",
+    "Ficha oficial de la temporada 2026. Foto: Colorado Athletics / cubuffs.com":"Official 2026 season portrait. Photo: Colorado Athletics / cubuffs.com",
+    "La plantilla en el CU Events Center. Foto: Colorado Athletics / cubuffs.com":"The roster at the CU Events Center. Photo: Colorado Athletics / cubuffs.com",
+    "Oro sobre negro. Foto: Colorado Athletics / cubuffs.com":"Gold on black. Photo: Colorado Athletics / cubuffs.com",
+    "Con España en el Mundial Sub-19 de 2025. Foto: La Opinión A Coruña / Prensa Ibérica":"With Spain at the 2025 U19 World Championship. Photo: La Opinión A Coruña / Prensa Ibérica",
+    /* trayectoria */
+    "De A Coruña a Boulder":"From A Coruña to Boulder",
+    "Cuatro etapas antes de cruzar el Atlántico, y un palmarés que empieza a los 14 años.":
+      "Four stages before crossing the Atlantic, and a record that starts at 14.",
+    "Hasta los 14 · A Coruña":"Up to 14 · A Coruña","Formación en Galicia":"Training in Galicia",
+    "Empieza en el voleibol gallego, donde llama la atención de los técnicos de la federación española.":
+      "She starts out in Galician volleyball, where she catches the eye of the Spanish federation's coaches.",
+    "Con 14 años · Soria":"Aged 14 · Soria",
+    "Entra en la concentración permanente de Soria. En la Superliga 2 de 2023-24 acaba como máxima anotadora: 431 puntos en 22 partidos.":
+      "She joins the permanent training centre in Soria. In the 2023-24 Superliga 2 she finishes as the top scorer: 431 points in 22 matches.",
+    "2025 - hoy · Boulder, Colorado":"2025 – present · Boulder, Colorado",
+    "Vuelve a casa para jugar en la Superliga con el club de su ciudad, ya con la selección española en el punto de mira.":
+      "She comes home to play in the top flight with her city's club, already on the Spain national team's radar.",
+    "Beca en la División I de la NCAA, en la Big 12. «Freshman» en 2025 con 21 partidos y 65 sets; en 2026, una de las puntas de referencia del equipo.":
+      "An NCAA Division I scholarship, in the Big 12. A freshman in 2025 with 21 matches and 65 sets; in 2026, one of the team's go-to outside hitters.",
+    "Mejor receptora del WEVZA Sub-17":"Best receiver at the WEVZA U17",
+    "Y siete ideal del torneo de Grünheide (Alemania), enero de 2023.":"And a place in the tournament's All-Star seven at Grünheide (Germany), January 2023.",
+    "Máxima anotadora de la Superliga 2":"Top scorer in Superliga 2",
+    "431 puntos en 22 partidos con el CAEP Soria, mejor registro de su grupo.":"431 points in 22 matches for CAEP Soria, the best mark in her group.",
+    "Campeona de España júnior":"Spanish junior champion",
+    "Con el Arenal Emevé, en la final disputada el 19 de mayo de 2024 en Las Palmas.":"With Arenal Emevé, in the final played on 19 May 2024 in Las Palmas.",
+    "Subcampeona de España cadete":"Spanish cadet runner-up","Con el JAV Olímpico.":"With JAV Olímpico.",
+    "Mundial Sub-19 de la FIVB con España":"FIVB U19 World Championship with Spain",
+    "120 puntos y un 40,52% de eficacia en ataque.":"120 points and a 40.52% hitting efficiency.",
+    "Debut en la NCAA":"NCAA debut",
+    "37,5 puntos, 21 partidos, 65 sets y 20 aces en su primera temporada.":"37.5 points, 21 matches, 65 sets and 20 aces in her first season.",
+    "Récord personal con los Buffaloes":"Career high with the Buffaloes",
+    "19,0 puntos ante Northern Colorado (6 sep): kills, aces y bloqueos.":"19.0 points against Northern Colorado (Sep 6): kills, aces and blocks.",
+    "Carrera NCAA: 34 partidos · 103 sets · 130,5 puntos · 78 kills · 42 aces · 43 digs · 10,5 bloqueos.":
+      "NCAA career: 34 matches · 103 sets · 130.5 points · 78 kills · 42 aces · 43 digs · 10.5 blocks.",
+    /* selección */
+    "Selección española":"Spain national team","La camiseta roja":"The red jersey",
+    "Antes de Boulder hubo España. Con la Sub-17 fue elegida mejor receptora del torneo WEVZA de Grünheide y entró en el siete ideal. Con la Sub-19 jugó el Mundial de la FIVB de 2025, donde terminó con 120 puntos y un 40,52% de eficacia en ataque.":
+      "Before Boulder there was Spain. With the U17 she was named best receiver at the WEVZA tournament in Grünheide and made the All-Star seven. With the U19 she played the 2025 FIVB World Championship, finishing with 120 points and a 40.52% hitting efficiency.",
+    "Puntos en el Mundial Sub-19":"Points at the U19 World Championship",
+    "Eficacia en ataque":"Hitting efficiency","7 ideal":"All-Star seven",
+    "Títulos de España de base":"Spanish youth titles",
+    /* tienda */
+    "Tienda oficial de los Buffaloes":"Official Buffaloes store","Vístete el 8":"Wear the 8",
+    "La equipación y el merchandising salen de la tienda oficial de Colorado Athletics. Los enlaces se abren en una pestaña nueva.":
+      "Kit and merchandise come from the official Colorado Athletics store. Links open in a new tab.",
+    "Camiseta de voleibol de Colorado":"Colorado volleyball jersey",
+    "NIL Store · su locker room":"NIL Store · her locker room",
+    "La camiseta de Inés":"Inés's jersey",
+    "Su página oficial en la NIL Store: la camiseta negra de Colorado con el apellido LOSADA y el dorsal 8, más el resto de su línea de voleibol. Cada compra va a la jugadora.":
+      "Her official NIL Store page: the black Colorado jersey with LOSADA and the No. 8 on the back, plus the rest of her volleyball line. Every purchase goes to the player.",
+    "Ir a su locker room":"Go to her locker room",
+    "Locker room de Inés Losada · NIL Store":"Inés Losada's locker room · NIL Store",
+    "La camiseta NIL de voleibol femenino de los Buffaloes, en la que se elige jugadora en la ficha del producto. Busca el dorsal 8: es el de Inés.":
+      "The Buffaloes' women's volleyball NIL jersey, in which you pick the player on the product page. Look for jersey 8: that's Inés.",
+    "Ir a la tienda oficial":"Go to the official store",
+    "NIL Store · plantilla":"NIL Store · roster","La tienda de las jugadoras":"The players' store",
+    "El NIL Store de Colorado reúne el merchandising firmado por las jugadoras: camisetas y sudaderas con su nombre, y cada compra va a la deportista.":
+      "Colorado's NIL Store gathers merchandise signed by the players: jerseys and sweatshirts with their names, with every purchase going to the athlete.",
+    "Ver la colección":"See the volleyball collection",
+    "Enlaces comprobados el 14 de octubre de 2026. También hay camisetas de voleibol en la":"Links checked on 14 October 2026. There are also volleyball jerseys in the",
+    "sección de equipaciones":"jerseys section","de la tienda oficial.":"of the official store.",
+    /* pie */
+    "Seguir al equipo":"Follow the team","Voleibol femenino · cubuffs.com":"Women's volleyball · cubuffs.com",
+    "Plantilla 2026":"2026 roster","Estadísticas de la temporada":"Season statistics",
+    "Canal BuffsTV en YouTube":"BuffsTV channel on YouTube",
+    "Crónicas de sus partidos":"Match reports",
+    "Remontada 3-2 a Kansas State (11 oct)":"3-2 comeback over Kansas State (Oct 11)",
+    "Victoria ante el nº 21 Baylor (4 oct)":"Win over No. 21 Baylor (Oct 4)",
+    "El reencuentro con Tinons (6 oct)":"The reunion with Tinons (Oct 6)",
+    "NIL Store · voleibol femenino":"NIL Store · women's volleyball",
+    "Equipaciones de Colorado":"Colorado jerseys",
+    "Créditos.":"Credits.","Vídeos: canal oficial":"Video: the official",
+    "de Colorado Athletics en YouTube; aquí solo se enlazan. Fotos: Colorado Athletics / cubuffs.com, salvo la imagen de la selección española, de La Opinión A Coruña / Prensa Ibérica, incluida como cobertura periodística del Mundial Sub-19 de 2025. Estadísticas: actas y páginas oficiales de cubuffs.com, consultadas el 14 de octubre de 2026.":
+      "channel of Colorado Athletics on YouTube; here they are only linked. Photos: Colorado Athletics / cubuffs.com, except the Spain national team image, from La Opinión A Coruña / Prensa Ibérica, included as press coverage of the 2025 U19 World Championship. Statistics: official box scores and pages from cubuffs.com, consulted on 14 October 2026.",
+    "Página no oficial, hecha como homenaje para Inés Losada. No está vinculada a la Universidad de Colorado, a CU Athletics ni a ninguna de las marcas citadas. En las ruedas de prensa, la identificación de Inés se hizo por el dorsal de la camiseta y el cotejo con su ficha oficial: la certeza es alta en la de Colorado State y media en las de Northern Colorado y Kansas State.":
+      "Unofficial page, made as a tribute to Inés Losada. It is not affiliated with the University of Colorado, CU Athletics or any of the brands mentioned. In the press conferences, Inés was identified by the jersey number and by comparison with her official roster profile: certainty is high for the Colorado State one and moderate for the Northern Colorado and Kansas State ones."
+  };
+
+  var EN_ALT = {
+    "Inés Losada, con la camiseta blanca del 8 de Colorado, en pleno salto de remate en el CU Events Center":"Inés Losada, in Colorado's white No. 8 jersey, mid-air on a spike at the CU Events Center",
+    "Fotograma del reel: las Buffaloes celebrando en la pista":"Still from the reel: the Buffaloes celebrating on the court",
+    "Fotograma del reel: jugadoras de Colorado abrazadas tras el punto":"Still from the reel: Colorado players hugging after a point",
+    "Fotograma del reel: acción de red contra Kansas State":"Still from the reel: net play against Kansas State",
+    "Fotograma del reel: jugadoras de Colorado celebrando el punto":"Still from the reel: Colorado players celebrating a point",
+    "Fotograma del reel contra USC en el Galen Center":"Still from the reel against USC at the Galen Center",
+    "Fotograma del reel contra CSUN":"Still from the reel against CSUN",
+    "Fotograma del reel contra Wichita State":"Still from the reel against Wichita State",
+    "Fotograma del reel contra Central Arkansas":"Still from the reel against Central Arkansas",
+    "Inés Losada y Tinons Munar Galmes sentadas en el banquillo del CU Events Center":"Inés Losada and Tinons Munar Galmes sitting on the bench at the CU Events Center",
+    "Sala de prensa del partido contra Colorado State":"Press conference for the Colorado State match",
+    "Sala de prensa del partido contra Kansas State":"Press conference for the Kansas State match",
+    "Sala de prensa del partido contra Northern Colorado":"Press conference for the Northern Colorado match",
+    "Inés Losada rematando con la camiseta negra del 8 de Colorado":"Inés Losada spiking in Colorado's black No. 8 jersey",
+    "El equipo de Colorado celebrando en corro tras ganar a Colorado State":"The Colorado team huddling after beating Colorado State",
+    "Ficha oficial de Inés Losada con la camiseta del número 8 de Colorado":"Inés Losada's official roster portrait in Colorado's No. 8 jersey",
+    "La plantilla de voleibol de Colorado celebrando en la pista":"The Colorado volleyball roster celebrating on the court",
+    "Detalle del dorsal y las mangas doradas de la camiseta negra de Colorado":"Close-up of the number and gold sleeves on Colorado's black jersey",
+    "La selección española sub-19 en un partido del Mundial":"The Spain U19 national team in a World Championship match",
+    "Inés Losada con la selección española sub-19 durante el Mundial de 2025":"Inés Losada with the Spain U19 national team at the 2025 World Championship"
+  };
+
+  var EN_ARIA = {"Secciones":"Sections","Ficha":"Player profile"};
+
+  /* índice de nodos de texto: guardo el original y su clave normalizada */
+  var nodos = [];
+  ['header','main','footer'].forEach(function(sel){
+    var raiz = document.querySelector(sel);
+    if(!raiz) return;
+    var it = document.createTreeWalker(raiz, NodeFilter.SHOW_TEXT, null);
+    var n;
+    while((n = it.nextNode())){
+      var p = n.parentNode;
+      if(!p || p.nodeName === 'SCRIPT' || p.nodeName === 'STYLE') continue;
+      var m = /^(\s*)([\s\S]*?)(\s*)$/.exec(n.nodeValue);
+      var clave = m[2].replace(/\s+/g, ' ').trim();
+      if(clave) nodos.push({n:n, pre:m[1], post:m[3], clave:clave, es:m[2]});
+    }
+  });
+  var altNodes = Array.prototype.map.call(document.querySelectorAll('img[alt]'), function(el){
+    return {el:el, es:el.getAttribute('alt')};
+  });
+  var ariaNodes = Array.prototype.map.call(document.querySelectorAll('[aria-label]'), function(el){
+    return {el:el, es:el.getAttribute('aria-label')};
+  });
+
+  function pinta(lang){
+    var en = lang === 'en';
+    nodos.forEach(function(o){
+      o.n.nodeValue = o.pre + (en && EN[o.clave] !== undefined ? EN[o.clave] : o.es) + o.post;
+    });
+    altNodes.forEach(function(o){
+      o.el.setAttribute('alt', en && EN_ALT[o.es] !== undefined ? EN_ALT[o.es] : o.es);
+    });
+    ariaNodes.forEach(function(o){
+      o.el.setAttribute('aria-label', en && EN_ARIA[o.es] !== undefined ? EN_ARIA[o.es] : o.es);
+    });
+    document.documentElement.lang = lang;
+    Array.prototype.forEach.call(document.querySelectorAll('.lang button'), function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.set === lang));
+    });
+  }
+
+  /* preferencia: la recordada, si no la del navegador, y si no español */
+  var LANG = /^en/i.test(navigator.language || '') ? 'en' : 'es';
+  try{
+    var guardado = localStorage.getItem('ines_lang');
+    if(guardado === 'es' || guardado === 'en') LANG = guardado;
+  }catch(e){}
+  pinta(LANG);
+  Array.prototype.forEach.call(document.querySelectorAll('.lang button'), function(b){
+    b.addEventListener('click', function(){
+      LANG = b.dataset.set;
+      pinta(LANG);
+      try{ localStorage.setItem('ines_lang', LANG); }catch(e){}
+    });
+  });
+
+  /* --- fondo ambiente: cruza las fotos según la sección visible --- */
+  var imgs = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.amb img'), function(i){
+    imgs[i.dataset.k] = i;
+  });
+  function ambient(key){
+    if(!imgs[key]) return;
+    for(var k in imgs){ imgs[k].classList.toggle('on', k === key); }
+  }
+  ambient('hero');
+
+  var sections = document.querySelectorAll('[data-amb]');
+  if('IntersectionObserver' in window && sections.length){
+    var best = null;
+    var io = new IntersectionObserver(function(){
+      var mid = window.innerHeight * 0.45, pick = 'hero', dist = Infinity;
+      Array.prototype.forEach.call(sections, function(s){
+        var r = s.getBoundingClientRect();
+        if(r.bottom < 0 || r.top > window.innerHeight) return;
+        var d = Math.abs(r.top - mid);
+        if(d < dist){ dist = d; pick = s.dataset.amb; }
+      });
+      ambient(pick);
+    }, {rootMargin:'-35% 0px -45% 0px', threshold:[0,.15,.5,1]});
+    Array.prototype.forEach.call(sections, function(s){ io.observe(s); });
+  }
+
+  /* --- barra superior --- */
+  var rail = document.getElementById('rail');
+  var hero = document.querySelector('.hero');
+  function railState(){
+    var past = window.scrollY > (hero ? hero.offsetHeight * 0.75 : 400);
+    rail.classList.toggle('on', past);
+  }
+  railState();
+
+  /* --- parallax suave del fondo --- */
+  var amb = document.querySelector('.amb'), last = -1, ticking = false;
+  function frame(){
+    ticking = false;
+    var y = Math.min(window.scrollY, 4000);
+    if(Math.abs(y - last) < 2) return;
+    last = y;
+    amb.style.transform = 'translate3d(0,' + (-y * 0.035).toFixed(2) + 'px,0)';
+  }
+  function onScroll(){
+    railState();
+    if(reduce) return;
+    if(!ticking){ ticking = true; window.requestAnimationFrame(frame); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* --- anclas suaves respetando el movimiento reducido --- */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var el = document.querySelector(a.getAttribute('href'));
+      if(!el) return;
+      e.preventDefault();
+      el.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'start'});
+      if(history.replaceState) history.replaceState(null, '', a.getAttribute('href'));
+    });
+  });
+})();
+</script>
+
+<!-- Contador de visitas. Solo existe en la version de GitHub Pages: dentro de un
+     Artifact no funcionaria, porque su politica de seguridad bloquea todo host que
+     no sea un CDN de su lista blanca. -->
+<div class="visits" id="contador" hidden>
+  <div class="wrap">
+    <span class="k">Visitas</span>
+    <b>0</b>
+  </div>
+</div>
+<script>
+(function(){
+  var caja = document.getElementById('contador');
+  if(!caja || !window.fetch) return;
+  var num = caja.querySelector('b');
+  var lab = caja.querySelector('.k');
+
+  /* El idioma lo decide el fragmento y lo deja escrito en el atributo lang del
+     documento, que es la unica fuente fiable: la primera visita la manda el idioma
+     del navegador y esa eleccion no siempre llega a guardarse en localStorage. */
+  function idioma(){
+    return /^en/i.test(document.documentElement.lang || '') ? 'en' : 'es';
+  }
+  function rotula(){
+    var en = idioma() === 'en';
+    lab.textContent = en ? 'Visits' : 'Visitas';
+    if(num.dataset.valor) num.textContent = Number(num.dataset.valor)
+      .toLocaleString(en ? 'en-US' : 'es-ES');
+  }
+
+  /* Una visita por pestana, para que recargar no infle la cifra. */
+  var contar = true;
+  try{
+    if(sessionStorage.getItem('ines_visita') === '1') contar = false;
+    else sessionStorage.setItem('ines_visita', '1');
+  }catch(e){}
+
+  rotula();
+  fetch('https://abacus.jasoncameron.dev/' + (contar ? 'hit' : 'get') + '/ines-losada-8/visitas')
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(d){
+      var n = parseInt(d && d.value, 10);
+      if(!isFinite(n)) return;
+      num.dataset.valor = n;
+      rotula();
+      caja.hidden = false;
+    })
+    .catch(function(){ /* sin red o servicio caido: la pagina se queda igual */ });
+
+  Array.prototype.forEach.call(document.querySelectorAll('.lang button'), function(b){
+    b.addEventListener('click', rotula);
+  });
+})();
+</script>
+</body>
+</html>
