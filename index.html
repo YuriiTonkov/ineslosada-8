@@ -224,13 +224,20 @@ main,.rail,footer{position:relative;z-index:2}
 .btn:hover{background:rgba(207,184,124,.12);border-color:var(--gold)}
 .btn.solid{background:var(--gold);border-color:var(--gold);color:#111}
 .btn.solid:hover{background:var(--gold-hi)}
+/* El retrato de la portada no lleva marco. La foto llega ya fundida en negro desde el
+   propio archivo (alfa de verdad, no un rectangulo), asi que se apoya en el fondo de la
+   pagina en vez de recortarse sobre el: no hay canto que se vea. El halo dorado de
+   detras es lo que impide que la figura flote en el vacio. */
 .hero .shot{position:relative;min-width:0}
-.hero .shot img{
-  width:100%;max-width:420px;margin-left:auto;border:1px solid var(--line);
-  filter:contrast(1.04) saturate(1.02);
+.hero .shot::before{
+  content:"";position:absolute;z-index:0;pointer-events:none;
+  left:50%;top:46%;width:min(100%,540px);aspect-ratio:1;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(circle,rgba(207,184,124,.17) 0%,rgba(207,184,124,.05) 40%,transparent 68%);
 }
+.hero .shot img{position:relative;z-index:1;display:block;width:100%;max-width:470px;margin-left:auto}
 .hero .shot figcaption{
-  max-width:420px;margin:10px 0 0 auto;font-family:var(--font-mono);
+  max-width:470px;margin:10px 0 0 auto;font-family:var(--font-mono);
   font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:right;
 }
 
@@ -553,9 +560,9 @@ html{-webkit-text-size-adjust:100%%}
         </div>
       </div>
       <figure class="shot">
-        <img src="img/hero.jpg" width="1040" height="1356"
-             alt="Inés Losada, con la camiseta blanca del 8 de Colorado, en pleno salto de remate en el CU Events Center">
-        <figcaption>Temporada 2026 · CU Events Center</figcaption>
+        <img src="img/saque.webp" width="880" height="1033"
+             alt="Inés Losada sacando desde el fondo de la pista, con la camiseta negra del 8 de Colorado">
+        <figcaption>Saque · Kansas State, 11 de octubre de 2026</figcaption>
       </figure>
     </div>
   </section>
@@ -1113,7 +1120,7 @@ html{-webkit-text-size-adjust:100%%}
     "su locker room de la NIL Store →":"her NIL Store locker room →",
     "Ese dorsal se lleva:":"That number is wearable:",
     "camiseta Losada 8 en su locker room →":"Losada 8 jersey in her locker room →",
-    "Temporada 2026 · CU Events Center":"2026 season · CU Events Center",
+    "Saque · Kansas State, 11 de octubre de 2026":"Serve · Kansas State, 11 October 2026",
     /* ficha */
     "Dorsal":"Jersey","Puesto":"Position","Altura":"Height","Equipo":"Team","Origen":"Hometown",
     "España":"Spain","Temporada 2026":"2026 season","13 partidos":"13 matches",
@@ -1269,7 +1276,7 @@ html{-webkit-text-size-adjust:100%%}
   };
 
   var EN_ALT = {
-    "Inés Losada, con la camiseta blanca del 8 de Colorado, en pleno salto de remate en el CU Events Center":"Inés Losada, in Colorado's white No. 8 jersey, mid-air on a spike at the CU Events Center",
+    "Inés Losada sacando desde el fondo de la pista, con la camiseta negra del 8 de Colorado":"Inés Losada serving from the back of the court in Colorado's black No. 8 jersey",
     "Fotograma del reel: las Buffaloes celebrando en la pista":"Still from the reel: the Buffaloes celebrating on the court",
     "Fotograma del reel: jugadoras de Colorado abrazadas tras el punto":"Still from the reel: Colorado players hugging after a point",
     "Fotograma del reel: acción de red contra Kansas State":"Still from the reel: net play against Kansas State",
