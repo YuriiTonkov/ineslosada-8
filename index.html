@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Fan zone de Inés Losada, la punta española (#8) de los Colorado Buffaloes: sus números, sus mejores partidos y su camiseta oficial.">
+<meta name="description" content="Fan zone de Inés Losada, punta de los Colorado Buffaloes e internacional con la selección española: sus números, sus mejores partidos y su camiseta oficial.">
 <meta name="theme-color" content="#070709">
 <meta property="og:url" content="https://yuriitonkov.github.io/ineslosada-8/">
 <meta property="og:type" content="website">
@@ -11,11 +11,11 @@
 <meta property="og:locale" content="es_ES">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:title" content="Inés Losada · #8 Colorado Buffaloes">
-<meta property="og:description" content="Fan zone de Inés Losada, la punta española (#8) de los Colorado Buffaloes: sus números, sus mejores partidos y su camiseta oficial.">
+<meta property="og:description" content="Fan zone de Inés Losada, punta de los Colorado Buffaloes e internacional con la selección española: sus números, sus mejores partidos y su camiseta oficial.">
 <meta property="og:image" content="https://yuriitonkov.github.io/ineslosada-8/img/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Inés Losada · #8 Colorado Buffaloes">
-<meta name="twitter:description" content="Fan zone de Inés Losada, la punta española (#8) de los Colorado Buffaloes: sus números, sus mejores partidos y su camiseta oficial.">
+<meta name="twitter:description" content="Fan zone de Inés Losada, punta de los Colorado Buffaloes e internacional con la selección española: sus números, sus mejores partidos y su camiseta oficial.">
 <meta name="twitter:image" content="https://yuriitonkov.github.io/ineslosada-8/img/hero.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23070709'%3E%3C/rect%3E%3Ctext x='16' y='24' font-family='Arial Black,Arial,sans-serif' font-size='22' font-weight='900' text-anchor='middle' fill='%23CFB87C'%3E8%3C/text%3E%3C/svg%3E">
 <title>Inés Losada · #8 Colorado Buffaloes</title>
@@ -387,6 +387,24 @@ section{padding-block:var(--band)}
 .nat .kpis{display:grid;gap:18px;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:26px;border-top:1px solid var(--line);padding-top:22px}
 .nat .kpis b{display:block;font-family:var(--font-display);font-weight:400;font-size:clamp(1.7rem,3.4vw,2.5rem);color:var(--gold-hi);line-height:1}
 .nat .kpis small{display:block;margin-top:6px;font-family:var(--font-mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+/* Los retratos de estudio que publica la federación. La fuente es 2:3 exacto, la
+   misma proporción que la caja, así que se muestran sin recortar nada. El ancho
+   mínimo de 150px los pone de tres en tres en escritorio y de dos en dos en el
+   móvil sin necesidad de media queries. */
+.nat .retratos{display:grid;gap:clamp(12px,1.6vw,20px);
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:clamp(30px,4.5vw,54px)}
+.nat .retratos img{width:100%;aspect-ratio:2/3;object-fit:cover}
+/* Sus tres dorsales. Los tres están contrastados uno a uno: el 8 en la ficha de
+   cubuffs.com, el 23 en la convocatoria de la European League 2026 y el 7 en la del
+   Europeo Sub-22. No mezclarlos: es el error más fácil de cometer con esta ficha. */
+.nat .dorsales{display:grid;gap:clamp(14px,2.2vw,26px);grid-template-columns:repeat(3,minmax(0,1fr));
+  margin-top:clamp(30px,4.5vw,54px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding-block:clamp(18px,2.4vw,24px)}
+.nat .dorsales div{display:flex;align-items:baseline;gap:13px;min-width:0}
+.nat .dorsales b{flex:none;font-family:var(--font-display);font-weight:400;
+  font-size:clamp(2.2rem,5.4vw,3.4rem);line-height:1;color:var(--gold-hi)}
+.nat .dorsales small{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);line-height:1.45}
 
 /* tienda */
 .store{background:linear-gradient(180deg,rgba(7,7,9,.92),var(--ink))}
@@ -444,6 +462,7 @@ footer .legal{grid-column:1/-1;margin-top:14px;padding-top:20px;border-top:1px s
   .compact .pt{grid-column:2;text-align:left}
   .pal li{grid-template-columns:minmax(0,1fr)}
   .nat .kpis{grid-template-columns:minmax(0,1fr)}
+  .nat .dorsales{grid-template-columns:minmax(0,1fr);gap:14px}
   /* la galería pasa a una columna: a dos por fila las fotos quedan de sello */
   .gal .grid{grid-template-columns:minmax(0,1fr)}
   .gal .tall img{aspect-ratio:4/5}
@@ -882,6 +901,10 @@ html{-webkit-text-size-adjust:100%%}
             <small>120 puntos y un 40,52% de eficacia en ataque.</small></span></li>
           <li><span class="y">2025</span><span><b>Debut en la NCAA</b>
             <small>37,5 puntos, 21 partidos, 65 sets y 20 aces en su primera temporada.</small></span></li>
+          <li><span class="y">2026</span><span><b>Convocada con la selección absoluta</b>
+            <small>Entra en la lista de España para la CEV European League, con el 23.</small></span></li>
+          <li><span class="y">2026</span><span><b>Europeo Sub-22 en La Haya</b>
+            <small>Convocada con la Sub-22, con el 7 a la espalda.</small></span></li>
           <li><span class="y">2026</span><span><b>Récord personal con los Buffaloes</b>
             <small>19,0 puntos ante Northern Colorado (6 sep): kills, aces y bloqueos.</small></span></li>
         </ul>
@@ -905,6 +928,11 @@ html{-webkit-text-size-adjust:100%%}
             de Grünheide y entró en el siete ideal. Con la Sub-19 jugó el Mundial de la FIVB de 2025,
             donde terminó con 120 puntos y un 40,52% de eficacia en ataque.
           </p>
+          <p class="lead" style="margin-top:14px">
+            En 2026 llegó el salto a la absoluta: entró en la convocatoria de la CEV European League,
+            que España cerró en sexta posición con cinco victorias y una sola derrota, y ese mismo
+            verano fue convocada con la Sub-22 para el Europeo de La Haya.
+          </p>
           <div class="kpis">
             <div><b>120</b><small>Puntos en el Mundial Sub-19</small></div>
             <div><b>40,52%</b><small>Eficacia en ataque</small></div>
@@ -919,6 +947,27 @@ html{-webkit-text-size-adjust:100%%}
           </figcaption>
         </figure>
       </div>
+
+      <div class="dorsales">
+        <div><b>8</b><small>Colorado</small></div>
+        <div><b>23</b><small>España absoluta</small></div>
+        <div><b>7</b><small>España Sub-22</small></div>
+      </div>
+
+      <div class="retratos">
+        <figure>
+          <img src="img/g_esp1.jpg" alt="Inés Losada de cuerpo entero con la equipación de la selección española" loading="lazy">
+        </figure>
+        <figure>
+          <img src="img/g_esp2.jpg" alt="Inés Losada con el balón en la mano, con la camiseta número 23 de la selección española" loading="lazy">
+        </figure>
+        <figure>
+          <img src="img/g_esp3.jpg" alt="Inés Losada celebrando con los puños en alto, con la camiseta de la selección española" loading="lazy">
+        </figure>
+      </div>
+      <p class="small" style="margin-top:12px">
+        Fotos: Real Federación Española de Voleibol (RFEVB).
+      </p>
     </div>
   </section>
 
@@ -1020,6 +1069,7 @@ html{-webkit-text-size-adjust:100%%}
       Fotos: Colorado Athletics / cubuffs.com, salvo la imagen de la selección española, de
       La Opinión A Coruña / Prensa Ibérica, incluida como cobertura periodística del Mundial Sub-19 de 2025.
       Estadísticas: actas y páginas oficiales de cubuffs.com, consultadas el 14 de octubre de 2026.
+      <span>Los retratos con la selección son de la Real Federación Española de Voleibol (RFEVB).</span>
       <br><br>
       Página no oficial, hecha como homenaje para Inés Losada. No está vinculada a la Universidad de
       Colorado, a CU Athletics ni a ninguna de las marcas citadas. En las ruedas de prensa, la
@@ -1133,6 +1183,7 @@ html{-webkit-text-size-adjust:100%%}
     "La plantilla en el CU Events Center. Foto: Colorado Athletics / cubuffs.com":"The roster at the CU Events Center. Photo: Colorado Athletics / cubuffs.com",
     "Oro sobre negro. Foto: Colorado Athletics / cubuffs.com":"Gold on black. Photo: Colorado Athletics / cubuffs.com",
     "Con España en el Mundial Sub-19 de 2025. Foto: La Opinión A Coruña / Prensa Ibérica":"With Spain at the 2025 U19 World Championship. Photo: La Opinión A Coruña / Prensa Ibérica",
+    "Foto: La Opinión A Coruña / Prensa Ibérica.":"Photo: La Opinión A Coruña / Prensa Ibérica.",
     /* trayectoria */
     "De A Coruña a Boulder":"From A Coruña to Boulder",
     "Cuatro etapas antes de cruzar el Atlántico, y un palmarés que empieza a los 14 años.":
@@ -1161,6 +1212,10 @@ html{-webkit-text-size-adjust:100%%}
     "37,5 puntos, 21 partidos, 65 sets y 20 aces en su primera temporada.":"37.5 points, 21 matches, 65 sets and 20 aces in her first season.",
     "Récord personal con los Buffaloes":"Career high with the Buffaloes",
     "19,0 puntos ante Northern Colorado (6 sep): kills, aces y bloqueos.":"19.0 points against Northern Colorado (Sep 6): kills, aces and blocks.",
+    "Convocada con la selección absoluta":"Called up to the senior national team",
+    "Entra en la lista de España para la CEV European League, con el 23.":"Named in Spain's squad for the CEV European League, wearing 23.",
+    "Europeo Sub-22 en La Haya":"U22 European Championship in The Hague",
+    "Convocada con la Sub-22, con el 7 a la espalda.":"Called up to the U22 side, wearing 7.",
     "Carrera NCAA: 34 partidos · 103 sets · 130,5 puntos · 78 kills · 42 aces · 43 digs · 10,5 bloqueos.":
       "NCAA career: 34 matches · 103 sets · 130.5 points · 78 kills · 42 aces · 43 digs · 10.5 blocks.",
     /* selección */
@@ -1169,6 +1224,10 @@ html{-webkit-text-size-adjust:100%%}
       "Before Boulder there was Spain. With the U17 she was named best receiver at the WEVZA tournament in Grünheide and made the All-Star seven. With the U19 she played the 2025 FIVB World Championship, finishing with 120 points and a 40.52% hitting efficiency.",
     "Puntos en el Mundial Sub-19":"Points at the U19 World Championship",
     "Eficacia en ataque":"Hitting efficiency","7 ideal":"All-Star seven",
+    "En 2026 llegó el salto a la absoluta: entró en la convocatoria de la CEV European League, que España cerró en sexta posición con cinco victorias y una sola derrota, y ese mismo verano fue convocada con la Sub-22 para el Europeo de La Haya.":
+      "In 2026 came the step up to the senior national team: she was named in Spain's squad for the CEV European League, where Spain finished sixth with five wins and a single defeat, and that same summer she was called up to the U22 side for the European Championship in The Hague.",
+    "España absoluta":"Spain senior team","España Sub-22":"Spain U22",
+    "Fotos: Real Federación Española de Voleibol (RFEVB).":"Photos: Royal Spanish Volleyball Federation (RFEVB).",
     "Títulos de España de base":"Spanish youth titles",
     /* tienda */
     "Tienda oficial de los Buffaloes":"Official Buffaloes store","Vístete el 8":"Wear the 8",
@@ -1201,6 +1260,8 @@ html{-webkit-text-size-adjust:100%%}
     "NIL Store · voleibol femenino":"NIL Store · women's volleyball",
     "Equipaciones de Colorado":"Colorado jerseys",
     "Créditos.":"Credits.","Vídeos: canal oficial":"Video: the official",
+    "Los retratos con la selección son de la Real Federación Española de Voleibol (RFEVB).":
+      "The portraits with the national team are from the Royal Spanish Volleyball Federation (RFEVB).",
     "de Colorado Athletics en YouTube; aquí solo se enlazan. Fotos: Colorado Athletics / cubuffs.com, salvo la imagen de la selección española, de La Opinión A Coruña / Prensa Ibérica, incluida como cobertura periodística del Mundial Sub-19 de 2025. Estadísticas: actas y páginas oficiales de cubuffs.com, consultadas el 14 de octubre de 2026.":
       "channel of Colorado Athletics on YouTube; here they are only linked. Photos: Colorado Athletics / cubuffs.com, except the Spain national team image, from La Opinión A Coruña / Prensa Ibérica, included as press coverage of the 2025 U19 World Championship. Statistics: official box scores and pages from cubuffs.com, consulted on 14 October 2026.",
     "Página no oficial, hecha como homenaje para Inés Losada. No está vinculada a la Universidad de Colorado, a CU Athletics ni a ninguna de las marcas citadas. En las ruedas de prensa, la identificación de Inés se hizo por el dorsal de la camiseta y el cotejo con su ficha oficial: la certeza es alta en la de Colorado State y media en las de Northern Colorado y Kansas State.":
@@ -1227,7 +1288,10 @@ html{-webkit-text-size-adjust:100%%}
     "La plantilla de voleibol de Colorado celebrando en la pista":"The Colorado volleyball roster celebrating on the court",
     "Detalle del dorsal y las mangas doradas de la camiseta negra de Colorado":"Close-up of the number and gold sleeves on Colorado's black jersey",
     "La selección española sub-19 en un partido del Mundial":"The Spain U19 national team in a World Championship match",
-    "Inés Losada con la selección española sub-19 durante el Mundial de 2025":"Inés Losada with the Spain U19 national team at the 2025 World Championship"
+    "Inés Losada con la selección española sub-19 durante el Mundial de 2025":"Inés Losada with the Spain U19 national team at the 2025 World Championship",
+    "Inés Losada de cuerpo entero con la equipación de la selección española":"Inés Losada, full length, in the Spain national team kit",
+    "Inés Losada con el balón en la mano, con la camiseta número 23 de la selección española":"Inés Losada holding the ball, in Spain's number 23 shirt",
+    "Inés Losada celebrando con los puños en alto, con la camiseta de la selección española":"Inés Losada celebrating with her fists up, in the Spain national team shirt"
   };
 
   var EN_ARIA = {"Secciones":"Sections","Ficha":"Player profile"};

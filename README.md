@@ -1,8 +1,9 @@
 # Inés Losada · #8
 
 Fan zone de **Inés Losada**, punta española de los **Colorado Buffaloes** (NCAA Div. I,
-Big 12). Una sola página, bilingüe español / inglés, con sus números de la temporada, sus
-mejores partidos en vídeo, galería, trayectoria y el enlace a su camiseta oficial.
+Big 12) e internacional con la selección española. Una sola página, bilingüe español /
+inglés, con sus números de la temporada, sus mejores partidos en vídeo, galería,
+trayectoria y el enlace a su camiseta oficial.
 
 ## Contenido del repositorio
 
@@ -30,9 +31,9 @@ la primera vez lo decide el idioma del navegador.
 ## Créditos
 
 - **Vídeos**: canal oficial *BuffsTV* de Colorado Athletics en YouTube; aquí solo se enlazan.
-- **Fotos**: Colorado Athletics / cubuffs.com, salvo la imagen de la selección española, de
-  *La Opinión A Coruña* / Prensa Ibérica, incluida como cobertura periodística del Mundial
-  Sub-19 de 2025.
+- **Fotos**: Colorado Athletics / cubuffs.com; los retratos con la selección, de la Real
+  Federación Española de Voleibol (RFEVB); y la imagen del Mundial Sub-19, de *La Opinión
+  A Coruña* / Prensa Ibérica, incluida como cobertura periodística.
 - **Estadísticas**: actas y páginas oficiales de cubuffs.com, consultadas el 14 de octubre de
   2026.
 
