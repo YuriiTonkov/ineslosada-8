@@ -243,6 +243,26 @@ main,.rail,footer{position:relative;z-index:2}
   max-width:620px;margin:10px 0 0 auto;font-family:var(--font-mono);
   font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:right;
 }
+/* En escritorio el retrato se sale de la rejilla. Encajado en una columna de la mitad se
+   quedaba en 532px, y la foto pide el doble; aqui ocupa el alto entero de la portada y
+   sangra hasta el borde derecho de la ventana, asi que pasa de los 1000px. El texto se le
+   monta encima por la izquierda, sobre la parte del fotograma que ya es negra: su silueta
+   empieza en el 27% del recorte, de modo que el titular cae en la zona oscura de la pista
+   y se lee sin velo ninguno, sin taparle la figura. Por eso el ancho del texto se limita
+   aqui al 42%: es lo que garantiza ese hueco a cualquier ancho de ventana. */
+@media (min-width:901px){
+  .hero{overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);align-items:start}
+  .hero .col{grid-area:1/1;z-index:2;max-width:min(480px,42%)}
+  .hero .shot{
+    grid-area:1/1;z-index:1;justify-self:end;align-self:start;
+    width:min(1010px,70vw);max-width:none;
+    margin-right:calc(-1 * var(--gutter) - max(0px, (100vw - var(--maxw)) / 2));
+  }
+  .hero .shot::before{width:min(100%,900px);top:44%}
+  .hero .shot img{max-width:none;margin-left:0}
+  .hero .shot figcaption{max-width:none;margin-left:0}
+}
 
 /* ---------- ficha ---------- */
 .ficha{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--scrim)}
