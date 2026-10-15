@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Fan zone de Inés Losada, punta de los Colorado Buffaloes e internacional con la selección española: sus números, sus mejores partidos y su camiseta oficial.">
-<meta name="theme-color" content="#070709">
+<meta name="theme-color" content="#0A0E13">
 <meta property="og:url" content="https://ineslosada.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Inés Losada #8">
@@ -12,39 +12,52 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:title" content="Inés Losada · #8 Colorado Buffaloes">
 <meta property="og:description" content="Fan zone de Inés Losada, punta de los Colorado Buffaloes e internacional con la selección española: sus números, sus mejores partidos y su camiseta oficial.">
-<meta property="og:image" content="https://ineslosada.com/img/hero.jpg">
+<meta property="og:image" content="https://ineslosada.com/img/hero_full.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Inés Losada · #8 Colorado Buffaloes">
 <meta name="twitter:description" content="Fan zone de Inés Losada, punta de los Colorado Buffaloes e internacional con la selección española: sus números, sus mejores partidos y su camiseta oficial.">
-<meta name="twitter:image" content="https://ineslosada.com/img/hero.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23070709'%3E%3C/rect%3E%3Ctext x='16' y='24' font-family='Arial Black,Arial,sans-serif' font-size='22' font-weight='900' text-anchor='middle' fill='%23CFB87C'%3E8%3C/text%3E%3C/svg%3E">
+<meta name="twitter:image" content="https://ineslosada.com/img/hero_full.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A0E13'%3E%3C/rect%3E%3Ctext x='16' y='24' font-family='Arial Black,Arial,sans-serif' font-size='22' font-weight='900' text-anchor='middle' fill='%234E8C7A'%3E8%3C/text%3E%3C/svg%3E">
+<meta charset="utf-8">
 <title>Inés Losada · #8 Colorado Buffaloes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
 
 <style>
 /* =========================================================================
    FAN ZONE · INÉS LOSADA · #8
-   Mundo visual único (deliberado): negro de pista + oro de los Buffaloes.
-   Paleta, tipografía y retícula declaradas aquí y usadas en todo el resto.
+   Mundo visual propio: pizarra mojada y cal, con el verde del Atlántico como
+   único acento (A Coruña → Boulder). El negro y el oro de los Buffaloes ya no
+   son el mundo entero: quedan citados dentro de `.isla-cu`, más abajo.
+   Paleta, tipografía y retícula se declaran aquí y se usan en todo lo demás.
    ========================================================================= */
 :root{
   color-scheme: dark;
-  /* color */
-  --ink:#070709;            /* fondo, negro de grada */
-  --ink-2:#0E0E12;          /* superficie de bloque */
-  --ink-3:#17171C;          /* superficie elevada */
-  --gold:#CFB87C;           /* oro CU */
-  --gold-hi:#F2E0AE;        /* champán para el foil */
-  --gold-deep:#9A8452;      /* oro apagado */
-  --paper:#F3F0E9;          /* texto principal */
-  --muted:#A7A395;          /* texto secundario */
-  --line:rgba(207,184,124,.26);
-  --line-soft:rgba(243,240,233,.10);
-  --scrim:rgba(7,7,9,.78);  /* velo sobre las fotos de fondo */
+  /* color · pizarra mojada y cal, con el verde del Atlántico como acento único */
+  --ink:#0A0E13;            /* fondo: pizarra mojada */
+  /* Superficie de bloque, un pelo mas clara que el fondo. Faltaba: se estaba usando en
+     `.marq` y en `.duo-cab` sin declararla en ninguna parte, y una variable sin declarar no
+     se ve como un error, se ve como `background:transparent`. Las dos bandas salian sin
+     fondo y no habia forma de saber por que mirando el CSS, porque la regla estaba bien. */
+  --ink-2:#0F141A;          /* superficie de bloque */
+  --ink-3:#161C23;          /* superficie elevada */
+  --accent:#4E8C7A;         /* acento ÚNICO de la página */
+  --accent-hi:#7FBFA6;      /* acento claro: hover y foco */
+  --accent-deep:#2E5E50;    /* acento apagado: fondos de banda */
+  --paper:#ECE8DF;          /* texto principal: cal */
+  --muted:#8B918E;          /* texto secundario: niebla */
+  --line:rgba(78,140,122,.26);
+  --line-soft:rgba(236,232,223,.10);
+  --hair:rgba(236,232,223,.16);  /* filete neutro de la retícula técnica */
+  --scrim:rgba(10,14,19,.78);    /* velo sobre las fotos de fondo */
   /* type */
-  --font-display:'Anton','Haettenschweiler','Arial Narrow',sans-serif;
+  /* Dos voces, no tres. La distinción no la da la familia sino CÓMO se usa: Archivo,
+     un grotesco neutro, se queda en las micro-etiquetas y el cuerpo; Instrument Serif
+     entra solo en los titulares de pantalla. Lo que se oye es el salto de escala entre
+     los 11 px en mayúsculas espaciadas y los 8 rem del nombre, no el cambio de fuente.
+     Anton queda para la isla Buffaloes, que lo redeclara en su propio ámbito. */
+  --font-display:'Instrument Serif',Georgia,'Times New Roman',serif;
   --font-body:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
   --font-mono:'IBM Plex Mono',ui-monospace,'Cascadia Mono',Consolas,monospace;
   --fs-name:clamp(3.2rem,12.5vw,8.6rem);
@@ -53,10 +66,54 @@
   --fs-lead:clamp(1rem,1.35vw,1.125rem);
   --fs-body:1rem;
   --fs-micro:.7rem;
+  /* Escala nueva del mundo propio: el salto entre estos dos peldaños es la voz —
+     micro-etiquetas en mayúsculas muy espaciadas frente a titulares de pantalla.
+     Aquí estaba `--fs-giant`, con el mismo valor que `--fs-name`. Se va: no lo
+     referenciaba nadie, porque el nombre del hero siempre ha tomado `--fs-name`
+     (`.hero .title`, más abajo). Dos tokens con el mismo número no son un
+     respaldo, son una trampa: el día que uno se cambie, el otro se queda atrás
+     y no hay forma de saber cuál manda. */
+  --fs-pantalla:clamp(2.2rem,6.4vw,4.6rem); /* titulares de sección completa */
+  --fs-label:.66rem;
   /* layout */
   --gutter:clamp(16px,4vw,40px);
   --maxw:1180px;
-  --band:clamp(48px,7vw,104px);   /* aire vertical entre secciones */
+  --band:clamp(48px,7vw,104px);   /* aire vertical dentro de una sección */
+  --rail-h:52px;                  /* alto REAL medido de la barra (52,39 px): remedido, no estimado */
+  --screen:calc(100svh - var(--rail-h));  /* una pantalla, descontando la barra */
+}
+
+/* ============================================================================
+   LA ISLA BUFFALOES
+   Aquí dentro vuelve el mundo de Colorado —negro de pista y oro CU—, pero
+   citado: es una pieza que se exhibe dentro del mundo de Inés, no el mundo
+   entero. El mecanismo es redefinir LOS MISMOS nombres de variable en este
+   ámbito, así que ninguna regla de .ficha, .season, .tiles, .rows, .chart ni
+   .eight se toca: las propiedades personalizadas solo heredan hacia abajo, de
+   modo que un valor declarado aquí no puede escaparse hacia fuera.
+   Si algún día se cambia un token de fuera, esto NO se mueve: es lo que
+   garantiza que las cifras sigan siendo las de los Buffaloes.
+   ========================================================================= */
+.isla-cu{
+  --ink:#070709; --ink-3:#17171C;
+  --accent:#CFB87C; --accent-hi:#F2E0AE; --accent-deep:#9A8452;
+  --paper:#F3F0E9; --muted:#A7A395;
+  --line:rgba(207,184,124,.26); --line-soft:rgba(243,240,233,.10);
+  --scrim:rgba(7,7,9,.78);
+  --font-display:'Anton','Haettenschweiler','Arial Narrow',sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,'Cascadia Mono',Consolas,monospace;
+  --band:clamp(48px,7vw,104px);
+  position:relative;
+  border-bottom:1px solid var(--accent);
+}
+/* El marco: un filete y una etiqueta técnica que declaran la pieza como citada.
+   El filete de arriba sustituye al borde propio de .ficha, para no duplicar línea. */
+.isla-cu .ficha{border-top:0;background:var(--ink)}
+.isla-cu-tag{
+  margin:0;padding:11px var(--gutter);
+  font-family:var(--font-mono);font-size:var(--fs-label);font-weight:500;
+  letter-spacing:.24em;text-transform:uppercase;
+  color:var(--accent);border-top:1px solid var(--accent);background:var(--ink);
 }
 
 *{box-sizing:border-box}
@@ -75,16 +132,20 @@ body{
    se queda puesta y la foto sale deformada. */
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 
 .wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+/* La barra es fija en el flujo (sticky), así que un salto de ancla lleva el destino
+   justo debajo de ella y se come el primer renglón. Medido: sin esto, la etiqueta de
+   la isla aterrizaba en top:70 px con la barra ocupando hasta 52. */
+section[id]{scroll-margin-top:calc(var(--rail-h) + 8px)}
 .eyebrow{
   font-family:var(--font-mono);font-size:var(--fs-micro);font-weight:500;
-  letter-spacing:.24em;text-transform:uppercase;color:var(--gold);
+  letter-spacing:.24em;text-transform:uppercase;color:var(--accent);
 }
 .h2{
   font-family:var(--font-display);font-size:var(--fs-h2);font-weight:400;
-  line-height:.98;letter-spacing:.005em;text-transform:uppercase;
+  line-height:.98;letter-spacing:-.01em;text-transform:uppercase;
   text-wrap:balance;margin:0;
 }
 .lead{font-size:var(--fs-lead);color:var(--paper);max-width:62ch}
@@ -100,14 +161,25 @@ a{color:inherit;text-decoration:none}
   opacity:0;transition:opacity 1.4s ease;
   filter:saturate(.9) brightness(.62);
 }
-.amb img.on{opacity:.52}
+/* La capa ambiente es MATERIAL, no una imagen: está detrás de todo y su trabajo es
+   dar textura al fondo, no competir con las fotos grandes. A .52 se leía el banderín
+   «COLORADO VOLLEYBALL» por detrás de los titulares nuevos, que ahora son mucho más
+   grandes y ocupan casi todo el ancho; a .34 se retira a su sitio y sigue notándose
+   que hay algo. Ojo con el orden de los factores: esta opacidad se multiplica por el
+   `brightness(.62)` de arriba, así que en la práctica la foto aporta poco más de una
+   quinta parte de su luminancia original. */
+.amb img.on{opacity:.34}
 .amb img[data-k="hero"]{object-position:50% 44%}
 .amb img[data-k="esp"]{object-position:50% 55%}
-.amb::after{ /* velo + viñeta para que el texto respire */
+/* EXCEPCIÓN DELIBERADA a la regla de «ni un degradado»: esto no es adorno, es el velo
+   que hace legible el texto sobre las fotos de fondo. Sin él, las fotos se comen la
+   tipografía. Si alguien viene a «limpiar» los degradados de esta hoja, que empiece
+   por cualquier otro y deje estos dos. */
+.amb::after{
   content:"";position:absolute;inset:0;
   background:
-    radial-gradient(120% 80% at 50% 0%,rgba(7,7,9,.15) 0%,rgba(7,7,9,.86) 62%,var(--ink) 100%),
-    linear-gradient(180deg,rgba(7,7,9,.72) 0%,rgba(7,7,9,.42) 30%,rgba(7,7,9,.55) 100%);
+    radial-gradient(120% 80% at 50% 0%,rgba(10,14,19,.15) 0%,rgba(10,14,19,.86) 62%,var(--ink) 100%),
+    linear-gradient(180deg,rgba(10,14,19,.72) 0%,rgba(10,14,19,.42) 30%,rgba(10,14,19,.55) 100%);
 }
 .grain{
   position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.055;
@@ -121,23 +193,26 @@ main,.rail,footer{position:relative;z-index:2}
    aparece en un espacio que ya estaba reservado: no hay salto de maquetación. Antes
    arrancaba desplazada hacia arriba (translateY(-102%)) y solo entraba al pasar el 75%
    del héroe, de modo que la navegación no existía hasta que se hacía scroll. */
+/* Placa opaca, no un cristal esmerilado. El velo de .amb::after ya está al 86% de
+   opacidad, así que por detrás de la barra apenas se veía nada: el blur costaba un
+   rectángulo borroso a cambio de casi nada. Opaca se lee mejor y pertenece al
+   lenguaje nuevo, donde no hay ni un desenfoque en toda la página. */
 .rail{
   position:sticky;top:env(safe-area-inset-top,0px);z-index:20;
   display:flex;align-items:center;gap:18px;
   padding:10px var(--gutter);
-  background:rgba(7,7,9,.82);
-  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  background:var(--ink);
   border-bottom:1px solid var(--line);
 }
 .rail .who{font-family:var(--font-display);letter-spacing:.06em;font-size:.95rem;text-transform:uppercase;white-space:nowrap}
-.rail .who b{color:var(--gold);font-weight:400}
+.rail .who b{color:var(--accent);font-weight:400}
 .rail nav{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
 .rail nav::-webkit-scrollbar{display:none}
 .rail nav a{
   font-family:var(--font-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--muted);padding:7px 9px;white-space:nowrap;border-radius:2px;
+  color:var(--muted);padding:7px 9px;white-space:nowrap;
 }
-.rail nav a:hover{color:var(--gold-hi)}
+.rail nav a:hover{color:var(--accent-hi)}
 /* conmutador de idioma: siempre visible, también cuando la nav se oculta */
 .lang{display:flex;gap:2px;margin-left:10px;border:1px solid var(--line-soft);padding:2px;flex:none}
 .lang button{
@@ -145,21 +220,25 @@ main,.rail,footer{position:relative;z-index:2}
   background:none;border:0;color:var(--muted);padding:5px 9px;cursor:pointer;
   transition:color .2s ease,background .2s ease;
 }
-.lang button:hover{color:var(--gold-hi)}
-.lang button[aria-pressed="true"]{background:var(--gold);color:var(--ink);cursor:default}
+.lang button:hover{color:var(--accent-hi)}
+.lang button[aria-pressed="true"]{background:var(--accent);color:var(--ink);cursor:default}
 /* acceso a su tienda: el sitio con más valor comercial, siempre a la vista */
 .rail .buy{
   margin-left:10px;flex:none;white-space:nowrap;
   font-family:var(--font-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
-  background:var(--gold);color:var(--ink);padding:7px 11px;border-radius:2px;
+  background:var(--accent);color:var(--ink);padding:7px 11px;
   transition:background .2s ease;
 }
-.rail .buy:hover{background:var(--gold-hi)}
+.rail .buy:hover{background:var(--accent-hi)}
 
 /* ---------- franja promocional de la tienda ---------- */
+/* Banda plana de acento. Antes era un degradado de oro a cinco paradas: el único
+   sitio de la página donde el acento se extendía a toda una superficie. Ahora el
+   acento es escaso, y cuando aparece, aparece entero. */
 .promo{
-  background:linear-gradient(92deg,var(--gold-deep) 0%,var(--gold) 28%,var(--gold-hi) 52%,var(--gold) 76%,var(--gold-deep) 100%);
-  color:#0B0B0D;
+  background:var(--accent-deep);
+  color:var(--paper);
+  border-block:1px solid var(--line);
 }
 .promo .wrap{
   display:flex;flex-wrap:wrap;gap:clamp(14px,2.4vw,34px);
@@ -171,25 +250,78 @@ main,.rail,footer{position:relative;z-index:2}
   display:block;font-family:var(--font-display);font-weight:400;text-transform:uppercase;
   font-size:clamp(1.35rem,2.8vw,2rem);line-height:.98;letter-spacing:.005em;text-wrap:balance;
 }
-.promo p{margin:9px 0 0;font-size:.9rem;line-height:1.5;max-width:54ch;color:rgba(11,11,13,.8)}
-.promo .btn{background:#0B0B0D;border-color:#0B0B0D;color:var(--gold-hi);flex:none}
-.promo .btn:hover{background:#191920;border-color:#191920;color:var(--gold-hi)}
+.promo p{margin:9px 0 0;font-size:.9rem;line-height:1.5;max-width:54ch;
+  color:color-mix(in srgb, var(--paper) 82%, transparent)}
+.promo .btn{background:var(--paper);border-color:var(--paper);color:var(--accent-deep);flex:none}
+.promo .btn:hover{background:var(--accent-hi);border-color:var(--accent-hi);color:var(--ink)}
 
 /* línea de compra al final de una sección */
 .buyline{
   margin:clamp(24px,3vw,34px) 0 0;padding-top:16px;border-top:1px solid var(--line-soft);
   font-size:.9rem;color:var(--muted);max-width:66ch;
 }
-.buyline a{color:var(--gold-hi);border-bottom:1px solid var(--line)}
-.buyline a:hover{border-bottom-color:var(--gold)}
+.buyline a{color:var(--accent-hi);border-bottom:1px solid var(--line)}
+.buyline a:hover{border-bottom-color:var(--accent)}
 
-/* ---------- hero ---------- */
-.hero{position:relative;padding-block:clamp(28px,5vw,54px) clamp(34px,6vw,72px)}
-.hero .wrap{display:grid;gap:clamp(20px,3vw,36px);grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end}
-.hero .col{min-width:0}
+/* ---------- portada a sangre ----------
+   La foto ocupa la pantalla entera y el texto se le monta encima por la izquierda. Antes
+   el retrato era un recorte con alfa de verdad que se apoyaba en el negro de la pagina,
+   asi que no habia canto que disimular; ahora la foto tiene bordes y hay que oscurecerla
+   justo donde cae el texto. Se eligio una imagen que ya es casi toda negra (vease
+   prep.py): el velo remata, no hace el trabajo. */
+.hero{
+  position:relative;overflow:hidden;
+  min-height:var(--screen);
+  /* La regla general es `section{padding-block:var(--band)}` y aquí NO vale. Aquí el relleno
+     no separa nada: la foto es a sangre y el texto lleva su propio margen dentro (.hero-in),
+     así que lo único que hacía era engordar la portada por arriba y por abajo —89,6 px en
+     cada lado a 1280, o sea 179 px de los 926, medidos—. Con el relleno quitado, el alto de
+     la portada es max(--screen, lo que mida el texto). */
+  padding-block:0;
+  display:grid;align-content:end;
+}
+/* El <figure> trae 40px de margen a cada lado del navegador y, con la foto a sangre, eso
+   dejaba asomar el fondo por los dos bordes. */
+.hero-bg{position:absolute;inset:0;margin:0;z-index:0}
+/* El encuadre lo trae ya hecho el fichero (ver prep.py): esta recortado a 1700x763, que es
+   el mismo aspecto que la caja, asi que el porcentaje VERTICAL no hace nada —que es justo
+   lo que se busca: que el encuadre no dependa del ancho de la ventana—. El horizontal si
+   actua en cuanto la ventana baja de ~1900 px, y vale 68,8%, que es donde cae la cabeza de
+   Ines dentro del fichero. El numero no es casual: `object-position: X%` lleva el punto
+   que esta al X% de la foto al X% de la caja, asi que al poner el mismo numero que su
+   posicion, la cabeza se queda en ese 68,8% de la portada a CUALQUIER ancho. Es el encuadre
+   que se eligio, hecho que se cumpla solo en vez de solo en la pantalla donde se midio. */
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:68.8% 50%}
+/* El velo son DOS degradados y los dos son necesarios, aunque la regla de esta hoja sea
+   «ni un degradado»: esto no es adorno, es lo que hace legible el texto sobre la foto. El
+   horizontal es el que importa, porque el nombre cae sobre la pista; el vertical hace dos
+   cosas a la vez —oscurece la banda de arriba, donde estan los banderines dorados del
+   pabellon, que sin velo se comen la pantalla entera y devuelven la pagina al mundo de
+   los Buffaloes, y hunde el pie para que cifras y botones no acaben sobre el brillo de la
+   grada—. Si alguien viene a «limpiar» los degradados, que empiece por cualquier otro. */
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,var(--ink) 0%,rgba(10,14,19,.90) 28%,rgba(10,14,19,.52) 48%,rgba(10,14,19,0) 70%),
+    linear-gradient(180deg,
+      rgba(10,14,19,.88) 0%,rgba(10,14,19,.34) 16%,rgba(10,14,19,0) 34%,
+      rgba(10,14,19,0) 52%,rgba(10,14,19,.44) 74%,rgba(10,14,19,.92) 100%);
+}
+.hero-in{position:relative;z-index:2;padding-block:clamp(26px,4.5vw,58px) clamp(22px,3.5vw,46px)}
+.hero-cred{
+  position:absolute;right:var(--gutter);bottom:14px;z-index:2;margin:0;
+  font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);
+}
+.hero .col{min-width:0;max-width:38rem}
+/* El nombre se mide tambien contra el ALTO de la ventana, no solo contra el ancho. Con la
+   escala de --fs-name a secas, en un portatil de 800 px de alto el bloque de texto pasaba
+   de pantalla y las cifras quedaban por debajo del pliegue. La primera declaracion es el
+   respaldo: si el navegador no entiende svh, se queda con esa y no con nada. */
 .hero .title{
   font-family:var(--font-display);font-weight:400;text-transform:uppercase;
-  font-size:var(--fs-name);line-height:.86;letter-spacing:0;margin:.43em 0 0;
+  font-size:var(--fs-name);font-size:min(var(--fs-name),15svh);
+  line-height:.86;letter-spacing:0;margin:.43em 0 0;
   color:var(--paper);
 }
 /* El margen de arriba no es un capricho. Con line-height .86 la caja de linea es mas
@@ -198,72 +330,151 @@ main,.rail,footer{position:relative;z-index:2}
    devolverle al nombre el mismo aire que tendria sin acento (y escala con el tipo,
    porque el margen va en em). */
 .hero .title span{display:block}
-@supports ((-webkit-background-clip:text) or (background-clip:text)){
-  .hero .title .foil{
-    background:linear-gradient(96deg,var(--gold-deep) 0%,var(--gold) 22%,var(--gold-hi) 46%,var(--gold) 68%,var(--gold-deep) 100%);
-    -webkit-background-clip:text;background-clip:text;
-    -webkit-text-fill-color:transparent;color:transparent;
-  }
-}
+/* El apellido iba en «foil»: un degradado de oro recortado sobre la letra. Aquí el
+   acento es un color plano: el apellido se distingue por el color, no por un brillo. */
+.hero .title .foil{color:var(--accent)}
 .hero .meta{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
-.hero .meta .dot{width:4px;height:4px;background:var(--gold);border-radius:50%}
+.hero .meta .dot{width:4px;height:4px;background:var(--accent);border-radius:50%}
 .hero .lead{margin-top:18px}
 .hero .stats{
   margin-top:clamp(22px,3vw,34px);display:grid;gap:0;
   grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);
 }
-.hero .stats div{padding:14px 12px 0 0;border-right:1px solid var(--line-soft)}
+/* El filete vertical va CENTRADO en el hueco entre cifra y cifra, no pegado a la de la
+   derecha. Antes el relleno estaba solo a la derecha de cada celda, asi que la linea quedaba
+   a 12 px de «93,0» y a 0 px de «130,5»: se veia pegada a la segunda y separada de la
+   primera. Con el mismo relleno a los dos lados el hueco es simetrico, y la primera celda
+   se queda sin relleno por la izquierda para que su cifra siga alineada con el antetitulo
+   y el titular de arriba. */
+.hero .stats div{padding:14px clamp(14px,1.6vw,26px) 0;border-right:1px solid var(--line-soft)}
+.hero .stats div:first-child{padding-left:0}
 .hero .stats div:last-child{border-right:0}
-.hero .stats b{display:block;font-family:var(--font-display);font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:400;color:var(--gold-hi);line-height:1}
+.hero .stats b{display:block;font-family:var(--font-display);font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:400;color:var(--accent-hi);line-height:1}
 .hero .stats small{display:block;margin-top:6px;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(22px,3vw,32px)}
 .btn{
   display:inline-flex;align-items:center;gap:10px;
   font-family:var(--font-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
-  padding:13px 18px;border:1px solid var(--line);color:var(--gold-hi);border-radius:2px;
+  padding:13px 18px;border:1px solid var(--line);color:var(--accent-hi);
   transition:background .25s ease,border-color .25s ease,color .25s ease;
 }
-.btn:hover{background:rgba(207,184,124,.12);border-color:var(--gold)}
-.btn.solid{background:var(--gold);border-color:var(--gold);color:#111}
-.btn.solid:hover{background:var(--gold-hi)}
-/* El retrato de la portada no lleva marco. La foto llega ya fundida en negro desde el
-   propio archivo (alfa de verdad, no un rectangulo), asi que se apoya en el fondo de la
-   pagina en vez de recortarse sobre el: no hay canto que se vea. El halo dorado de
-   detras es lo que impide que la figura flote en el vacio. */
-/* El margin:0 no es adorno: un <figure> trae 40px de margen a cada lado del navegador y,
-   como la foto va a ancho completo, se comia 80px de columna y la dejaba mas pequena que
-   su propio hueco. */
-.hero .shot{position:relative;min-width:0;margin:0}
-.hero .shot::before{
-  content:"";position:absolute;z-index:0;pointer-events:none;
-  left:50%;top:46%;width:min(100%,660px);aspect-ratio:1;
-  transform:translate(-50%,-50%);
-  background:radial-gradient(circle,rgba(207,184,124,.12) 0%,rgba(207,184,124,.04) 42%,transparent 76%);
+.btn:hover{background:color-mix(in srgb, var(--accent) 14%, transparent);border-color:var(--accent)}
+.btn.solid{background:var(--accent);border-color:var(--accent);color:var(--ink)}
+.btn.solid:hover{background:var(--accent-hi)}
+/* En movil la foto se queda detras y el texto la ocupa de lado a lado: no hay ancho para
+   una columna al 50%, y el velo de abajo ya lo sostiene. El credito estorba ahi. */
+@media (max-width:700px){ .hero-cred{display:none} }
+/* En escritorio el texto se limita a la mitad izquierda. El numero no es decorativo: es
+   la frontera del velo, y se comprobo a 886, 1280 y 1905 px que el titular no llega a
+   pisar la silueta (que empieza en el 33% del ancho de la ventana; vease la nota de
+   medicion en la conversacion). */
+@media (min-width:901px){ .hero .col{max-width:min(660px,54%)} }
+
+/* ---------- marquesina ----------
+   La pista va partida en DOS grupos idénticos y se desplaza exactamente la mitad de su
+   propio ancho. Cuando el segundo grupo llega donde empezó el primero el fotograma es
+   idéntico, así que el salto de vuelta no se ve; por eso el translateX es -50% y no un
+   valor en píxeles —así no depende de lo que mida el texto, que cambia con el idioma—.
+   El overflow:hidden del contenedor es lo que impide que una pista de 5486 px ensanche
+   la página. La velocidad sale de aquí: 2743 px en 60 s, unos 46 px/s. */
+.marq{overflow:hidden;background:var(--ink-2);border-block:1px solid var(--line)}
+.marq-track{display:flex;width:max-content;animation:marq 60s linear infinite}
+.marq-track span{
+  display:block;flex:none;padding-block:11px;
+  font-family:var(--font-mono);font-size:.78rem;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap;
 }
-.hero .shot img{position:relative;z-index:1;display:block;width:100%;max-width:620px;margin-left:auto}
-.hero .shot figcaption{
-  max-width:620px;margin:10px 0 0 auto;font-family:var(--font-mono);
-  font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:right;
+.marq-track span::after{content:"·";margin:0 .9em;color:var(--accent)}
+@keyframes marq{to{transform:translateX(-50%)}}
+/* Con movimiento reducido la animación ya la apaga la regla global `*{animation:none}`,
+   pero eso deja la pista quieta y empezando por su borde izquierdo: se queda un solo
+   grupo, centrado, y se lee entero. */
+@media (prefers-reduced-motion:reduce){
+  .marq-track{display:block;width:auto;text-align:center}
+  .marq-track span{display:none}
+  .marq-track span:first-child{display:block;padding-inline:var(--gutter)}
 }
-/* En escritorio el retrato se sale de la rejilla. Encajado en una columna de la mitad se
-   quedaba en 532px, y la foto pide el doble; aqui ocupa el alto entero de la portada y
-   sangra hasta el borde derecho de la ventana, asi que pasa de los 1000px. El texto se le
-   monta encima por la izquierda, sobre la parte del fotograma que ya es negra: su silueta
-   empieza en el 27% del recorte, de modo que el titular cae en la zona oscura de la pista
-   y se lee sin velo ninguno, sin taparle la figura. Por eso el ancho del texto se limita
-   aqui al 42%: es lo que garantiza ese hueco a cualquier ancho de ventana. */
-@media (min-width:901px){
-  .hero{overflow:hidden}
-  .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);align-items:start}
-  .hero .col{grid-area:1/1;z-index:2;max-width:min(480px,42%)}
-  .hero .shot{
-    grid-area:1/1;z-index:1;justify-self:end;align-self:start;
-    width:min(1010px,70vw);max-width:none;
-    margin-right:calc(-1 * var(--gutter) - max(0px, (100vw - var(--maxw)) / 2));
+
+/* ---------- pantalla de dualidad ----------
+   Dos mitades a sangre. El filete vertical que las separa no es un borde: es el hueco de
+   1 px de la retícula, por el que asoma el fondo del contenedor. Se hace así porque un
+   borde pertenece a un panel y el otro no, y en la mitad derecha el borde caería del lado
+   equivocado. Este hueco es la red, y los dos nombres se apoyan en él. */
+.duo{
+  position:relative;min-height:var(--screen);padding-block:0;
+  display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto minmax(0,1fr);
+  column-gap:1px;background:var(--line);
+}
+.duo-lado{position:relative;margin:0;overflow:hidden;min-width:0}
+.duo-lado img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* El encuadre de cada mitad no es el mismo número por capricho: en las dos fotos la cara
+   cae a alturas distintas, y con `object-fit:cover` sobre un panel de 640x748 lo que se
+   recorta es alto, así que el 26% y el 30% son lo que pone las dos caras a la misma altura
+   (medido: 101 px desde arriba en ambas). */
+.duo-lado:first-of-type img{object-position:50% 26%}
+.duo-lado:last-of-type img{object-position:62% 30%}
+/* Velo inferior, para que los nombres no acaben sobre la grada. */
+.duo-lado::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:48%;z-index:1;
+  background:linear-gradient(180deg,rgba(10,14,19,0),rgba(10,14,19,.52) 52%,rgba(10,14,19,.94));
+  pointer-events:none;
+}
+.duo-lado figcaption{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;
+  padding-bottom:clamp(22px,3.2vw,44px);
+}
+/* Cada nombre pegado a la costura, y el hueco interior para que no la toque. */
+.duo-lado:first-of-type figcaption{text-align:right;padding-right:clamp(18px,3vw,42px)}
+.duo-lado:last-of-type figcaption{text-align:left;padding-left:clamp(18px,3vw,42px)}
+.duo-nombre{
+  display:block;font-family:var(--font-display);font-weight:400;text-transform:uppercase;
+  font-size:var(--fs-pantalla);line-height:.92;letter-spacing:-.01em;color:var(--paper);
+}
+/* El tachado, como el «OFF TRACK» de Norris: un filete de 1 px girado a mano, no un
+   `text-decoration`, que seguiría la altura de la x y se vería como un error de maqueta. */
+.duo-nombre .tachado{position:relative;display:inline-block}
+.duo-nombre .tachado::after{
+  content:"";position:absolute;left:-.05em;right:-.05em;top:51%;height:1px;
+  background:var(--accent);transform:rotate(-5deg);
+}
+.duo-meta{
+  display:block;margin-top:11px;
+  font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);
+}
+/* La anotación técnica, en una banda propia por encima de las fotos. Primero iba flotando
+   sobre ellas con un velo debajo, y sobre el banderín blanco de «COLORADO VOLLEYBALL» no
+   se leía: un velo sólo funciona si la foto no es blanca justo ahí, y ahí lo es. La banda
+   resuelve el problema en vez de disimularlo, y además es el idioma de la página.
+   El filete que la cierra por abajo no es un borde: es el hueco de 1 px de la retícula. */
+.duo-cab{
+  grid-column:1/-1;z-index:3;margin:0;
+  display:flex;align-items:center;gap:clamp(12px,1.6vw,22px);
+  padding:clamp(11px,1.5vw,16px) var(--gutter);
+  background:var(--ink-2);
+  font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.18em;
+  text-transform:uppercase;color:var(--paper);white-space:nowrap;
+}
+.duo-cab::before,.duo-cab::after{content:"";flex:1;height:1px;background:var(--hair)}
+/* En el móvil no hay ancho para dos columnas de 195 px: los paneles se apilan, la costura
+   pasa a ser horizontal, y los dos nombres se alinean a la izquierda porque ya no se
+   miran el uno al otro. */
+@media (max-width:700px){
+  .duo{grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr 1fr;row-gap:1px}
+  .duo-lado:first-of-type figcaption,.duo-lado:last-of-type figcaption{
+    text-align:left;padding-left:var(--gutter);padding-right:var(--gutter);
   }
-  .hero .shot::before{width:min(100%,900px);top:44%}
-  .hero .shot img{max-width:none;margin-left:0}
-  .hero .shot figcaption{max-width:none;margin-left:0}
+  .duo-lado:first-of-type img{object-position:50% 20%}
+  .duo-lado:last-of-type img{object-position:58% 22%}
+  .duo-lado figcaption{padding-bottom:clamp(16px,4vw,26px)}
+  /* Aquí había un `.duo-meta br{display:none}` para ahorrar una línea. No vale: el `<br>` no
+     es decoración, es lo único que separa «…ARENAL EMEVÉ» de «2022 — 2025», así que al
+     esconderlo las dos frases se pegaban sin un solo espacio entre ellas. La etiqueta
+     ocupa dos líneas también en el móvil, y caben: 35 caracteres a 0,66 rem con 0,12 em de
+     tracking son unos 280 px de los 358 disponibles. */
+  .duo-meta{margin-top:6px;letter-spacing:.12em}
+  .duo-lado::after{height:64%}
+  .duo-cab::before,.duo-cab::after{display:none}
 }
 
 /* ---------- ficha ---------- */
@@ -272,9 +483,23 @@ main,.rail,footer{position:relative;z-index:2}
   margin:0;display:grid;gap:0;
   grid-template-columns:repeat(6,minmax(0,1fr));
 }
-.ficha div{padding:18px 14px 18px 0;border-right:1px solid var(--line-soft);min-width:0}
-.ficha div:last-child{border-right:0}
-.ficha dt{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+/* OJO con el selector: tiene que ser `dl > div`, no `div` a secas. Con `div` a secas
+   esta regla tambien alcanzaba al <div class="wrap"> de la ficha y le pisaba su
+   `padding-inline:var(--gutter)` con `0 14px`, asi que la ficha entera se quedaba sin
+   margen izquierdo y sus etiquetas —Dorsal, Altura, Origen— arrancaban pegadas al borde
+   de la pantalla. En escritorio se disimulaba porque el wrap va centrado y le sobra sitio
+   a los lados; en movil, donde el margen es el unico aire que hay, se veia cortada.
+
+   Y el relleno va igualado a los dos lados por lo mismo que en `.hero .stats`: con el
+   relleno solo a la derecha, el filete vertical quedaba a 14 px de una etiqueta y a 0 px de
+   la siguiente, o sea pegado a «Puesto», «Altura», «Equipo». Centrado en el hueco se lee
+   como lo que es, una separacion. En movil no hace falta —ahi el filete es horizontal— y
+   por eso la media query lo devuelve a `0 14px`, que ademas deja las dos columnas de la
+   retícula cuadradas entre si. */
+.ficha dl > div{padding:18px clamp(11px,1.3vw,19px);border-right:1px solid var(--line-soft);min-width:0}
+.ficha dl > div:first-child{padding-left:0}
+.ficha dl > div:last-child{border-right:0}
+.ficha dt{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
 .ficha dd{margin:0;font-size:.95rem;line-height:1.35}
 
 /* ---------- secciones ---------- */
@@ -282,7 +507,12 @@ section{padding-block:var(--band)}
 .head{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:flex-end;justify-content:space-between;margin-bottom:clamp(24px,3.5vw,44px)}
 .head .h2{max-width:22ch}
 .head .small{max-width:44ch}
-.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0%,rgba(207,184,124,.1) 60%,transparent 100%)}
+.rule{height:1px;background:var(--hair)}
+/* Trayectoria es el otro frente de texto de la página, y su titular va en la voz grande.
+   El salto de escala es justamente lo que separa un frente de un tramo denso: la sección
+   cuenta la carrera entera, no una lista de datos. El ancho de `.head .h2` (22ch) sigue
+   valiendo porque está en unidades del propio carácter, así que crece con la letra. */
+#trayectoria .head .h2{font-size:var(--fs-pantalla);line-height:.92}
 
 /* temporada */
 .season{background:linear-gradient(180deg,rgba(7,7,9,.9),rgba(7,7,9,.94));position:relative;overflow:hidden}
@@ -292,11 +522,11 @@ section{padding-block:var(--band)}
 }
 .tiles{display:grid;gap:1px;background:var(--line-soft);grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid var(--line-soft)}
 .tile{background:rgba(14,14,18,.86);padding:clamp(16px,2.4vw,26px);min-width:0}
-.tile b{display:block;font-family:var(--font-display);font-weight:400;font-size:clamp(2rem,4.6vw,3.2rem);line-height:1;color:var(--gold-hi)}
+.tile b{display:block;font-family:var(--font-display);font-weight:400;font-size:clamp(2rem,4.6vw,3.2rem);line-height:1;color:var(--accent-hi)}
 .tile small{display:block;margin-top:8px;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
 
 .chart{margin-top:clamp(30px,4vw,54px)}
-.chart h3{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 4px}
+.chart h3{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 4px}
 .chart .lg{font-size:.8rem;color:var(--muted);margin:0 0 20px;max-width:70ch}
 .rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-soft)}
 .rows li{
@@ -310,32 +540,39 @@ section{padding-block:var(--band)}
 .rows .track{position:relative;height:12px;background:rgba(243,240,233,.07);min-width:0}
 .rows .track i{
   position:absolute;inset:0 auto 0 0;width:var(--w,0%);
-  background:linear-gradient(90deg,var(--gold-deep),var(--gold));
+  background:linear-gradient(90deg,var(--accent-deep),var(--accent));
 }
-.rows li.top .track i{background:linear-gradient(90deg,var(--gold),var(--gold-hi))}
+.rows li.top .track i{background:linear-gradient(90deg,var(--accent),var(--accent-hi))}
 .rows .pts{font-family:var(--font-display);font-size:1.15rem;color:var(--paper);text-align:right;font-variant-numeric:tabular-nums}
-.rows li.top .pts{color:var(--gold-hi)}
+.rows li.top .pts{color:var(--accent-hi)}
 .rows .k{font-family:var(--font-mono);font-size:.68rem;color:var(--muted);letter-spacing:.04em;min-width:0;text-align:right}
-.rows .k .v{color:var(--gold);border:1px solid var(--line);padding:1px 5px;margin-left:6px;white-space:nowrap}
+.rows .k .v{color:var(--accent);border:1px solid var(--line);padding:1px 5px;margin-left:6px;white-space:nowrap}
 .rows .none{opacity:.55}
 
 /* vídeos */
 .vids .grid{display:grid;gap:clamp(18px,2.4vw,30px);grid-template-columns:repeat(2,minmax(0,1fr))}
+/* `--ink-2` y no un casi-negro escrito a mano. El valor de antes —`rgba(14,14,18,.82)`— era
+   el negro de la isla Buffaloes: la superficie de una pieza citada, puesta fuera de la
+   pieza. Es exactamente el error que esta reestructuración viene a corregir, y además
+   invisible, porque los dos negros se parecen lo bastante como para no dar la voz. */
 .card{
-  display:flex;flex-direction:column;background:rgba(14,14,18,.82);
+  display:flex;flex-direction:column;background:var(--ink-2);
   border:1px solid var(--line-soft);min-width:0;
-  transition:border-color .3s ease,transform .3s ease;
+  transition:border-color .3s ease;
 }
-.card:hover{border-color:var(--line);transform:translateY(-3px)}
+.card:hover{border-color:var(--line)}
 .card .shot{position:relative;overflow:hidden;aspect-ratio:16/9;background:var(--ink-3)}
-.card .shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.card:hover .shot img{transform:scale(1.045)}
+.card .shot img{width:100%;height:100%;object-fit:cover}
+/* Aquí había un `transform:scale(1.045)` de la foto al pasar el ratón. Fuera: en este
+   lenguaje el puntero no empuja ni acerca nada —la tarjeta responde bordeando más, y ya
+   está—. Se queda, sí, el deslizamiento de la flecha de `.go`, que no es adorno: dice
+   hacia dónde lleva el enlace. */
 .card .badge{
-  position:absolute;left:0;top:0;background:var(--gold);color:#111;
+  position:absolute;left:0;top:0;background:var(--accent);color:var(--ink);
   font-family:var(--font-display);font-size:1rem;letter-spacing:.02em;padding:6px 11px 5px;
 }
 .card .dur{
-  position:absolute;right:0;bottom:0;background:rgba(7,7,9,.82);color:var(--paper);
+  position:absolute;right:0;bottom:0;background:var(--scrim);color:var(--paper);
   font-family:var(--font-mono);font-size:.66rem;letter-spacing:.1em;padding:5px 9px;
 }
 .card .body{padding:clamp(14px,2vw,22px);display:flex;flex-direction:column;gap:10px;flex:1}
@@ -344,25 +581,25 @@ section{padding-block:var(--band)}
 .card .go{
   margin-top:auto;display:inline-flex;align-items:center;gap:8px;padding-top:12px;
   border-top:1px solid var(--line-soft);font-family:var(--font-mono);font-size:.68rem;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);
+  letter-spacing:.16em;text-transform:uppercase;color:var(--accent-hi);
 }
 .card .go span{transition:transform .3s ease}
 .card:hover .go span{transform:translateX(5px)}
-.sub{margin:clamp(34px,5vw,60px) 0 16px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.sub{margin:clamp(34px,5vw,60px) 0 16px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
 .compact{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-soft)}
 .compact li{border-bottom:1px solid var(--line-soft)}
 .compact a{display:grid;gap:8px 16px;align-items:center;grid-template-columns:96px minmax(0,1fr) auto;padding:13px 0;transition:background .25s ease}
-.compact a:hover{background:rgba(207,184,124,.06)}
+.compact a:hover{background:color-mix(in srgb, var(--accent) 7%, transparent)}
 .compact .mini{width:96px;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line-soft)}
 .compact .t{min-width:0}
 .compact .t b{display:block;font-weight:600;font-size:.93rem}
 .compact .t small{display:block;color:var(--muted);font-size:.8rem;margin-top:3px}
-.compact .pt{font-family:var(--font-display);font-size:1.1rem;color:var(--gold-hi);white-space:nowrap;text-align:right}
+.compact .pt{font-family:var(--font-display);font-size:1.1rem;color:var(--accent-hi);white-space:nowrap;text-align:right}
 .compact .pt small{display:block;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
 
 .feature{
   display:grid;gap:clamp(16px,2.2vw,28px);grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
-  align-items:center;border:1px solid var(--line-soft);background:rgba(14,14,18,.82);
+  align-items:center;border:1px solid var(--line-soft);background:var(--ink-2);
 }
 .feature .shot{aspect-ratio:16/9;overflow:hidden}
 .feature .shot img{width:100%;height:100%;object-fit:cover}
@@ -370,24 +607,144 @@ section{padding-block:var(--band)}
 .feature .txt h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase;font-size:var(--fs-h3);margin:8px 0 10px}
 .feature .txt p{margin:0;font-size:.9rem;color:var(--muted);max-width:52ch}
 
-/* galería */
-.gal{background:var(--scrim)}
-.gal .grid{display:grid;gap:clamp(12px,1.6vw,20px);grid-template-columns:repeat(6,minmax(0,1fr));align-items:start}
-.gal figure{margin:0;min-width:0;position:relative;overflow:hidden}
-.gal figure img{width:100%;object-fit:cover;filter:contrast(1.03)}
-.gal figcaption{
-  font-family:var(--font-mono);font-size:.64rem;letter-spacing:.06em;line-height:1.5;
-  color:var(--muted);margin-top:8px;
+/* ---------- galería horizontal anclada ----------
+   El carril no se mueve solo: lo empuja el scroll vertical. La sección se estira
+   exactamente lo que mide el carril menos la ventana (lo hace el JS, porque el ancho del
+   carril depende de la ventana) y dentro de ese tramo el carril se queda pegado arriba
+   —`position:sticky`— mientras el desplazamiento horizontal avanza de 0 a 1. Así el
+   recorrido horizontal dura lo mismo que el vertical que se le dedica, y no depende de la
+   velocidad del ratón ni de la inercia: se recorre entero aunque se baje de un tirón.
+
+   Las piezas NO llevan `flex:1` ni anchos en porcentaje del contenedor: cada una declara el
+   suyo en `--w`, y por eso el ancho total del carril es independiente de lo que midan sus
+   pies de foto. Si el ancho dependiera del texto, cada cambio de idioma movería la pista y
+   habría que volver a medirla; así solo hay que medirla al redimensionar.
+
+   Ninguna pieza se pega a la de al lado: `--dy` las sube y las baja para que la línea de
+   ojos del espectador no encuentre una fila recta. Es lo único que las ordena. */
+/* El relleno general de sección se anula aquí, y no es un detalle de estilo: `position:sticky`
+   se ancla contra la caja de RELLENO del contenedor, no contra su caja de borde. Con los
+   `var(--band)` de `section` puestos —90 px arriba y abajo a este ancho—, el carril empezaba a
+   pegarse 90 px tarde, se soltaba 90 px antes y el tramo útil se quedaba en 3 164 px cuando el
+   recorrido horizontal mide 3 344: los últimos 180 px de carril se hacían justo cuando el bloque
+   ya estaba saliendo de pantalla, o sea que la última pieza no llegaba a verse nunca de frente.
+   A cero, el recorrido disponible y el recorrido horizontal son el mismo número. */
+.gal{position:relative;background:var(--scrim);padding-block:0}
+/* El carril es `width:max-content`, igual que la marquesina: así mide lo que miden sus piezas
+   y no lo que mide la ventana. Si fuera un elemento flexible dentro de un contenedor flex se
+   encogería hasta caber y no habría nada que recorrer; y si midiera el 100%, su propio
+   `overflow` lo haría scroller y el scroll horizontal de la página. */
+.gal-pin{position:sticky;top:var(--rail-h);height:var(--screen);overflow:hidden}
+/* El relleno lateral del carril no es `var(--gutter)` a secas, es el del contenedor de la
+   página: el margen exterior más el centrado de `--maxw`, que es la misma cuenta que hace
+   `.wrap`. Con el margen a secas, la entradilla arrancaba en x=40 mientras el resto de la
+   página lo hace en x=83, y el titular de la galería no casaba con el de las secciones de
+   arriba. Como el relleno es simétrico, esto además cierra la última pieza contra el margen
+   derecho cuando el carril llega al final: a la izquierda abre con el texto, a la derecha
+   termina con la última foto. */
+.gal-track{
+  display:flex;align-items:center;gap:clamp(16px,2.6vw,46px);
+  width:max-content;height:100%;
+  padding-inline:max(var(--gutter), calc((100% - var(--maxw)) / 2 + var(--gutter)));
+  will-change:transform;
 }
-.gal .w3{grid-column:span 3}
-.gal .w4{grid-column:span 4}
-.gal .w2{grid-column:span 2}
-/* Las parejas de cada fila comparten altura: 2/3 junto a 4/3, y 1/1 junto a 2/1. */
-.gal .tall img{aspect-ratio:2/3}
-.gal .wide img{aspect-ratio:16/9}
-.gal .sq img{aspect-ratio:1/1}
-.gal .r43 img{aspect-ratio:4/3}
-.gal .r21 img{aspect-ratio:2/1}
+.gal-pieza{flex:none;margin:0;position:relative;width:var(--w);transform:translateY(var(--dy,0))}
+.gal-pieza img{display:block;width:100%;height:auto;filter:contrast(1.03)}
+.gal-pieza figcaption{margin-top:10px;display:flex;flex-wrap:wrap;gap:3px 10px;align-items:baseline}
+.gal-sitio{
+  font-family:var(--font-mono);font-size:var(--fs-label);font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+}
+.gal-fecha{
+  font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);
+}
+/* El retrato del saque viene recortado con alfa, así que no lleva marco: flota sobre el
+   fondo y es lo único del carril que no es una ventana rectangular. */
+.gal-saque{--w:min(24vw,300px);--dy:-9vh}
+.gal-saque img{filter:none}
+.gal-spike{--w:min(46vw,620px);--dy:5vh}
+.gal-ficha{--w:min(22vw,270px);--dy:8vh}
+.gal-equipo{--w:min(50vw,700px);--dy:-4vh}
+.gal-corro{--w:min(36vw,480px);--dy:9vh}
+.gal-oro{--w:min(27vw,340px);--dy:-7vh}
+.gal-esp{--w:min(38vw,500px);--dy:4vh}
+/* La entradilla abre el carril, como la primera pieza de la pista: rótulo, titular y pie. */
+.gal-intro{flex:none;width:min(38vw,440px)}
+/* El contador vive en el marco del carril, no en la entradilla: así lee de principio a fin.
+   Va abajo a la izquierda, en el mismo margen que el texto de la página —la misma cuenta que
+   el relleno del carril— y en la banda que queda libre por debajo de las piezas, que se
+   centran en vertical y no llegan nunca al fondo del marco.
+   El número lo pone el CSS con `content:attr(data-n)`, no un nodo de texto: así el traductor
+   no lo ve y no puede devolverlo a «01» al cambiar de idioma a mitad del recorrido. */
+.gal-cuenta{
+  position:absolute;z-index:2;
+  left:max(var(--gutter), calc((100% - var(--maxw)) / 2 + var(--gutter)));
+  bottom:clamp(16px,3vh,32px);
+  margin:0;display:inline-flex;align-items:center;gap:9px;
+  padding:7px 12px;border:1px solid var(--line);
+  font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.14em;color:var(--muted);
+}
+.gal-cuenta::before{content:attr(data-n);color:var(--accent);font-weight:500}
+.gal-cuenta::after{content:"/ 07"}
+/* La pista, a escala real, en el hueco negativo entre dos fotos: es el único sitio del
+   carril donde no hay imagen, y por eso se lee. Las tres primeras cifras son las del campo
+   reglamentario —18 × 9 m, y la línea de ataque a 3 m de la red con la red a 2,24 m en
+   categoría femenina—; la cuarta es ella, para que la última línea del cuadro conteste a
+   las otras tres. */
+.gal-nota{flex:none;width:min(28vw,360px)}
+.gal-medidas{list-style:none;margin:16px 0 0;padding:0}
+.gal-medidas li{
+  padding:11px 0;border-top:1px solid var(--line-soft);
+  font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);line-height:1.5;
+}
+.gal-medidas b{
+  display:block;margin-bottom:4px;font-family:var(--font-display);font-weight:400;
+  font-size:1.45rem;letter-spacing:0;text-transform:none;color:var(--accent-hi);
+  font-variant-numeric:tabular-nums;
+}
+.gal-compra{flex:none;width:min(30vw,360px)}
+/* Móvil y movimiento reducido: ni ancla ni JS. El carril pasa a ser un carrusel nativo, con
+   el dedo y con `scroll-snap`, que es lo que la gente ya sabe usar sin que nadie se lo
+   explique. Las piezas pierden su desplazamiento vertical porque en una tira que se arrastra
+   el desnivel solo estorba.
+
+   Y se centran en vertical, no se alinean arriba. La altura de la tira la fija la pieza más
+   alta, y con `flex-start` todo el hueco sobrante caía debajo: trescientos píxeles de nada
+   entre la última foto y la sección siguiente. Centrado, ese hueco se reparte y la tira se
+   lee como una tira. Por lo mismo se acorta la ficha: es la única pieza vertical de verdad
+   (2:3) y a 76vw medía 471 px de alto, o sea que era ella sola la que estiraba la sección.
+
+   Aquí el contador se retira. En la tira nativa no hay recorrido que medir —se arrastra con
+   el dedo y se ve entera, sin ancla ni progreso—, y colocado contra la sección entera caería
+   encima de las fotos, porque el marco ha dejado de tener altura propia. */
+@media (max-width:900px){
+  .gal{height:auto}
+  .gal-pin{position:static;height:auto;overflow:visible}
+  .gal-cuenta{display:none}
+  .gal-track{
+    width:auto;height:auto;transform:none;
+    overflow-x:auto;overflow-y:hidden;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    padding-block:var(--band);align-items:center;
+  }
+  .gal-pieza{--w:min(76vw,440px);--dy:0}
+  .gal-saque{--w:min(46vw,220px)}
+  .gal-ficha{--w:min(52vw,220px)}
+  .gal-intro,.gal-nota,.gal-compra{width:min(78vw,420px)}
+  .gal-pieza,.gal-intro,.gal-nota,.gal-compra{scroll-snap-align:center;transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .gal{height:auto}
+  .gal-pin{position:static;height:auto;overflow:visible}
+  .gal-cuenta{display:none}
+  .gal-track{
+    width:auto;height:auto;transform:none;
+    overflow-x:auto;overflow-y:hidden;
+    scroll-snap-type:x mandatory;padding-block:var(--band);align-items:center;
+  }
+}
 
 /* trayectoria */
 .two{display:grid;gap:clamp(28px,4vw,56px);grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
@@ -400,24 +757,70 @@ section{padding-block:var(--band)}
   counter-increment:s;content:counter(s,decimal-leading-zero);
   position:absolute;left:-9px;top:-2px;width:34px;height:34px;
   display:grid;place-items:center;background:var(--ink-3);border:1px solid var(--line);
-  font-family:var(--font-mono);font-size:.68rem;color:var(--gold);
+  font-family:var(--font-mono);font-size:.68rem;color:var(--accent);
 }
 .steps h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase;font-size:1.05rem;margin:0 0 6px}
 .steps p{margin:0;font-size:.88rem;color:var(--muted);max-width:44ch}
-.steps .yr{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.16em;color:var(--gold);display:block;margin-bottom:6px}
+.steps .yr{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.16em;color:var(--accent);display:block;margin-bottom:6px}
 .pal{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .pal li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:6px 16px;padding:14px 0;border-bottom:1px solid var(--line-soft)}
-.pal .y{font-family:var(--font-mono);font-size:.7rem;color:var(--gold);letter-spacing:.1em}
+.pal .y{font-family:var(--font-mono);font-size:.7rem;color:var(--accent);letter-spacing:.1em}
 .pal b{font-weight:600;font-size:.93rem}
 .pal small{display:block;color:var(--muted);font-size:.82rem;margin-top:2px}
 
-/* selección */
-.nat{background:linear-gradient(180deg,rgba(7,7,9,.82),rgba(7,7,9,.9))}
-.nat .box{display:grid;gap:clamp(20px,3vw,40px);grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center}
+/* ---------- LA PLACA DE ESPAÑA ----------
+   Mismo mecanismo que `.isla-cu`, pero al revés. Allí se citaba el mundo de Colorado
+   dentro del de Inés; aquí se le da la vuelta a la propia paleta de la página: la cal
+   pasa de ser el color del TEXTO al del FONDO y la pizarra al revés, y dentro el acento
+   deja de ser el verde del Atlántico y vuelve a ser el rojo de la camiseta. Ni una regla
+   de dentro de la sección se toca: son los MISMOS nombres de variable, y las propiedades
+   personalizadas solo heredan hacia abajo, así que el rojo no puede escaparse de aquí.
+
+   Y es la única pantalla clara de toda la web. En un guion que va de pizarra en pizarra,
+   el blanco es el recurso más caro que hay: por eso se lo lleva esta sección y no otra.
+
+   `--muted` NO puede quedarse en `#8B918E`. Ese gris frío está elegido para leerse sobre
+   negro; sobre cal da 2,6:1 y los pies de foto y las micro-etiquetas de las cifras se
+   desvanecen sin llegar a ser ilegibles del todo, que es la peor forma de fallar. `#635D54`
+   da 5,3:1 y mantiene el aire cálido del papel: las etiquetas de las cifras van en versalitas
+   de 10 px muy espaciadas, que es el caso donde menos margen hay.
+   El `--line` rojo al 30 % da los filetes de la retícula —el de encima de las cifras, los
+   dos de los dorsales— y el borde de las fotos: sobre cal, un filete rojo fino se lee como
+   lo que es, la federación, y no como un adorno. */
+.nat{
+  --accent:#A3121F;--accent-hi:#C0172B;
+  --muted:#635D54;
+  --line:rgba(163,18,31,.30);--line-soft:rgba(10,14,19,.12);
+  background:var(--paper);color:var(--ink);
+  border-top:2px solid var(--accent);border-bottom:2px solid var(--accent);
+  /* Los dos filetes rojos de arriba y abajo son el mismo recurso con que la isla
+     Buffaloes se enmarca en oro: la pieza se declara con un canto. Sin ellos, el borde
+     de la cal contra la pizarra es un corte seco y se lee como un fallo de pintado, no
+     como una pantalla. */
+}
+/* OJO con `--paper`, que NO se redefine arriba a propósito. En toda la hoja `--paper`
+   significa «el color del texto» y `--ink` «el del fondo», no «cal» y «pizarra»: son dos
+   papeles, no dos colores. Por eso aquí el fondo y el color se ponen a mano y los tokens
+   se quedan como están — cambiarles el valor habría funcionado de milagro y habría dejado
+   el CSS mintiendo. Pero queda una regla que sí pedía `--paper` a pelo: `.lead`, que
+   fuera es la cal del texto sobre negro. Sobre la cal del fondo eso es cal sobre cal, y
+   los dos párrafos de la selección desaparecían sin dar ningún error. */
+.nat .lead{color:var(--ink)}
+/* El frente de la selección es su primera caja, no la sección entera. La sección mide 1 844 px
+   —texto, cifras, dorsales, tres retratos y el pie de créditos—, así que un `min-height` de
+   una pantalla puesto en ella no haría absolutamente nada; y lo que el guion pide es que la
+   sección ABRA a pantalla entera, que es lo que hace la caja del retrato y las cifras.
+   `min-height` y no `height`: en cuanto la ventana es baja, el texto manda y la caja crece.
+   (El 1 507 que ponía aquí era una medición hecha con los retratos todavía sin cargar, que
+   son `loading="lazy"`: la sección encogía sola al medirla.) */
+.nat .box{display:grid;gap:clamp(20px,3vw,40px);grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;min-height:var(--screen)}
+/* Y su titular en la voz grande, la misma de la dualidad: si la apertura es un frente, el
+   titular no puede seguir en la escala de los tramos densos o el frente no se nota. */
+.nat .h2{font-size:var(--fs-pantalla);line-height:.92}
 .nat figure{margin:0;min-width:0}
 .nat img{border:1px solid var(--line)}
 .nat .kpis{display:grid;gap:18px;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:26px;border-top:1px solid var(--line);padding-top:22px}
-.nat .kpis b{display:block;font-family:var(--font-display);font-weight:400;font-size:clamp(1.7rem,3.4vw,2.5rem);color:var(--gold-hi);line-height:1}
+.nat .kpis b{display:block;font-family:var(--font-display);font-weight:400;font-size:clamp(1.7rem,3.4vw,2.5rem);color:var(--accent-hi);line-height:1}
 .nat .kpis small{display:block;margin-top:6px;font-family:var(--font-mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 /* Los retratos de estudio que publica la federación. La fuente es 2:3 exacto, la
    misma proporción que la caja, así que se muestran sin recortar nada. El ancho
@@ -434,18 +837,18 @@ section{padding-block:var(--band)}
   padding-block:clamp(18px,2.4vw,24px)}
 .nat .dorsales div{display:flex;align-items:baseline;gap:13px;min-width:0}
 .nat .dorsales b{flex:none;font-family:var(--font-display);font-weight:400;
-  font-size:clamp(2.2rem,5.4vw,3.4rem);line-height:1;color:var(--gold-hi)}
+  font-size:clamp(2.2rem,5.4vw,3.4rem);line-height:1;color:var(--accent-hi)}
 .nat .dorsales small{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.14em;
   text-transform:uppercase;color:var(--muted);line-height:1.45}
 
 /* tienda */
-.store{background:linear-gradient(180deg,rgba(7,7,9,.92),var(--ink))}
+.store{background:var(--scrim)}
 .store .grid{display:grid;gap:clamp(16px,2.2vw,28px);grid-template-columns:repeat(3,minmax(0,1fr))}
-.shop{display:flex;flex-direction:column;gap:12px;padding:clamp(20px,2.6vw,32px);border:1px solid var(--line);background:rgba(23,23,28,.7);min-width:0}
+.shop{display:flex;flex-direction:column;gap:12px;padding:clamp(20px,2.6vw,32px);border:1px solid var(--line);background:var(--ink-2);min-width:0}
 /* la suya manda: marco y fondo de oro, y el botón sólido */
-.shop.lead{border-color:var(--gold);background:rgba(207,184,124,.09)}
-.shop.lead .k{color:var(--gold-hi)}
-.shop .k{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.shop.lead{border-color:var(--accent);background:color-mix(in srgb, var(--accent) 10%, transparent)}
+.shop.lead .k{color:var(--accent-hi)}
+.shop .k{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
 .shop h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase;font-size:var(--fs-h3);margin:0}
 .shop p{margin:0;font-size:.88rem;color:var(--muted)}
 .shop .btn{margin-top:auto;align-self:flex-start}
@@ -454,11 +857,19 @@ section{padding-block:var(--band)}
 /* pie */
 footer{border-top:1px solid var(--line);padding-block:clamp(34px,5vw,64px);background:var(--ink)}
 footer .grid{display:grid;gap:clamp(24px,3vw,48px);grid-template-columns:repeat(3,minmax(0,1fr))}
-footer h4{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+footer h4{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
 footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
 footer a{font-size:.86rem;color:var(--muted);border-bottom:1px solid transparent}
-footer a:hover{color:var(--gold-hi);border-bottom-color:var(--line)}
-footer .legal{grid-column:1/-1;margin-top:14px;padding-top:20px;border-top:1px solid var(--line-soft);font-size:.78rem;color:var(--muted);max-width:80ch}
+footer a:hover{color:var(--accent-hi);border-bottom-color:var(--line)}
+/* Los creditos, en dos columnas y con letra mas pequena que la del resto del pie. Se
+   quito el `max-width:80ch` que tenia: con `columns:2` ese tope se repartia entre las dos
+   columnas y dejaba cada una en 40 caracteres, ilegible. A lo ancho, cada columna mide lo
+   mismo que una de las tres de enlaces de arriba, y el filete case con la retícula. */
+footer .legal{grid-column:1/-1;margin-top:14px;padding-top:20px;border-top:1px solid var(--line-soft);font-size:.72rem;line-height:1.62;color:var(--muted);columns:2;column-gap:clamp(26px,4vw,60px);orphans:2;widows:2}
+/* El aviso legal va en su propio bloque y no detras de dos `<br>`: con `columns` el salto de
+   linea puede caer justo en el corte de columna y entonces los dos textos se leen seguidos,
+   sin nada que los separe. Un bloque con margen y `break-inside:avoid` no puede partirse. */
+footer .legal-nota{display:block;margin-top:1.15em;break-inside:avoid}
 
 /* ---------- móvil ---------- */
 /* la barra cede la navegación (redundante con el pie) antes que el acceso a su tienda */
@@ -471,9 +882,10 @@ footer .legal{grid-column:1/-1;margin-top:14px;padding-top:20px;border-top:1px s
   .hero .shot img,.hero .shot figcaption{margin-left:0;max-width:100%}
   .hero .shot figcaption{text-align:left}
   .ficha dl{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .ficha div{border-right:0;border-bottom:1px solid var(--line-soft)}
+  .ficha dl > div{border-right:0;border-bottom:1px solid var(--line-soft);padding-left:0;padding-right:14px}
   .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
   .vids .grid,.store .grid,footer .grid{grid-template-columns:minmax(0,1fr)}
+  footer .legal{columns:1}
   .gal .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .gal .w3,.gal .w4,.gal .w2{grid-column:span 1}
   .gal .tall img{aspect-ratio:1/1}
@@ -481,8 +893,15 @@ footer .legal{grid-column:1/-1;margin-top:14px;padding-top:20px;border-top:1px s
 @media (max-width:560px){
   .eyebrow{letter-spacing:.13em}
   .ficha dl{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .hero .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .hero .stats div{border-right:0}
+  /* Dos columnas dejaban la tercera cifra sola en su fila y, peor, su etiqueta —«PUNTOS ·
+     CARRERA NCAA», la mas larga de las tres— partia en dos lineas y desalineaba la base
+     con la de al lado. En una columna, cifra y etiqueta en la misma linea y un filete
+     entre filas, se lee como una ficha tecnica y no deja huecos. */
+  .hero .stats{grid-template-columns:minmax(0,1fr)}
+  .hero .stats div{display:flex;align-items:baseline;gap:14px;
+    padding:9px 0;border-right:0;border-top:1px solid var(--line-soft)}
+  .hero .stats div:first-child{border-top:0;padding-top:0}
+  .hero .stats small{margin-top:0}
   .rows li{grid-template-columns:minmax(0,1fr) 48px}
   .rows .date{grid-column:1}
   .rows .opp{grid-column:1}
@@ -526,7 +945,7 @@ html{-webkit-text-size-adjust:100%%}
 .visits .k{font-family:var(--font-mono);font-size:var(--fs-micro);letter-spacing:.16em;
   text-transform:uppercase;color:var(--muted)}
 .visits b{font-family:var(--font-display);font-weight:400;font-size:1.2rem;line-height:1;
-  color:var(--gold);font-variant-numeric:tabular-nums}
+  color:var(--accent);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -557,9 +976,13 @@ html{-webkit-text-size-adjust:100%%}
 </header>
 
 <main>
-  <!-- ================= HERO ================= -->
+  <!-- ================= PORTADA ================= -->
   <section class="hero" id="inicio">
-    <div class="wrap">
+    <figure class="hero-bg">
+      <img src="img/hero_full.jpg" width="2000" height="1125"
+           alt="Inés Losada rematando de espaldas a la red en el Ferrell Center de Waco">
+    </figure>
+    <div class="wrap hero-in">
       <div class="col">
         <p class="eyebrow">Colorado Buffaloes · Voleibol · Big 12</p>
         <h1 class="title"><span>Inés</span><span class="foil">Losada</span></h1>
@@ -584,13 +1007,45 @@ html{-webkit-text-size-adjust:100%%}
           <a class="btn solid" href="https://nil.store/colorado/col-ines-losada-8" target="_blank" rel="noopener">Camiseta de Inés <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <figure class="shot">
-        <img src="img/saque.webp" width="880" height="1033"
-             alt="Inés Losada sacando desde el fondo de la pista, con la camiseta negra del 8 de Colorado">
-        <figcaption>Saque · Kansas State, 11 de octubre de 2026</figcaption>
-      </figure>
     </div>
+    <p class="hero-cred">Ataque · Baylor, 4 de octubre de 2026 · Foto: Colorado Athletics</p>
   </section>
+
+  <!-- ================= MARQUESINA =================
+       La frase va repetida siete veces en cada grupo, y el grupo dos veces. El número no es
+       decorativo: el bucle consiste en desplazar la pista la mitad de su ancho, así que un
+       grupo TIENE que medir más que la ventana o al girar se vería el hueco vacío que queda
+       a la derecha de la pista. Con siete repeticiones cada grupo mide 2743 px (medidos a
+       0,78 rem con 0,2 em de tracking), que cubre cualquier monitor hasta 2742 px de ancho.
+       El separador «·» lo pone el CSS, no el texto, así que el nodo de texto es sólo la
+       frase y el traductor tiene una clave por frase en vez de catorce. -->
+  <div class="marq" aria-hidden="true">
+    <div class="marq-track">
+      <span>A Coruña → Boulder · Dorsal 8 · 2026</span>
+      <span>A Coruña → Boulder · Dorsal 8 · 2026</span>
+      <span>A Coruña → Boulder · Dorsal 8 · 2026</span>
+      <span>A Coruña → Boulder · Dorsal 8 · 2026</span>
+      <span>A Coruña → Boulder · Dorsal 8 · 2026</span>
+      <span>A Coruña → Boulder · Dorsal 8 · 2026</span>
+      <span>A Coruña → Boulder · Dorsal 8 · 2026</span>
+      <span>A Coruña → Boulder · Dorsal 8 · 2026</span>
+      <span>A Coruña → Boulder · Dorsal 8 · 2026</span>
+      <span>A Coruña → Boulder · Dorsal 8 · 2026</span>
+      <span>A Coruña → Boulder · Dorsal 8 · 2026</span>
+      <span>A Coruña → Boulder · Dorsal 8 · 2026</span>
+      <span>A Coruña → Boulder · Dorsal 8 · 2026</span>
+      <span>A Coruña → Boulder · Dorsal 8 · 2026</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       ISLA COLORADO · aquí se cita el mundo de los Buffaloes
+       La ficha y la temporada conservan su negro, su oro y su Anton; lo que cambia
+       es que ya no son el mundo entero, sino una pieza exhibida dentro del de Inés.
+       El CSS de dentro no se ha tocado: los colores le llegan del ámbito .isla-cu.
+       ============================================================ -->
+  <div class="isla-cu">
+  <p class="isla-cu-tag">Colorado Buffaloes · Big 12 · 2026</p>
 
   <!-- ================= FICHA ================= -->
   <section class="ficha" aria-label="Ficha" style="padding-block:0">
@@ -680,12 +1135,13 @@ html{-webkit-text-size-adjust:100%%}
       </div>
     </div>
   </section>
+  </div><!-- /isla-cu -->
 
   <!-- ================= FRANJA PROMOCIONAL ================= -->
   <div class="promo">
     <div class="wrap">
       <div class="t">
-        <p class="eyebrow" style="color:rgba(11,11,13,.72)">Su locker room oficial · NIL Store</p>
+        <p class="eyebrow" style="color:color-mix(in srgb, var(--paper) 74%, transparent)">Su locker room oficial · NIL Store</p>
         <b>Lleva el 8</b>
         <p>
           La camiseta negra de Colorado con el apellido LOSADA y el dorsal 8, y el resto de su
@@ -697,6 +1153,37 @@ html{-webkit-text-size-adjust:100%%}
       </a>
     </div>
   </div>
+
+  <!-- ================= PANTALLA DE DUALIDAD =================
+       Las dos mitades del recorrido, enfrentadas. Los dos nombres van pegados a la costura
+       —uno alineado a la derecha y el otro a la izquierda— para que se lean como un diálogo
+       a través de la red, que es el filete de 1 px que separa los paneles. «A Coruña» va
+       tachada porque es el lado que se deja; el tachón lo pone el CSS.
+       Las dos fotos son de cuerpo entero y fondo oscuro a propósito: lo que contrasta es el
+       uniforme rojo de España contra el blanco de Colorado, no el estudio contra la grada. -->
+  <section class="duo">
+    <!-- La anotación va PRIMERO en el marcado, aunque se lea como un pie. No es un capricho:
+         la retícula coloca sola, de arriba abajo, así que el orden del documento es el orden
+         en pantalla. Con el párrafo al final caía en la fila de abajo, debajo de las fotos, y
+         además —al ser el último hijo— dejaba sin efecto a `.duo-lado:last-of-type`. -->
+    <p class="duo-cab">7 555 km · 8 horas de diferencia</p>
+    <figure class="duo-lado">
+      <img src="img/duo_es.jpg" width="900" height="1350"
+           alt="Inés Losada con la camiseta de la selección española, con un balón en la mano">
+      <figcaption>
+        <span class="duo-nombre"><span class="tachado">A Coruña</span></span>
+        <span class="duo-meta">España · CAEP Soria y Arenal Emevé<br>2022 — 2025</span>
+      </figcaption>
+    </figure>
+    <figure class="duo-lado">
+      <img src="img/duo_us.jpg" width="900" height="1350"
+           alt="Inés Losada celebrando un punto con la camiseta blanca de los Colorado Buffaloes">
+      <figcaption>
+        <span class="duo-nombre">Boulder</span>
+        <span class="duo-meta">Colorado Buffaloes · Big 12<br>2025 — hoy</span>
+      </figcaption>
+    </figure>
+  </section>
 
   <!-- ================= VÍDEOS ================= -->
   <section class="vids" id="videos" data-amb="csu">
@@ -828,54 +1315,116 @@ html{-webkit-text-size-adjust:100%%}
     </div>
   </section>
 
-  <!-- ================= GALERÍA ================= -->
+  <!-- ================= GALERÍA =================
+       Un carril horizontal, no una rejilla. Las siete piezas van a escalas y alturas
+       distintas y el scroll vertical las empuja de lado (véase el bloque de JS). El orden
+       alterna una pieza grande con una pequeña y sube o baja cada una, para que la vista no
+       encuentre nunca una fila recta. -->
   <section class="gal" id="galeria" data-amb="team">
-    <div class="wrap">
-      <div class="head">
-        <div>
+    <div class="gal-pin">
+      <!-- El contador va en el marco, no dentro de la entradilla. Ahí se iba con ella: en
+           cuanto el carril avanzaba una pieza dejaba de verse, y un marcador que solo existe
+           en la primera pantalla no marca nada. Aquí lee durante todo el recorrido. -->
+      <p class="gal-cuenta" data-n="01"></p>
+      <div class="gal-track">
+
+        <div class="gal-intro">
           <p class="eyebrow">Galería</p>
           <h2 class="h2">El 8 en la pista</h2>
+          <p class="small">
+            Fotos de Colorado Athletics, más una de prensa gallega con la selección española.
+            Los créditos están al final de la página.
+          </p>
         </div>
-        <p class="small">
-          Fotos de Colorado Athletics, más una de prensa gallega con la selección española.
-          Los créditos están al final de la página.
-        </p>
+
+        <figure class="gal-pieza gal-spike">
+          <img src="img/g_spike.jpg" width="1400" height="787" loading="lazy"
+               alt="Inés Losada rematando con la camiseta negra del 8 de Colorado">
+          <figcaption>
+            <span class="gal-sitio">Remate</span>
+            <span class="gal-fecha">Ferrell Center · 4 oct 2026</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gal-pieza gal-saque">
+          <img src="img/saque.webp" width="880" height="1033"
+               alt="Inés Losada sacando desde el fondo de la pista, con la camiseta negra del 8 de Colorado">
+          <figcaption>
+            <span class="gal-sitio">Saque</span>
+            <span class="gal-fecha">CU Events Center · 11 oct 2026</span>
+          </figcaption>
+        </figure>
+
+        <!-- La ficha oficial. El fichero de cubuffs que se llama «…Headshots-08» NO es la
+             jugadora del dorsal 8: en esa serie el número es el orden en la plantilla, y
+             ese es de otra compañera. La de Inés la señala el propio cubuffs en su tarjeta
+             de plantilla. Ver prep.py, donde está contado entero. -->
+        <figure class="gal-pieza gal-ficha">
+          <img src="img/headshot_losada.jpg" width="768" height="1152" loading="lazy"
+               alt="Ficha oficial de Inés Losada con la camiseta del número 8 de Colorado">
+          <figcaption>
+            <span class="gal-sitio">Ficha oficial</span>
+            <span class="gal-fecha">Boulder · 2025</span>
+          </figcaption>
+        </figure>
+
+        <!-- El hueco negativo del carril no se rellena con otra foto: se rellena con la pista,
+             a escala real. Es el único dato de la galería que no sale de una imagen, y el
+             único sitio de la página donde el deporte se explica con sus propias medidas. -->
+        <div class="gal-nota">
+          <p class="eyebrow">La pista</p>
+          <ul class="gal-medidas">
+            <li><b>18 × 9 m</b> el campo entero</li>
+            <li><b>3 m</b> de la red a la línea de ataque</li>
+            <li><b>2,24 m</b> la red, en categoría femenina</li>
+            <li><b>1,86 m</b> Inés</li>
+          </ul>
+        </div>
+
+        <figure class="gal-pieza gal-equipo">
+          <img src="img/g_team.jpg" width="1400" height="824" loading="lazy"
+               alt="La plantilla de voleibol de Colorado celebrando en la pista">
+          <figcaption>
+            <span class="gal-sitio">La plantilla</span>
+            <span class="gal-fecha">CU Events Center · 2026</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gal-pieza gal-corro">
+          <img src="img/g_csu.jpg" width="1300" height="730" loading="lazy"
+               alt="El equipo de Colorado celebrando en corro tras ganar a Colorado State">
+          <figcaption>
+            <span class="gal-sitio">El corro</span>
+            <span class="gal-fecha">CU Events Center · 17 sep 2026</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gal-pieza gal-oro">
+          <img src="img/g_detail.jpg" width="805" height="805" loading="lazy"
+               alt="Inés Losada en el aire, de espaldas, con el dorsal 8 y las mangas doradas de la camiseta negra de Colorado">
+          <figcaption>
+            <span class="gal-sitio">Oro sobre negro</span>
+            <span class="gal-fecha">Boulder · 2026</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gal-pieza gal-esp">
+          <img src="img/g_esp.jpg" width="880" height="495" loading="lazy"
+               alt="La selección española sub-19 en un partido del Mundial">
+          <figcaption>
+            <span class="gal-sitio">Con España</span>
+            <span class="gal-fecha">Mundial Sub-19 · 2025</span>
+          </figcaption>
+        </figure>
+
+        <div class="gal-compra">
+          <p class="buyline">
+            Ese dorsal se lleva:
+            <a href="https://nil.store/colorado/col-ines-losada-8" target="_blank" rel="noopener">camiseta Losada 8 en su locker room →</a>
+          </p>
+        </div>
+
       </div>
-
-      <div class="grid">
-        <figure class="w3 wide">
-          <img src="img/g_spike.jpg" alt="Inés Losada rematando con la camiseta negra del 8 de Colorado" loading="lazy">
-          <figcaption>Remate con la equipación negra. Foto: Colorado Athletics / cubuffs.com</figcaption>
-        </figure>
-        <figure class="w3 wide">
-          <img src="img/g_csu.jpg" alt="El equipo de Colorado celebrando en corro tras ganar a Colorado State" loading="lazy">
-          <figcaption>El corro tras ganar el derbi a Colorado State (17 sep), el 9-0 histórico.
-            Foto: Colorado Athletics / cubuffs.com</figcaption>
-        </figure>
-
-        <figure class="w2 tall">
-          <img src="img/portrait.jpg" alt="Ficha oficial de Inés Losada con la camiseta del número 8 de Colorado" loading="lazy">
-          <figcaption>Ficha oficial de la temporada 2026. Foto: Colorado Athletics / cubuffs.com</figcaption>
-        </figure>
-        <figure class="w4 r43">
-          <img src="img/g_team.jpg" alt="La plantilla de voleibol de Colorado celebrando en la pista" loading="lazy">
-          <figcaption>La plantilla en el CU Events Center. Foto: Colorado Athletics / cubuffs.com</figcaption>
-        </figure>
-
-        <figure class="w2 sq">
-          <img src="img/g_detail.jpg" alt="Inés Losada en el aire, de espaldas, con el dorsal 8 y las mangas doradas de la camiseta negra de Colorado" loading="lazy">
-          <figcaption>Oro sobre negro. Foto: Colorado Athletics / cubuffs.com</figcaption>
-        </figure>
-        <figure class="w4 r21">
-          <img src="img/g_esp.jpg" alt="La selección española sub-19 en un partido del Mundial" loading="lazy">
-          <figcaption>Con España en el Mundial Sub-19 de 2025. Foto: La Opinión A Coruña / Prensa Ibérica</figcaption>
-        </figure>
-      </div>
-
-      <p class="buyline">
-        Ese dorsal se lleva:
-        <a href="https://nil.store/colorado/col-ines-losada-8" target="_blank" rel="noopener">camiseta Losada 8 en su locker room →</a>
-      </p>
     </div>
   </section>
 
@@ -1057,11 +1606,36 @@ html{-webkit-text-size-adjust:100%%}
 
       <p class="note">
         Enlaces comprobados el 14 de octubre de 2026. También hay camisetas de voleibol en la
-        <a href="https://shop.cubuffs.com/colorado-buffaloes/jerseys/t-12602597+d-86776790+z-995-3679135264" target="_blank" rel="noopener" style="color:var(--gold-hi);border-bottom:1px solid var(--line)">sección de equipaciones</a>
+        <a href="https://shop.cubuffs.com/colorado-buffaloes/jerseys/t-12602597+d-86776790+z-995-3679135264" target="_blank" rel="noopener" style="color:var(--accent-hi);border-bottom:1px solid var(--line)">sección de equipaciones</a>
         de la tienda oficial.
       </p>
     </div>
   </section>
+
+  <!-- Marquesina de cierre. La de arriba abre la página con «A Coruña → Boulder»; esta la
+       cierra con la razón por la que la página existe, que es mandar a la gente a su tienda.
+       No es un enlace —`aria-hidden` y sin `a`, porque es una banda, no un botón—: los
+       enlaces de verdad están en el pie, tres renglones más abajo.
+       Las catorce copias del texto comparten una sola clave en el diccionario inglés: es
+       una frase repetida para que el bucle no deje hueco, no catorce frases. -->
+  <div class="marq" aria-hidden="true">
+    <div class="marq-track">
+      <span>Camiseta 8 · NIL Store · Colorado Buffaloes</span>
+      <span>Camiseta 8 · NIL Store · Colorado Buffaloes</span>
+      <span>Camiseta 8 · NIL Store · Colorado Buffaloes</span>
+      <span>Camiseta 8 · NIL Store · Colorado Buffaloes</span>
+      <span>Camiseta 8 · NIL Store · Colorado Buffaloes</span>
+      <span>Camiseta 8 · NIL Store · Colorado Buffaloes</span>
+      <span>Camiseta 8 · NIL Store · Colorado Buffaloes</span>
+      <span>Camiseta 8 · NIL Store · Colorado Buffaloes</span>
+      <span>Camiseta 8 · NIL Store · Colorado Buffaloes</span>
+      <span>Camiseta 8 · NIL Store · Colorado Buffaloes</span>
+      <span>Camiseta 8 · NIL Store · Colorado Buffaloes</span>
+      <span>Camiseta 8 · NIL Store · Colorado Buffaloes</span>
+      <span>Camiseta 8 · NIL Store · Colorado Buffaloes</span>
+      <span>Camiseta 8 · NIL Store · Colorado Buffaloes</span>
+    </div>
+  </div>
 </main>
 
 <footer>
@@ -1102,18 +1676,26 @@ html{-webkit-text-size-adjust:100%%}
       La Opinión A Coruña / Prensa Ibérica, incluida como cobertura periodística del Mundial Sub-19 de 2025.
       Estadísticas: actas y páginas oficiales de cubuffs.com, consultadas el 14 de octubre de 2026.
       <span>Los retratos con la selección son de la Real Federación Española de Voleibol (RFEVB).</span>
-      <br><br>
-      Página no oficial, hecha como homenaje para Inés Losada. No está vinculada a la Universidad de
+      <span class="legal-nota">Página no oficial, hecha como homenaje para Inés Losada. No está vinculada a la Universidad de
       Colorado, a CU Athletics ni a ninguna de las marcas citadas. En las ruedas de prensa, la
       identificación de Inés se hizo por el dorsal de la camiseta y el cotejo con su ficha oficial:
-      la certeza es alta en la de Colorado State y media en las de Northern Colorado y Kansas State.
+      la certeza es alta en la de Colorado State y media en las de Northern Colorado y Kansas State.</span>
     </p>
   </div>
 </footer>
 
 <script>
 (function(){
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* El sistema puede cambiar de opinion con la pagina abierta —en Windows y en macOS es un
+     interruptor de los ajustes de accesibilidad—, y el CSS lo sigue solo porque es una media
+     query. Si aquí se leyera una vez y se guardara, la hoja y el guion dejarían de contar lo
+     mismo: el carril seguiría sin ancla (porque el guion ya lo midió como reducido) mientras
+     el CSS ya lo habría anclado. Así que se relee y se vuelve a medir cuando cambia. */
+  var rm = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var reduce = rm.matches;
+  var alCambiarMovimiento = function(){ reduce = rm.matches; mideGal(); galDibuja(); };
+  if(rm.addEventListener) rm.addEventListener('change', alCambiarMovimiento);
+  else if(rm.addListener) rm.addListener(alCambiarMovimiento);
 
   /* =======================================================================
      IDIOMA · ES por defecto, EN a un clic, y el idioma del navegador manda
@@ -1132,8 +1714,13 @@ html{-webkit-text-size-adjust:100%%}
       "From Superliga 2 to the U19 World Championship with Spain and on to Colorado. In her second season with the Buffaloes she is one of the outside hitters carrying the team's attack, and one of the voices the University puts in front of the camera.",
     "Puntos · 2026":"Points · 2026","Puntos · carrera NCAA":"Points · NCAA career",
     "Eficacia · Mundial S19":"Efficiency · U19 World Ch.",
-    "Sus mejores partidos":"Her best matches","Tienda oficial":"Official store",
+    "Sus mejores partidos":"Her best matches",
     "Camiseta":"Jersey","Camiseta de Inés":"Inés's jersey",
+    "Ataque · Baylor, 4 de octubre de 2026 · Foto: Colorado Athletics":
+      "Attack · Baylor, 4 October 2026 · Photo: Colorado Athletics",
+    /* marquesina */
+    "A Coruña → Boulder · Dorsal 8 · 2026":"A Coruña → Boulder · Jersey 8 · 2026",
+    "Camiseta 8 · NIL Store · Colorado Buffaloes":"Jersey 8 · NIL Store · Colorado Buffaloes",
     /* franja promocional */
     "Su locker room oficial · NIL Store":"Her official locker room · NIL Store",
     "Lleva el 8":"Wear the 8",
@@ -1145,7 +1732,10 @@ html{-webkit-text-size-adjust:100%%}
     "su locker room de la NIL Store →":"her NIL Store locker room →",
     "Ese dorsal se lleva:":"That number is wearable:",
     "camiseta Losada 8 en su locker room →":"Losada 8 jersey in her locker room →",
-    "Saque · Kansas State, 11 de octubre de 2026":"Serve · Kansas State, 11 October 2026",
+    /* pantalla de dualidad */
+    "España · CAEP Soria y Arenal Emevé":"Spain · CAEP Soria and Arenal Emevé",
+    "2025 — hoy":"2025 — today",
+    "7 555 km · 8 horas de diferencia":"7,555 km · 8 hours apart",
     /* ficha */
     "Dorsal":"Jersey","Puesto":"Position","Altura":"Height","Equipo":"Team","Origen":"Hometown",
     "España":"Spain","Temporada 2026":"2026 season","13 partidos":"13 matches",
@@ -1208,13 +1798,26 @@ html{-webkit-text-size-adjust:100%%}
     "El 8 en la pista":"The 8 on the court",
     "Fotos de Colorado Athletics, más una de prensa gallega con la selección española. Los créditos están al final de la página.":
       "Photos from Colorado Athletics, plus one from the Galician press with the Spain national team. Credits are at the foot of the page.",
-    "Remate con la equipación negra. Foto: Colorado Athletics / cubuffs.com":"Attacking in the black kit. Photo: Colorado Athletics / cubuffs.com",
-    "El corro tras ganar el derbi a Colorado State (17 sep), el 9-0 histórico. Foto: Colorado Athletics / cubuffs.com":
-      "The huddle after beating Colorado State in the derby (Sep 17), the historic 9-0 start. Photo: Colorado Athletics / cubuffs.com",
-    "Ficha oficial de la temporada 2026. Foto: Colorado Athletics / cubuffs.com":"Official 2026 season portrait. Photo: Colorado Athletics / cubuffs.com",
-    "La plantilla en el CU Events Center. Foto: Colorado Athletics / cubuffs.com":"The roster at the CU Events Center. Photo: Colorado Athletics / cubuffs.com",
-    "Oro sobre negro. Foto: Colorado Athletics / cubuffs.com":"Gold on black. Photo: Colorado Athletics / cubuffs.com",
-    "Con España en el Mundial Sub-19 de 2025. Foto: La Opinión A Coruña / Prensa Ibérica":"With Spain at the 2025 U19 World Championship. Photo: La Opinión A Coruña / Prensa Ibérica",
+    /* galería · los pies van en dos nodos —sitio y fecha—, así que son dos claves cada uno.
+       «Boulder · 2026», «CU Events Center · 2026», «18 × 9 m» y «3 m» no llevan entrada a
+       propósito: no hay nada que traducir en ellos. El único decimal de la lista, «2,24 m»,
+       sí la necesita, porque en inglés el separador es el punto. */
+    "Remate":"Attack",
+    "Ferrell Center · 4 oct 2026":"Ferrell Center · 4 Oct 2026",
+    "Saque":"Serve",
+    "CU Events Center · 11 oct 2026":"CU Events Center · 11 Oct 2026",
+    "Ficha oficial":"Official profile",
+    "La pista":"The court",
+    "el campo entero":"the whole court",
+    "de la red a la línea de ataque":"from the net to the attack line",
+    "2,24 m":"2.24 m",
+    "la red, en categoría femenina":"the net, in the women's game",
+    "La plantilla":"The roster",
+    "El corro":"The huddle",
+    "CU Events Center · 17 sep 2026":"CU Events Center · 17 Sep 2026",
+    "Oro sobre negro":"Gold on black",
+    "Con España":"With Spain",
+    "Mundial Sub-19 · 2025":"U19 World Championship · 2025",
     "Foto: La Opinión A Coruña / Prensa Ibérica.":"Photo: La Opinión A Coruña / Prensa Ibérica.",
     /* trayectoria */
     "De A Coruña a Boulder":"From A Coruña to Boulder",
@@ -1323,7 +1926,10 @@ html{-webkit-text-size-adjust:100%%}
     "Inés Losada con la selección española sub-19 durante el Mundial de 2025":"Inés Losada with the Spain U19 national team at the 2025 World Championship",
     "Inés Losada de cuerpo entero con la equipación de la selección española":"Inés Losada, full length, in the Spain national team kit",
     "Inés Losada con el balón en la mano, con la camiseta número 23 de la selección española":"Inés Losada holding the ball, in Spain's number 23 shirt",
-    "Inés Losada celebrando con los puños en alto, con la camiseta de la selección española":"Inés Losada celebrating with her fists up, in the Spain national team shirt"
+    "Inés Losada celebrando con los puños en alto, con la camiseta de la selección española":"Inés Losada celebrating with her fists up, in the Spain national team shirt",
+    "Inés Losada rematando de espaldas a la red en el Ferrell Center de Waco":"Inés Losada spiking with her back to the net at the Ferrell Center in Waco",
+    "Inés Losada con la camiseta de la selección española, con un balón en la mano":"Inés Losada in the Spain national team shirt, ball in hand",
+    "Inés Losada celebrando un punto con la camiseta blanca de los Colorado Buffaloes":"Inés Losada celebrating a point in the white Colorado Buffaloes jersey"
   };
 
   var EN_ARIA = {"Secciones":"Sections","Ficha":"Player profile"};
@@ -1397,11 +2003,20 @@ html{-webkit-text-size-adjust:100%%}
   if('IntersectionObserver' in window && sections.length){
     var best = null;
     var io = new IntersectionObserver(function(){
+      /* Manda la seccion que CONTIENE la linea del 45%, no la que tiene el borde
+         superior mas cerca de ella. Con la regla anterior (`|r.top - mid|`) una seccion
+         alta perdia siempre contra la que venia detras: al entrar en `trayectoria` su
+         borde superior se queda arriba y la distancia no hace mas que crecer, asi que a
+         un tercio de seccion el selector saltaba a `seleccion` y la foto de `trayectoria`
+         solo llegaba a verse en su primer tramo. Midiendo la distancia al INTERVALO
+         [r.top, r.bottom] eso no puede pasar: si la linea cae dentro, la distancia es 0
+         y gana. Cuando no cae dentro —los tramos entre secciones, que no declaran
+         ambiente— se sigue midiendo al borde mas proximo, que es lo que hacia antes. */
       var mid = window.innerHeight * 0.45, pick = 'hero', dist = Infinity;
       Array.prototype.forEach.call(sections, function(s){
         var r = s.getBoundingClientRect();
         if(r.bottom < 0 || r.top > window.innerHeight) return;
-        var d = Math.abs(r.top - mid);
+        var d = r.top > mid ? r.top - mid : (r.bottom < mid ? mid - r.bottom : 0);
         if(d < dist){ dist = d; pick = s.dataset.amb; }
       });
       ambient(pick);
@@ -1413,6 +2028,11 @@ html{-webkit-text-size-adjust:100%%}
   var amb = document.querySelector('.amb'), last = -1, ticking = false;
   function frame(){
     ticking = false;
+    /* La galería se dibuja ANTES del atajo de abajo a propósito: ese atajo compara contra un
+       scroll recortado a 4000 px, y la galería queda muy por debajo. Si se dibujara después,
+       al pasar de 4000 px el atajo la daría por parada y el carril se quedaría clavado a
+       medio camino. */
+    galDibuja();
     var y = Math.min(window.scrollY, 4000);
     if(Math.abs(y - last) < 2) return;
     last = y;
@@ -1423,6 +2043,84 @@ html{-webkit-text-size-adjust:100%%}
     if(!ticking){ ticking = true; window.requestAnimationFrame(frame); }
   }
   window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* --- galería horizontal anclada ---
+     El carril no se mueve solo: lo empuja el scroll vertical. La sección se estira justo lo
+     que mide el carril menos la ventana, y dentro de ese tramo el carril se queda pegado
+     arriba mientras avanza de lado. El recorrido horizontal dura así lo mismo que el
+     vertical que se le dedica, y no depende de la velocidad del ratón: se recorre entero
+     aunque se baje de un tirón.
+
+     El ancho del carril se mide una vez y no depende del texto —cada pieza tiene su ancho
+     fijo en `--w`—, así que cambiar de idioma no obliga a volver a medirlo. Lo que sí lo
+     obliga es redimensionar: los anchos van en `vw`. */
+  var gal = document.querySelector('.gal');
+  var galPin = gal && gal.querySelector('.gal-pin');
+  var galTrack = gal && gal.querySelector('.gal-track');
+  var galCuenta = gal && gal.querySelector('.gal-cuenta');
+  var galLargo = 0;
+  var galCentros = [];                           /* el centro de cada pieza, en coordenadas del carril */
+  var estrecho = window.matchMedia('(max-width:900px)');
+
+  function mideGal(){
+    if(!gal) return;
+    if(reduce || estrecho.matches){
+      gal.style.height = ''; galLargo = 0; galCentros = [];
+      galTrack.style.transform = '';
+      return;
+    }
+    galTrack.style.transform = '';                 /* sin desplazamiento, o se mide a sí mismo */
+    /* Se mide contra `clientWidth`, no contra `innerWidth`: en Windows y en Linux, con barras de
+       desplazamiento clásicas, `innerWidth` cuenta los 15 px de la barra y `clientWidth` no. El
+       carril tiene que parar cuando su borde derecho llega al borde del área de contenido, no
+       debajo de la barra, o los últimos 15 px del recorrido se hacen fuera de la vista. */
+    galLargo = Math.max(0, galTrack.scrollWidth - document.documentElement.clientWidth);
+    gal.style.height = (galPin.offsetHeight + galLargo) + 'px';
+    /* Los centros de las piezas se toman aquí, con el carril sin desplazar, que es cuando
+       `getBoundingClientRect` devuelve su sitio de verdad. Se guardan referidos al propio carril
+       para que no dependan de dónde esté la sección en la página. */
+    var t = galTrack.getBoundingClientRect();
+    galCentros = Array.prototype.map.call(galTrack.querySelectorAll('.gal-pieza'), function(f){
+      var b = f.getBoundingClientRect();
+      return b.left - t.left + b.width / 2;
+    });
+  }
+
+  function galDibuja(){
+    if(!galLargo) return;
+    var r = gal.getBoundingClientRect();
+    var p = -r.top / galLargo;
+    p = p < 0 ? 0 : p > 1 ? 1 : p;
+    galTrack.style.transform = 'translate3d(' + (-p * galLargo).toFixed(1) + 'px,0,0)';
+    if(!galCuenta || galCentros.length < 2) return;
+    /* El contador dice qué pieza manda en pantalla. La tentación es preguntar cuál está más
+       cerca del centro de la ventana, y está mal: el centro de la ventana recorre el carril
+       desde `cw/2` hasta `largo − cw/2`, así que en una ventana ancha la primera y la última
+       pieza —que son las estrechas— quedan fuera de ese tramo y no salen NUNCA. A 1905 px el
+       contador no pasaba de 06 ni con el carril al final del todo.
+       Lo que sí funciona: pasear el punto de mira desde el centro de la primera pieza hasta el
+       de la última, a la par que el recorrido. Cada pieza manda en el tramo que queda más cerca
+       de su centro que de ningún otro, así que el número sube de uno en uno y sin saltos, da 01
+       al principio y el total al final, y no hace falta que las piezas midan lo mismo. */
+    var fin = galCentros.length - 1;
+    var mira = galCentros[0] + p * (galCentros[fin] - galCentros[0]);
+    var mejor = 1, dist = Infinity;
+    galCentros.forEach(function(c, i){
+      var d = Math.abs(c - mira);
+      if(d < dist){ dist = d; mejor = i + 1; }
+    });
+    galCuenta.dataset.n = (mejor < 10 ? '0' : '') + mejor;
+  }
+
+  mideGal();
+  galDibuja();
+  window.addEventListener('resize', function(){ mideGal(); galDibuja(); }, {passive:true});
+  /* Las tipografías cambian el alto de los pies de foto, no el ancho de las piezas, pero
+     `offsetHeight` del anclaje sí depende de la barra de direcciones del móvil: se vuelve a
+     medir cuando el navegador ya sabe lo que mide todo. */
+  if(document.fonts && document.fonts.ready){
+    document.fonts.ready.then(function(){ mideGal(); galDibuja(); });
+  }
 
   /* --- anclas suaves respetando el movimiento reducido --- */
   document.querySelectorAll('a[href^="#"]').forEach(function(a){
