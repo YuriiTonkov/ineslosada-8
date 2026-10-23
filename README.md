@@ -10,7 +10,7 @@ trayectoria y el enlace a su camiseta oficial.
 | Ruta | Qué es |
 |---|---|
 | `index.html` | La página entera: HTML, CSS y JavaScript en un único fichero. No hay build ni dependencias, salvo las tipografías de Google Fonts y el contador de visitas. |
-| `img/` | Las 28 imágenes: el saque de la portada, el retrato, los fondos en duotono negro/oro, las carátulas de los vídeos y la foto de la tarjeta al compartir. |
+| `img/` | Las 30 imágenes: la portada, los retratos, los fondos de ambiente, las carátulas de los vídeos y la foto de la tarjeta al compartir. |
 
 Para verla en local basta con abrir `index.html`, o servirlo con
 `python -m http.server` si el navegador bloquea las rutas locales.
@@ -34,10 +34,10 @@ la primera vez lo decide el idioma del navegador.
 - **Fotos**: Colorado Athletics / cubuffs.com; los retratos con la selección, de la Real
   Federación Española de Voleibol (RFEVB); y la imagen del Mundial Sub-19, de *La Opinión
   A Coruña* / Prensa Ibérica, incluida como cobertura periodística. La foto de la portada
-  —Inés sacando con la camiseta negra del 8— es un fotograma del partido contra Kansas
-  State del 11 de octubre de 2026, recortado de la retransmisión y fundido en negro para
-  que se apoye en el fondo de la página sin que se vea el canto.
-- **Estadísticas**: actas y páginas oficiales de cubuffs.com, consultadas el 14 de octubre de
+  —Inés con la camiseta negra del 8— es un fotograma de una retransmisión de 2026,
+  recortado y fundido en negro para que se apoye en el fondo de la página sin que se vea
+  el canto.
+- **Estadísticas**: actas y páginas oficiales de cubuffs.com, consultadas el 23 de octubre de
   2026.
 
 ---
