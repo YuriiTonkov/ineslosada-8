@@ -10,7 +10,7 @@ trayectoria y el enlace a su camiseta oficial.
 | Ruta | Qué es |
 |---|---|
 | `index.html` | La página entera: HTML, CSS y JavaScript en un único fichero. No hay build ni dependencias, salvo las tipografías de Google Fonts y el contador de visitas. |
-| `img/` | Las 31 imágenes: la portada, los retratos, los fondos de ambiente, las carátulas de los vídeos, la foto del bloqueo en Utah y la de la tarjeta al compartir. |
+| `img/` | Las 33 imágenes: la portada, los retratos, los fondos de ambiente, las carátulas de los vídeos, las fotos de la galería (incluidas las de la selección) y la de la tarjeta al compartir. |
 
 Para verla en local basta con abrir `index.html`, o servirlo con
 `python -m http.server` si el navegador bloquea las rutas locales.

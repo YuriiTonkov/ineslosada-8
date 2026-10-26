@@ -643,14 +643,24 @@ section{padding-block:var(--band)}
    derecho cuando el carril llega al final: a la izquierda abre con el texto, a la derecha
    termina con la última foto. */
 .gal-track{
+  /* Una sola altura para todas las fotos: el ancho sale de la proporción de cada una.
+     Antes cada pieza traía su propio `--w` y un `--dy` en vh, y el resultado era un
+     collage con siete tamaños y siete baselines distintos: la ficha medía 270 px de
+     ancho y la del equipo 700, y los pies de foto caían a alturas separadas hasta 140 px.
+     Con la altura común, el ancho solo varía por el formato (vertical, cuadrado,
+     apaisado) y los pies comparten línea. */
+  --gal-h:clamp(300px,40vh,410px);
   display:flex;align-items:center;gap:clamp(16px,2.6vw,46px);
   width:max-content;height:100%;
   padding-inline:max(var(--gutter), calc((100% - var(--maxw)) / 2 + var(--gutter)));
   will-change:transform;
 }
-.gal-pieza{flex:none;margin:0;position:relative;width:var(--w);transform:translateY(var(--dy,0))}
-.gal-pieza img{display:block;width:100%;height:auto;filter:contrast(1.03)}
-.gal-pieza figcaption{margin-top:10px;display:flex;flex-wrap:wrap;gap:3px 10px;align-items:baseline}
+.gal-pieza{flex:none;margin:0;position:relative}
+.gal-pieza img{display:block;height:var(--gal-h);width:auto;max-width:none;filter:contrast(1.03)}
+.gal-pieza figcaption{
+  margin-top:10px;display:flex;flex-wrap:wrap;gap:3px 10px;align-items:baseline;
+  min-height:2.4em;align-content:flex-start; /* dos líneas de reserva: si un pie parte, no mueve la foto */
+}
 .gal-sitio{
   font-family:var(--font-mono);font-size:var(--fs-label);font-weight:500;
   letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
@@ -661,15 +671,7 @@ section{padding-block:var(--band)}
 }
 /* El retrato del saque viene recortado con alfa, así que no lleva marco: flota sobre el
    fondo y es lo único del carril que no es una ventana rectangular. */
-.gal-saque{--w:min(24vw,300px);--dy:-9vh}
 .gal-saque img{filter:none}
-.gal-spike{--w:min(46vw,620px);--dy:5vh}
-.gal-ficha{--w:min(22vw,270px);--dy:8vh}
-.gal-equipo{--w:min(50vw,700px);--dy:-4vh}
-.gal-corro{--w:min(36vw,480px);--dy:9vh}
-.gal-oro{--w:min(27vw,340px);--dy:-7vh}
-.gal-esp{--w:min(38vw,500px);--dy:4vh}
-.gal-bloqueo{--w:min(40vw,540px);--dy:6vh}
 /* La entradilla abre el carril, como la primera pieza de la pista: rótulo, titular y pie. */
 .gal-intro{flex:none;width:min(38vw,440px)}
 /* El contador vive en el marco del carril, no en la entradilla: así lee de principio a fin.
@@ -687,7 +689,7 @@ section{padding-block:var(--band)}
   font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.14em;color:var(--muted);
 }
 .gal-cuenta::before{content:attr(data-n);color:var(--accent);font-weight:500}
-.gal-cuenta::after{content:"/ 08"}
+.gal-cuenta::after{content:"/ " attr(data-total)}
 /* La pista, a escala real, en el hueco negativo entre dos fotos: es el único sitio del
    carril donde no hay imagen, y por eso se lee. Las tres primeras cifras son las del campo
    reglamentario —18 × 9 m, y la línea de ataque a 3 m de la red con la red a 2,24 m en
@@ -714,8 +716,8 @@ section{padding-block:var(--band)}
    Y se centran en vertical, no se alinean arriba. La altura de la tira la fija la pieza más
    alta, y con `flex-start` todo el hueco sobrante caía debajo: trescientos píxeles de nada
    entre la última foto y la sección siguiente. Centrado, ese hueco se reparte y la tira se
-   lee como una tira. Por lo mismo se acorta la ficha: es la única pieza vertical de verdad
-   (2:3) y a 76vw medía 471 px de alto, o sea que era ella sola la que estiraba la sección.
+   lee como una tira. La altura común que trae la regla de escritorio resuelve además lo que
+   antes obligaba a encoger la ficha: ya no hay una pieza vertical que estire la sección.
 
    Aquí el contador se retira. En la tira nativa no hay recorrido que medir —se arrastra con
    el dedo y se ve entera, sin ancla ni progreso—, y colocado contra la sección entera caería
@@ -730,9 +732,8 @@ section{padding-block:var(--band)}
     scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
     padding-block:var(--band);align-items:center;
   }
-  .gal-pieza{--w:min(76vw,440px);--dy:0}
-  .gal-saque{--w:min(46vw,220px)}
-  .gal-ficha{--w:min(52vw,220px)}
+  /* La misma regla que en escritorio: una altura común y el ancho por proporción. */
+  .gal-pieza{--gal-h:clamp(220px,58vw,270px)}
   .gal-intro,.gal-nota,.gal-compra{width:min(78vw,420px)}
   .gal-pieza,.gal-intro,.gal-nota,.gal-compra{scroll-snap-align:center;transform:none}
 }
@@ -1335,14 +1336,14 @@ html{-webkit-text-size-adjust:100%}
       <!-- El contador va en el marco, no dentro de la entradilla. Ahí se iba con ella: en
            cuanto el carril avanzaba una pieza dejaba de verse, y un marcador que solo existe
            en la primera pantalla no marca nada. Aquí lee durante todo el recorrido. -->
-      <p class="gal-cuenta" data-n="01"></p>
+      <p class="gal-cuenta" data-n="01" data-total="10"></p>
       <div class="gal-track">
 
         <div class="gal-intro">
           <p class="eyebrow">Galería</p>
           <h2 class="h2">El 8 en la pista</h2>
           <p class="small">
-            Fotos de Colorado Athletics, más una de prensa gallega con la selección española.
+            Fotos de Colorado Athletics y de prensa gallega con la selección española.
             Los créditos están al final de la página.
           </p>
         </div>
@@ -1437,6 +1438,28 @@ html{-webkit-text-size-adjust:100%}
           <figcaption>
             <span class="gal-sitio">Con España</span>
             <span class="gal-fecha">Mundial Sub-19 · 2025</span>
+          </figcaption>
+        </figure>
+
+        <!-- Las dos fotos de prensa gallega que entraron en la revisión del 26 oct. La
+             primera es un retrato fuera de la pista, con la equipación de la absoluta, en
+             la concentración de A Coruña de junio de 2026. La segunda es el tridente
+             coruñés: Inés, en el centro, con Jimena Gayoso y Lucía Varela. -->
+        <figure class="gal-pieza gal-esp-off">
+          <img src="img/g_esp_off.jpg" width="1200" height="801" loading="lazy"
+               alt="Inés Losada con la equipación de la selección española absoluta en A Coruña">
+          <figcaption>
+            <span class="gal-sitio">Con la absoluta</span>
+            <span class="gal-fecha">A Coruña · junio 2026</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gal-pieza gal-esp-trio">
+          <img src="img/g_esp_trio.jpg" width="1280" height="732" loading="lazy"
+               alt="Inés Losada, en el centro, con Jimena Gayoso y Lucía Varela con la camiseta de España">
+          <figcaption>
+            <span class="gal-sitio">El tridente coruñés</span>
+            <span class="gal-fecha">A Coruña · 2026</span>
           </figcaption>
         </figure>
 
@@ -1711,8 +1734,10 @@ html{-webkit-text-size-adjust:100%}
     <p class="legal">
       <strong style="color:var(--paper);font-weight:600">Créditos.</strong>
       Vídeos: canal oficial <em>BuffsTV</em> de Colorado Athletics en YouTube; aquí solo se enlazan.
-      Fotos: Colorado Athletics / cubuffs.com, salvo la imagen de la selección española, de
-      La Opinión A Coruña / Prensa Ibérica, incluida como cobertura periodística del Mundial Sub-19 de 2025.
+      Fotos: Colorado Athletics / cubuffs.com, salvo las de la selección española: la del
+      Mundial Sub-19, de La Opinión A Coruña / Prensa Ibérica; el retrato en A Coruña, del
+      mismo diario; y la del tridente, de Dani Patiño / DxT Campeón. Todas, como cobertura
+      periodística.
       Estadísticas: actas y páginas oficiales de cubuffs.com, consultadas el 26 de octubre de 2026.
       <span>Los retratos con la selección son de la Real Federación Española de Voleibol (RFEVB).</span>
       <span class="legal-nota">Página no oficial, hecha como homenaje para Inés Losada. No está vinculada a la Universidad de
@@ -1835,8 +1860,8 @@ html{-webkit-text-size-adjust:100%}
     "La rueda de prensa de su mejor partido del curso.":"The press conference from her best match of the season.",
     /* galería */
     "El 8 en la pista":"The 8 on the court",
-    "Fotos de Colorado Athletics, más una de prensa gallega con la selección española. Los créditos están al final de la página.":
-      "Photos from Colorado Athletics, plus one from the Galician press with the Spain national team. Credits are at the foot of the page.",
+    "Fotos de Colorado Athletics y de prensa gallega con la selección española. Los créditos están al final de la página.":
+      "Photos from Colorado Athletics and from the Galician press with the Spain national team. Credits are at the foot of the page.",
     /* galería · los pies van en dos nodos —sitio y fecha—, así que son dos claves cada uno.
        «Boulder · 2026», «CU Events Center · 2026», «18 × 9 m» y «3 m» no llevan entrada a
        propósito: no hay nada que traducir en ellos. El único decimal de la lista, «2,24 m»,
@@ -1859,6 +1884,10 @@ html{-webkit-text-size-adjust:100%}
     "Oro sobre negro":"Gold on black",
     "Con España":"With Spain",
     "Mundial Sub-19 · 2025":"U19 World Championship · 2025",
+    "Con la absoluta":"With the senior team",
+    "A Coruña · junio 2026":"A Coruña · June 2026",
+    "El tridente coruñés":"The A Coruña trio",
+    "A Coruña · 2026":"A Coruña · 2026",
     "Foto: La Opinión A Coruña / Prensa Ibérica.":"Photo: La Opinión A Coruña / Prensa Ibérica.",
     /* trayectoria */
     "De A Coruña a Boulder":"From A Coruña to Boulder",
@@ -1945,14 +1974,16 @@ html{-webkit-text-size-adjust:100%}
     "Créditos.":"Credits.","Vídeos: canal oficial":"Video: the official",
     "Los retratos con la selección son de la Real Federación Española de Voleibol (RFEVB).":
       "The portraits with the national team are from the Royal Spanish Volleyball Federation (RFEVB).",
-    "de Colorado Athletics en YouTube; aquí solo se enlazan. Fotos: Colorado Athletics / cubuffs.com, salvo la imagen de la selección española, de La Opinión A Coruña / Prensa Ibérica, incluida como cobertura periodística del Mundial Sub-19 de 2025. Estadísticas: actas y páginas oficiales de cubuffs.com, consultadas el 26 de octubre de 2026.":
-      "channel of Colorado Athletics on YouTube; here they are only linked. Photos: Colorado Athletics / cubuffs.com, except the Spain national team image, from La Opinión A Coruña / Prensa Ibérica, included as press coverage of the 2025 U19 World Championship. Statistics: official box scores and pages from cubuffs.com, consulted on 26 October 2026.",
+    "de Colorado Athletics en YouTube; aquí solo se enlazan. Fotos: Colorado Athletics / cubuffs.com, salvo las de la selección española: la del Mundial Sub-19, de La Opinión A Coruña / Prensa Ibérica; el retrato en A Coruña, del mismo diario; y la del tridente, de Dani Patiño / DxT Campeón. Todas, como cobertura periodística. Estadísticas: actas y páginas oficiales de cubuffs.com, consultadas el 26 de octubre de 2026.":
+      "channel of Colorado Athletics on YouTube; here they are only linked. Photos: Colorado Athletics / cubuffs.com, except the Spain national team ones: the U19 World Championship photo, from La Opinión A Coruña / Prensa Ibérica; the portrait in A Coruña, from the same newspaper; and the trio, by Dani Patiño / DxT Campeón. All as press coverage. Statistics: official box scores and pages from cubuffs.com, consulted on 26 October 2026.",
     "Página no oficial, hecha como homenaje para Inés Losada. No está vinculada a la Universidad de Colorado, a CU Athletics ni a ninguna de las marcas citadas. En las ruedas de prensa, la identificación de Inés se hizo por el dorsal de la camiseta y el cotejo con su ficha oficial: la certeza es alta en la de Colorado State y media en las de Northern Colorado y Kansas State.":
       "Unofficial page, made as a tribute to Inés Losada. It is not affiliated with the University of Colorado, CU Athletics or any of the brands mentioned. In the press conferences, Inés was identified by the jersey number and by comparison with her official roster profile: certainty is high for the Colorado State one and moderate for the Northern Colorado and Kansas State ones."
   };
 
   var EN_ALT = {
     "Bloqueo de Colorado ante Utah en el Jon M. Huntsman Center":"Colorado blocking against Utah at the Jon M. Huntsman Center",
+    "Inés Losada con la equipación de la selección española absoluta en A Coruña":"Inés Losada in the Spain senior national team kit in A Coruña",
+    "Inés Losada, en el centro, con Jimena Gayoso y Lucía Varela con la camiseta de España":"Inés Losada, centre, with Jimena Gayoso and Lucía Varela in the Spain shirt",
     "Inés Losada sacando desde el fondo de la pista, con la camiseta negra del 8 de Colorado":"Inés Losada serving from the back of the court in Colorado's black No. 8 jersey",
     "Fotograma del reel: las Buffaloes celebrando en la pista":"Still from the reel: the Buffaloes celebrating on the court",
     "Fotograma del reel: jugadoras de Colorado abrazadas tras el punto":"Still from the reel: Colorado players hugging after a point",
@@ -2107,6 +2138,12 @@ html{-webkit-text-size-adjust:100%}
   var galPin = gal && gal.querySelector('.gal-pin');
   var galTrack = gal && gal.querySelector('.gal-track');
   var galCuenta = gal && gal.querySelector('.gal-cuenta');
+  /* El total sale del número real de piezas, no de un «/ 08» escrito a mano: la galería
+     ya ha crecido dos veces y el dato se quedaba atrás en cada una. */
+  if(galCuenta){
+    var nPiezas = gal.querySelectorAll('.gal-pieza').length;
+    galCuenta.dataset.total = (nPiezas < 10 ? '0' : '') + nPiezas;
+  }
   var galLargo = 0;
   var galCentros = [];                           /* el centro de cada pieza, en coordenadas del carril */
   var estrecho = window.matchMedia('(max-width:900px)');
