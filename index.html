@@ -669,6 +669,7 @@ section{padding-block:var(--band)}
 .gal-corro{--w:min(36vw,480px);--dy:9vh}
 .gal-oro{--w:min(27vw,340px);--dy:-7vh}
 .gal-esp{--w:min(38vw,500px);--dy:4vh}
+.gal-bloqueo{--w:min(40vw,540px);--dy:6vh}
 /* La entradilla abre el carril, como la primera pieza de la pista: rótulo, titular y pie. */
 .gal-intro{flex:none;width:min(38vw,440px)}
 /* El contador vive en el marco del carril, no en la entradilla: así lee de principio a fin.
@@ -686,7 +687,7 @@ section{padding-block:var(--band)}
   font-family:var(--font-mono);font-size:var(--fs-label);letter-spacing:.14em;color:var(--muted);
 }
 .gal-cuenta::before{content:attr(data-n);color:var(--accent);font-weight:500}
-.gal-cuenta::after{content:"/ 07"}
+.gal-cuenta::after{content:"/ 08"}
 /* La pista, a escala real, en el hueco negativo entre dos fotos: es el único sitio del
    carril donde no hay imagen, y por eso se lee. Las tres primeras cifras son las del campo
    reglamentario —18 × 9 m, y la línea de ataque a 3 m de la red con la red a 2,24 m en
@@ -998,8 +999,8 @@ html{-webkit-text-size-adjust:100%}
           y una de las voces que la Universidad pone delante de la cámara.
         </p>
         <div class="stats">
-          <div><b>127,0</b><small>Puntos · 2026</small></div>
-          <div><b>164,5</b><small>Puntos · carrera NCAA</small></div>
+          <div><b>144,0</b><small>Puntos · 2026</small></div>
+          <div><b>181,5</b><small>Puntos · carrera NCAA</small></div>
           <div><b>40,52%</b><small>Eficacia · Mundial S19</small></div>
         </div>
         <div class="cta">
@@ -1056,7 +1057,7 @@ html{-webkit-text-size-adjust:100%}
         <div><dt>Altura</dt><dd>1,86 m</dd></div>
         <div><dt>Equipo</dt><dd>Colorado Buffaloes<br><span class="small">NCAA Div. I · Big 12</span></dd></div>
         <div><dt>Origen</dt><dd>A Coruña, Galicia<br><span class="small">España</span></dd></div>
-        <div><dt>Temporada 2026</dt><dd>15 partidos<br><span class="small">45 sets hasta el 22 oct</span></dd></div>
+        <div><dt>Temporada 2026</dt><dd>16 partidos<br><span class="small">49 sets hasta el 25 oct</span></dd></div>
       </dl>
     </div>
   </section>
@@ -1071,17 +1072,17 @@ html{-webkit-text-size-adjust:100%}
           <h2 class="h2">Lo que firma cada noche</h2>
         </div>
         <p class="small">
-          15 de los 18 partidos del equipo hasta el 22 de octubre de 2026, cuando los Buffaloes
-          eran el número 25 del ranking nacional. Media de 2,82 puntos por set.
+          16 de los 19 partidos del equipo hasta el 25 de octubre de 2026, cuando los Buffaloes
+          eran el número 25 del ranking nacional. Media de 2,94 puntos por set.
         </p>
       </div>
 
       <div class="tiles">
-        <div class="tile"><b>127,0</b><small>Puntos</small></div>
-        <div class="tile"><b>89</b><small>Kills</small></div>
+        <div class="tile"><b>144,0</b><small>Puntos</small></div>
+        <div class="tile"><b>103</b><small>Kills</small></div>
         <div class="tile"><b>24</b><small>Aces</small></div>
-        <div class="tile"><b>29</b><small>Digs</small></div>
-        <div class="tile"><b>14,0</b><small>Bloqueos</small></div>
+        <div class="tile"><b>31</b><small>Digs</small></div>
+        <div class="tile"><b>17,0</b><small>Bloqueos</small></div>
       </div>
 
       <div class="chart">
@@ -1101,10 +1102,13 @@ html{-webkit-text-size-adjust:100%}
           <li class="top"><span class="date">22 oct</span><span class="opp">BYU</span>
             <span class="track"><i style="--w:89%"></i></span><span class="pts">17,0</span>
             <span class="k">14 K + 1 ace</span></li>
+          <li class="top"><span class="date">25 oct</span><span class="opp">Utah</span>
+            <span class="track"><i style="--w:89%"></i></span><span class="pts">17,0</span>
+            <span class="k">14 K</span></li>
           <li class="top"><span class="date">4 oct</span><span class="opp"><em>#21</em> Baylor</span>
             <span class="track"><i style="--w:87%"></i></span><span class="pts">16,5</span>
             <span class="k">10 K + 5 aces <span class="v">vídeo</span></span></li>
-          <li class="top"><span class="date">11 oct</span><span class="opp">Kansas State</span>
+          <li><span class="date">11 oct</span><span class="opp">Kansas State</span>
             <span class="track"><i style="--w:87%"></i></span><span class="pts">16,5</span>
             <span class="k">11 K + 5 aces <span class="v">vídeo</span></span></li>
           <li><span class="date">17 sep</span><span class="opp">Colorado State</span>
@@ -1361,6 +1365,19 @@ html{-webkit-text-size-adjust:100%}
           </figcaption>
         </figure>
 
+        <!-- La foto del partido de Utah (25 oct), el de los cinco bloqueos de Inés. El pie
+             no la identifica a ella en la imagen: la jugadora que bloquea en el centro no
+             lleva visible el dorsal, y en esta página no se pone un nombre a lo que no se
+             puede leer en la foto. El 8 asoma en primer plano, desenfocado. -->
+        <figure class="gal-pieza gal-bloqueo">
+          <img src="img/g_utah.jpg" width="1400" height="933" loading="lazy"
+               alt="Bloqueo de Colorado ante Utah en el Jon M. Huntsman Center">
+          <figcaption>
+            <span class="gal-sitio">Bloqueo</span>
+            <span class="gal-fecha">Jon M. Huntsman Center · 25 oct 2026</span>
+          </figcaption>
+        </figure>
+
         <!-- La ficha oficial. El fichero de cubuffs que se llama «…Headshots-08» NO es la
              jugadora del dorsal 8: en esa serie el número es el orden en la plantilla, y
              ese es de otra compañera. La de Inés la señala el propio cubuffs en su tarjeta
@@ -1511,7 +1528,7 @@ html{-webkit-text-size-adjust:100%}
       </div>
 
       <p class="small mono" style="margin-top:clamp(26px,3.5vw,44px)">
-        Carrera NCAA: 36 partidos · 110 sets · 164,5 puntos · 105 kills · 44 aces · 47 digs · 15,5 bloqueos.
+        Carrera NCAA: 37 partidos · 114 sets · 181,5 puntos · 119 kills · 44 aces · 49 digs · 18,5 bloqueos.
       </p>
     </div>
   </section>
@@ -1624,7 +1641,7 @@ html{-webkit-text-size-adjust:100%}
       </div>
 
       <p class="note">
-        Enlaces comprobados el 23 de octubre de 2026. También hay camisetas de voleibol en la
+        Enlaces comprobados el 26 de octubre de 2026. También hay camisetas de voleibol en la
         <a href="https://shop.cubuffs.com/colorado-buffaloes/jerseys/t-12602597+d-86776790+z-995-3679135264" target="_blank" rel="noopener" style="color:var(--accent-hi);border-bottom:1px solid var(--line)">sección de equipaciones</a>
         de la tienda oficial.
       </p>
@@ -1672,6 +1689,9 @@ html{-webkit-text-size-adjust:100%}
       <div>
         <h4>Crónicas de sus partidos</h4>
         <ul>
+          <li><a href="https://cubuffs.com/news/2026/10/25/volleyball-no-25-colorado-throws-block-party-to-take-down-utah" target="_blank" rel="noopener">Victoria 3-1 en Utah (25 oct)</a></li>
+          <li><a href="https://cubuffs.com/news/2026/10/22/volleyball-no-25-colorado-falls-to-no-11-byu" target="_blank" rel="noopener">Derrota 1-3 ante el nº 11 BYU (22 oct)</a></li>
+          <li><a href="https://cubuffs.com/news/2026/10/15/volleyball-no-25-colorado-stuns-iowa-state-in-three-sets" target="_blank" rel="noopener">3-0 a Iowa State (15 oct)</a></li>
           <li><a href="https://cubuffs.com/news/2026/10/11/volleyball-no-23-colorado-reverse-sweeps-kansas-state" target="_blank" rel="noopener">Remontada 3-2 a Kansas State (11 oct)</a></li>
           <li><a href="https://cubuffs.com/news/2026/10/4/volleyball-no-24-colorado-dominates-first-two-sets-to-upset-no-21-baylor" target="_blank" rel="noopener">Victoria ante el nº 21 Baylor (4 oct)</a></li>
           <li><a href="https://cubuffs.com/news/2026/10/6/volleyball-from-miles-apart-to-amountain-town-reunion" target="_blank" rel="noopener">El reencuentro con Tinons (6 oct)</a></li>
@@ -1693,7 +1713,7 @@ html{-webkit-text-size-adjust:100%}
       Vídeos: canal oficial <em>BuffsTV</em> de Colorado Athletics en YouTube; aquí solo se enlazan.
       Fotos: Colorado Athletics / cubuffs.com, salvo la imagen de la selección española, de
       La Opinión A Coruña / Prensa Ibérica, incluida como cobertura periodística del Mundial Sub-19 de 2025.
-      Estadísticas: actas y páginas oficiales de cubuffs.com, consultadas el 23 de octubre de 2026.
+      Estadísticas: actas y páginas oficiales de cubuffs.com, consultadas el 26 de octubre de 2026.
       <span>Los retratos con la selección son de la Real Federación Española de Voleibol (RFEVB).</span>
       <span class="legal-nota">Página no oficial, hecha como homenaje para Inés Losada. No está vinculada a la Universidad de
       Colorado, a CU Athletics ni a ninguna de las marcas citadas. En las ruedas de prensa, la
@@ -1757,22 +1777,21 @@ html{-webkit-text-size-adjust:100%}
     "7 555 km · 8 horas de diferencia":"7,555 km · 8 hours apart",
     /* ficha */
     "Dorsal":"Jersey","Puesto":"Position","Altura":"Height","Equipo":"Team","Origen":"Hometown",
-    "España":"Spain","Temporada 2026":"2026 season","15 partidos":"15 matches",
-    "45 sets hasta el 22 oct":"45 sets through Oct 22",
+    "España":"Spain","Temporada 2026":"2026 season","16 partidos":"16 matches",
+    "49 sets hasta el 25 oct":"49 sets through Oct 25",
     /* temporada */
     "Temporada 2026 · datos de las actas oficiales":"2026 season · official box scores",
     "Lo que firma cada noche":"What she signs every night",
-    "15 de los 18 partidos del equipo hasta el 22 de octubre de 2026, cuando los Buffaloes eran el número 25 del ranking nacional. Media de 2,82 puntos por set.":
-      "15 of the team's 18 matches through 22 October 2026, when the Buffaloes were ranked No. 25 in the nation. An average of 2.82 points per set.",
+    "16 de los 19 partidos del equipo hasta el 25 de octubre de 2026, cuando los Buffaloes eran el número 25 del ranking nacional. Media de 2,94 puntos por set.":
+      "16 of the team's 19 matches through 25 October 2026, when the Buffaloes were ranked No. 25 in the nation. An average of 2.94 points per set.",
     "Puntos":"Points","Bloqueos":"Blocks","Puntos por partido":"Points per match",
     "Puntos = kills + aces + bloqueos (0,5 por bloqueo asistido). Las cinco primeras líneas son sus mejores partidos del curso; las que llevan la marca «vídeo» tienen reel publicado en el canal de los Buffaloes.":
       "Points = kills + aces + blocks (0.5 per assisted block). The first five rows are her best matches of the season; the ones marked “video” have a highlight reel on the Buffaloes' channel.",
-    "6 sep":"Sep 6","4 oct":"Oct 4","11 oct":"Oct 11","15 oct":"Oct 15","22 oct":"Oct 22","17 sep":"Sep 17","2 oct":"Oct 2",
+    "6 sep":"Sep 6","4 oct":"Oct 4","11 oct":"Oct 11","15 oct":"Oct 15","22 oct":"Oct 22","25 oct":"Oct 25","17 sep":"Sep 17","2 oct":"Oct 2",
     "9 oct":"Oct 9","11 sep":"Sep 11","25 sep":"Sep 25","28 ago":"Aug 28","4 sep":"Sep 4",
     "29 ago":"Aug 29","12 sep":"Sep 12","18 sep":"Sep 18",
     "vídeo":"video","Sin puntos ·":"No points ·","Sin puntos":"No points",
-    "127,0":"127.0","164,5":"164.5","40,52%":"40.52%","19,0":"19.0","16,5":"16.5","17,0":"17.0",
-    "14,0":"14.0",
+    "144,0":"144.0","181,5":"181.5","40,52%":"40.52%","19,0":"19.0","16,5":"16.5","17,0":"17.0",
     "13,0":"13.0","12,0":"12.0","6,0":"6.0","3,0":"3.0","2,5":"2.5","2,0":"2.0","1,5":"1.5",
     "1,0":"1.0","0,0":"0.0",
     /* vídeos */
@@ -1826,6 +1845,8 @@ html{-webkit-text-size-adjust:100%}
     "Ferrell Center · 4 oct 2026":"Ferrell Center · 4 Oct 2026",
     "Saque":"Serve",
     "CU Events Center · 11 oct 2026":"CU Events Center · 11 Oct 2026",
+    "Bloqueo":"Block",
+    "Jon M. Huntsman Center · 25 oct 2026":"Jon M. Huntsman Center · 25 Oct 2026",
     "Ficha oficial":"Official profile",
     "La pista":"The court",
     "el campo entero":"the whole court",
@@ -1875,8 +1896,8 @@ html{-webkit-text-size-adjust:100%}
     "Entra en la lista de España para la CEV European League, con el 23.":"Named in Spain's squad for the CEV European League, wearing 23.",
     "Europeo Sub-22 en La Haya":"U22 European Championship in The Hague",
     "Convocada con la Sub-22, con el 7 a la espalda.":"Called up to the U22 side, wearing 7.",
-    "Carrera NCAA: 36 partidos · 110 sets · 164,5 puntos · 105 kills · 44 aces · 47 digs · 15,5 bloqueos.":
-      "NCAA career: 36 matches · 110 sets · 164.5 points · 105 kills · 44 aces · 47 digs · 15.5 blocks.",
+    "Carrera NCAA: 37 partidos · 114 sets · 181,5 puntos · 119 kills · 44 aces · 49 digs · 18,5 bloqueos.":
+      "NCAA career: 37 matches · 114 sets · 181.5 points · 119 kills · 44 aces · 49 digs · 18.5 blocks.",
     /* selección */
     "Selección española":"Spain national team","La camiseta roja":"The red jersey",
     "Antes de Boulder hubo España. Con la Sub-17 fue elegida mejor receptora del torneo WEVZA de Grünheide y entró en el siete ideal. Con la Sub-19 jugó el Mundial de la FIVB de 2025, donde terminó con 120 puntos y un 40,52% de eficacia en ataque.":
@@ -1906,13 +1927,16 @@ html{-webkit-text-size-adjust:100%}
     "El NIL Store de Colorado reúne el merchandising firmado por las jugadoras: camisetas y sudaderas con su nombre, y cada compra va a la deportista.":
       "Colorado's NIL Store gathers merchandise signed by the players: jerseys and sweatshirts with their names, with every purchase going to the athlete.",
     "Ver la colección":"See the volleyball collection",
-    "Enlaces comprobados el 23 de octubre de 2026. También hay camisetas de voleibol en la":"Links checked on 23 October 2026. There are also volleyball jerseys in the",
+    "Enlaces comprobados el 26 de octubre de 2026. También hay camisetas de voleibol en la":"Links checked on 26 October 2026. There are also volleyball jerseys in the",
     "sección de equipaciones":"jerseys section","de la tienda oficial.":"of the official store.",
     /* pie */
     "Seguir al equipo":"Follow the team","Voleibol femenino · cubuffs.com":"Women's volleyball · cubuffs.com",
     "Plantilla 2026":"2026 roster","Estadísticas de la temporada":"Season statistics",
     "Canal BuffsTV en YouTube":"BuffsTV channel on YouTube",
     "Crónicas de sus partidos":"Match reports",
+    "Victoria 3-1 en Utah (25 oct)":"3-1 win at Utah (Oct 25)",
+    "Derrota 1-3 ante el nº 11 BYU (22 oct)":"1-3 loss to No. 11 BYU (Oct 22)",
+    "3-0 a Iowa State (15 oct)":"3-0 win over Iowa State (Oct 15)",
     "Remontada 3-2 a Kansas State (11 oct)":"3-2 comeback over Kansas State (Oct 11)",
     "Victoria ante el nº 21 Baylor (4 oct)":"Win over No. 21 Baylor (Oct 4)",
     "El reencuentro con Tinons (6 oct)":"The reunion with Tinons (Oct 6)",
@@ -1921,13 +1945,14 @@ html{-webkit-text-size-adjust:100%}
     "Créditos.":"Credits.","Vídeos: canal oficial":"Video: the official",
     "Los retratos con la selección son de la Real Federación Española de Voleibol (RFEVB).":
       "The portraits with the national team are from the Royal Spanish Volleyball Federation (RFEVB).",
-    "de Colorado Athletics en YouTube; aquí solo se enlazan. Fotos: Colorado Athletics / cubuffs.com, salvo la imagen de la selección española, de La Opinión A Coruña / Prensa Ibérica, incluida como cobertura periodística del Mundial Sub-19 de 2025. Estadísticas: actas y páginas oficiales de cubuffs.com, consultadas el 23 de octubre de 2026.":
-      "channel of Colorado Athletics on YouTube; here they are only linked. Photos: Colorado Athletics / cubuffs.com, except the Spain national team image, from La Opinión A Coruña / Prensa Ibérica, included as press coverage of the 2025 U19 World Championship. Statistics: official box scores and pages from cubuffs.com, consulted on 23 October 2026.",
+    "de Colorado Athletics en YouTube; aquí solo se enlazan. Fotos: Colorado Athletics / cubuffs.com, salvo la imagen de la selección española, de La Opinión A Coruña / Prensa Ibérica, incluida como cobertura periodística del Mundial Sub-19 de 2025. Estadísticas: actas y páginas oficiales de cubuffs.com, consultadas el 26 de octubre de 2026.":
+      "channel of Colorado Athletics on YouTube; here they are only linked. Photos: Colorado Athletics / cubuffs.com, except the Spain national team image, from La Opinión A Coruña / Prensa Ibérica, included as press coverage of the 2025 U19 World Championship. Statistics: official box scores and pages from cubuffs.com, consulted on 26 October 2026.",
     "Página no oficial, hecha como homenaje para Inés Losada. No está vinculada a la Universidad de Colorado, a CU Athletics ni a ninguna de las marcas citadas. En las ruedas de prensa, la identificación de Inés se hizo por el dorsal de la camiseta y el cotejo con su ficha oficial: la certeza es alta en la de Colorado State y media en las de Northern Colorado y Kansas State.":
       "Unofficial page, made as a tribute to Inés Losada. It is not affiliated with the University of Colorado, CU Athletics or any of the brands mentioned. In the press conferences, Inés was identified by the jersey number and by comparison with her official roster profile: certainty is high for the Colorado State one and moderate for the Northern Colorado and Kansas State ones."
   };
 
   var EN_ALT = {
+    "Bloqueo de Colorado ante Utah en el Jon M. Huntsman Center":"Colorado blocking against Utah at the Jon M. Huntsman Center",
     "Inés Losada sacando desde el fondo de la pista, con la camiseta negra del 8 de Colorado":"Inés Losada serving from the back of the court in Colorado's black No. 8 jersey",
     "Fotograma del reel: las Buffaloes celebrando en la pista":"Still from the reel: the Buffaloes celebrating on the court",
     "Fotograma del reel: jugadoras de Colorado abrazadas tras el punto":"Still from the reel: Colorado players hugging after a point",
