@@ -770,6 +770,19 @@ section{padding-block:var(--band)}
 .pal b{font-weight:600;font-size:.93rem}
 .pal small{display:block;color:var(--muted);font-size:.82rem;margin-top:2px}
 
+/* La rejilla de fotos de la temporada. No es el carril: aquí no hay scroll anclado, se ve
+   todo de un vistazo y cada pieza mantiene su pie. La única horizontal ocupa dos columnas,
+   porque recortarla a 4:5 se comería medio encuadre. */
+.fotogrid{display:grid;gap:clamp(10px,1.4vw,18px);grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
+.fotogrid figure{margin:0}
+.fotogrid img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--line-soft)}
+.fotogrid .ancha{grid-column:span 2}
+.fotogrid .ancha img{aspect-ratio:16/9}
+.fotogrid figcaption{margin-top:9px;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase}
+.fotogrid figcaption span{display:block;color:var(--accent)}
+.fotogrid figcaption small{display:block;margin-top:3px;color:var(--muted);letter-spacing:.1em}
+@media (max-width:560px){.fotogrid .ancha{grid-column:span 1}}
+
 /* ---------- LA PLACA DE ESPAÑA ----------
    Mismo mecanismo que `.isla-cu`, pero al revés. Allí se citaba el mundo de Colorado
    dentro del de Inés; aquí se le da la vuelta a la propia paleta de la página: la cal
@@ -1615,6 +1628,223 @@ html{-webkit-text-size-adjust:100%}
     </div>
   </section>
 
+  <!-- ================= LA TEMPORADA, EN FOTOS =================
+       Las 24 fotos de partido que mandó la familia el 15 de noviembre de 2026. No entran en el
+       carril de la galería: son 24 piezas más y el carril está anclado, así que la página habría
+       pasado de 4.500 a 14.400 px de scroll para verlas una a una. En rejilla se ven de golpe.
+       Los pies no identifican a Inés salvo donde el 8 se lee en la foto. -->
+  <section id="fotos-temporada" data-amb="team">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow">La temporada, en fotos</p>
+          <h2 class="h2">El curso, en imágenes</h2>
+        </div>
+        <p class="small">
+          Veinticuatro fotos de la temporada 2026, en Boulder y en cancha ajena. Las de prensa y
+          las de la selección están en la galería; estas son el día a día del equipo.
+        </p>
+      </div>
+      <div class="fotogrid">
+
+          <figure>
+            <img src="img/g2_01.jpg" width="800" height="1000" loading="lazy"
+               alt="Dos jugadoras de Colorado cierran la red ante el ataque rival">
+            <figcaption>
+              <span>Bloqueo</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_02.jpg" width="800" height="1000" loading="lazy"
+               alt="Remate de Colorado por la banda con el público al fondo">
+            <figcaption>
+              <span>Remate</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_03.jpg" width="800" height="1000" loading="lazy"
+               alt="Inés Losada de espaldas, con el 8 de Colorado, celebrando el punto">
+            <figcaption>
+              <span>El 8, de espaldas</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_04.jpg" width="800" height="1000" loading="lazy"
+               alt="Una jugadora de Colorado recibe en defensa en el fondo de la pista">
+            <figcaption>
+              <span>Defensa</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_05.jpg" width="800" height="1000" loading="lazy"
+               alt="Jugadoras de Colorado celebran el punto junto a la grada">
+            <figcaption>
+              <span>Celebración</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_06.jpg" width="800" height="1000" loading="lazy"
+               alt="El equipo de Colorado celebra con una bandera en la pista">
+            <figcaption>
+              <span>El equipo</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_07.jpg" width="800" height="1000" loading="lazy"
+               alt="Remate de Colorado desde el fondo de la pista">
+            <figcaption>
+              <span>Remate</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_08.jpg" width="800" height="1000" loading="lazy"
+               alt="Las jugadoras de Colorado, con la mano en el pecho, durante el himno">
+            <figcaption>
+              <span>El himno</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_09.jpg" width="800" height="1000" loading="lazy"
+               alt="El banquillo de Colorado durante el partido">
+            <figcaption>
+              <span>El banquillo</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_10.jpg" width="800" height="1000" loading="lazy"
+               alt="Bloqueo de dos jugadoras de Colorado en la red">
+            <figcaption>
+              <span>Bloqueo</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_11.jpg" width="800" height="1000" loading="lazy"
+               alt="Dos jugadoras de Colorado levantan los brazos en la red">
+            <figcaption>
+              <span>En la red</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_12.jpg" width="750" height="1000" loading="lazy"
+               alt="Una jugadora de Colorado celebra el punto con los brazos en alto">
+            <figcaption>
+              <span>El punto</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_13.jpg" width="750" height="1000" loading="lazy"
+               alt="Jugadoras de Colorado abrazándose tras el punto">
+            <figcaption>
+              <span>El abrazo</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_14.jpg" width="750" height="1000" loading="lazy"
+               alt="Retrato en blanco y negro de una jugadora de Colorado en el banquillo">
+            <figcaption>
+              <span>En blanco y negro</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_15.jpg" width="750" height="1000" loading="lazy"
+               alt="Saque de Colorado desde el fondo de la pista, con el letrero del equipo al fondo">
+            <figcaption>
+              <span>Saque</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_16.jpg" width="750" height="1000" loading="lazy"
+               alt="La grada y el banquillo durante un partido de Colorado">
+            <figcaption>
+              <span>La grada</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure class="ancha">
+            <img src="img/g2_17.jpg" width="1000" height="562" loading="lazy"
+               alt="Inés Losada, con el 8, bloqueando en la red ante Kansas">
+            <figcaption>
+              <span>Bloqueo</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_18.jpg" width="750" height="1000" loading="lazy"
+               alt="Remate de Colorado desde el fondo de la pista">
+            <figcaption>
+              <span>Remate</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_19.jpg" width="750" height="1000" loading="lazy"
+               alt="Jugadoras de Colorado calentando en la pista">
+            <figcaption>
+              <span>Remate</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_20.jpg" width="750" height="1000" loading="lazy"
+               alt="El equipo de Colorado reunido en corro antes del partido">
+            <figcaption>
+              <span>El corro</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_21.jpg" width="750" height="1000" loading="lazy"
+               alt="Jugadoras y cuerpo técnico de Colorado en el banquillo">
+            <figcaption>
+              <span>El banquillo</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_22.jpg" width="750" height="1000" loading="lazy"
+               alt="Una jugadora de Colorado se lanza a por el balón en defensa">
+            <figcaption>
+              <span>Defensa</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_23.jpg" width="750" height="1000" loading="lazy"
+               alt="El equipo de Colorado abrazado en la pista">
+            <figcaption>
+              <span>El equipo</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="img/g2_24.jpg" width="750" height="1000" loading="lazy"
+               alt="Remate de una jugadora de Colorado en la red">
+            <figcaption>
+              <span>Remate</span>
+            <small>Temporada 2026</small>
+            </figcaption>
+          </figure>
+
+
+      </div>
+    </div>
+  </section>
+
   <!-- ================= SELECCIÓN ================= -->
   <section class="nat" id="seleccion" data-amb="esp">
     <div class="wrap">
@@ -1955,6 +2185,17 @@ html{-webkit-text-size-adjust:100%}
     "Saque":"Serve",
     "CU Events Center · 11 oct 2026":"CU Events Center · 11 Oct 2026",
     "Bloqueo":"Block",
+    "El 8, de espaldas":"The 8, from behind",
+    "Defensa":"Defence",
+    "Celebración":"Celebration",
+    "El equipo":"The team",
+    "El himno":"The anthem",
+    "El banquillo":"The bench",
+    "En la red":"At the net",
+    "El punto":"The point",
+    "El abrazo":"The hug",
+    "En blanco y negro":"In black and white",
+    "La grada":"The stands",
     "Jon M. Huntsman Center · 25 oct 2026":"Jon M. Huntsman Center · 25 Oct 2026",
     "Ficha oficial":"Official profile",
     "La pista":"The court",
@@ -2070,6 +2311,30 @@ html{-webkit-text-size-adjust:100%}
   };
 
   var EN_ALT = {
+    "Dos jugadoras de Colorado cierran la red ante el ataque rival":"Two Colorado players close the net against the rival attack",
+    "Remate de Colorado por la banda con el público al fondo":"Colorado attacking from the wing with the crowd behind",
+    "Inés Losada de espaldas, con el 8 de Colorado, celebrando el punto":"Inés Losada seen from behind, in Colorado's number 8, celebrating the point",
+    "Una jugadora de Colorado recibe en defensa en el fondo de la pista":"A Colorado player receiving in defence at the back of the court",
+    "Jugadoras de Colorado celebran el punto junto a la grada":"Colorado players celebrating the point by the stands",
+    "El equipo de Colorado celebra con una bandera en la pista":"The Colorado team celebrating with a flag on court",
+    "Remate de Colorado desde el fondo de la pista":"Colorado attacking from the back of the court",
+    "Las jugadoras de Colorado, con la mano en el pecho, durante el himno":"Colorado players with their hands on their chests during the anthem",
+    "El banquillo de Colorado durante el partido":"The Colorado bench during the match",
+    "Bloqueo de dos jugadoras de Colorado en la red":"Two Colorado players blocking at the net",
+    "Dos jugadoras de Colorado levantan los brazos en la red":"Two Colorado players with their arms up at the net",
+    "Una jugadora de Colorado celebra el punto con los brazos en alto":"A Colorado player celebrating the point with her arms raised",
+    "Jugadoras de Colorado abrazándose tras el punto":"Colorado players hugging after the point",
+    "Retrato en blanco y negro de una jugadora de Colorado en el banquillo":"Black and white portrait of a Colorado player on the bench",
+    "Saque de Colorado desde el fondo de la pista, con el letrero del equipo al fondo":"Colorado serving from the back of the court, with the team sign behind",
+    "La grada y el banquillo durante un partido de Colorado":"The stands and the bench during a Colorado match",
+    "Inés Losada, con el 8, bloqueando en la red ante Kansas":"Inés Losada, in the number 8, blocking at the net against Kansas",
+    "Remate de Colorado desde el fondo de la pista":"Colorado attacking from the back of the court",
+    "Jugadoras de Colorado calentando en la pista":"Colorado players warming up on court",
+    "El equipo de Colorado reunido en corro antes del partido":"The Colorado team gathered in a huddle before the match",
+    "Jugadoras y cuerpo técnico de Colorado en el banquillo":"Colorado players and staff on the bench",
+    "Una jugadora de Colorado se lanza a por el balón en defensa":"A Colorado player diving for the ball in defence",
+    "El equipo de Colorado abrazado en la pista":"The Colorado team hugging on court",
+    "Remate de una jugadora de Colorado en la red":"A Colorado player attacking at the net",
     "Bloqueo de Colorado ante Utah en el Jon M. Huntsman Center":"Colorado blocking against Utah at the Jon M. Huntsman Center",
     "Inés Losada con la equipación de la selección española absoluta en A Coruña":"Inés Losada in the Spain senior national team kit in A Coruña",
     "Inés Losada, en el centro, con Jimena Gayoso y Lucía Varela con la camiseta de España":"Inés Losada, centre, with Jimena Gayoso and Lucía Varela in the Spain shirt",
